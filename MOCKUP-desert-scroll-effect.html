@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Scroll Effect - Arabian Adventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Full Screen Desert Hero Section with Scroll Effect */
+        .hero-fullscreen {
+            height: 100vh;
+            background-image: linear-gradient(rgba(92, 64, 42, 0.6), rgba(61, 47, 35, 0.7)),
+                              url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 40px;
+            z-index: 2;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-main-title {
+            font-size: 72px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            letter-spacing: 3px;
+            text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 50px;
+            color: #f5e6d3;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Contact Button */
+        .contact-us-btn {
+            background-color: #a67c52;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 4px;
+            animation: pulse 2s ease-in-out infinite;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 6px 16px rgba(166, 124, 82, 0.5);
+            z-index: 3;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 16px rgba(166, 124, 82, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 24px rgba(166, 124, 82, 0.7);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 16px rgba(166, 124, 82, 0.5);
+            }
+        }
+
+        .contact-us-btn:hover {
+            background-color: #c67b3e;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 28px rgba(198, 123, 62, 0.6),
+                        0 0 40px rgba(198, 123, 62, 0.3);
+            animation: none;
+        }
+
+        .contact-us-btn:active {
+            transform: translateY(-2px) scale(0.98);
+            box-shadow: 0 4px 12px rgba(198, 123, 62, 0.4);
+            animation: none;
+        }
+
+        /* Scroll Indicator with Desert Theme */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+        }
+
+        .mouse-icon {
+            width: 32px;
+            height: 52px;
+            border: 3px solid rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            position: relative;
+            background: rgba(166, 124, 82, 0.15);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 16px rgba(166, 124, 82, 0.3);
+        }
+
+        .mouse-wheel {
+            width: 6px;
+            height: 12px;
+            background: linear-gradient(180deg, #fff 0%, #f5e6d3 100%);
+            border-radius: 3px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll 2s infinite;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(20px);
+            }
+        }
+
+        .scroll-text {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .scroll-subtext {
+            color: #f5e6d3;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+            margin-top: -4px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Big Scroll Button on the Left */
+        .big-scroll-button {
+            position: fixed;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(166, 124, 82, 0.9);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 24px rgba(166, 124, 82, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .big-scroll-button:hover {
+            transform: translateY(-50%) scale(1.15);
+            background: rgba(198, 123, 62, 0.95);
+            box-shadow: 0 12px 32px rgba(198, 123, 62, 0.7),
+                        0 0 50px rgba(198, 123, 62, 0.4);
+        }
+
+        .big-scroll-button svg {
+            width: 40px;
+            height: 40px;
+            stroke: white;
+            stroke-width: 3;
+            animation: arrowBounce 2s infinite;
+        }
+
+        @keyframes arrowBounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(8px);
+            }
+            60% {
+                transform: translateY(4px);
+            }
+        }
+
+        /* Sand Dunes Overlay Animation */
+        .sand-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, rgba(166, 124, 82, 0.3) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* Content Section - Desert Theme */
+        .content-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg, #e8dfd5 0%, #d9cbb8 50%, #c9b79c 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            color: #5d4a3a;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            font-family: 'Brush Script MT', 'Calibri', cursive;
+            color: #a67c52;
+            font-size: 38px;
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #fff 0%, #faf8f5 100%);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(166, 124, 82, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid rgba(166, 124, 82, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(166, 124, 82, 0.35);
+            border-color: #a67c52;
+        }
+
+        .feature-icon {
+            font-size: 52px;
+            margin-bottom: 20px;
+            filter: drop-shadow(2px 2px 4px rgba(166, 124, 82, 0.3));
+        }
+
+        .feature-title {
+            font-size: 24px;
+            color: #5d4a3a;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #8b7355;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Desert Particles Effect */
+        .desert-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(245, 230, 211, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateY(-100px) translateX(50px) scale(1.2);
+                opacity: 0.6;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-main-title {
+                font-size: 42px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .scroll-indicator {
+                bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .section-subtitle {
+                font-size: 28px;
+            }
+
+            .big-scroll-button {
+                left: 20px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .big-scroll-button svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .contact-us-btn {
+                padding: 15px 35px;
+                font-size: 14px;
+            }
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Big Scroll Button on Left Side -->
+    <div class="big-scroll-button" onclick="document.getElementById('content').scrollIntoView({behavior: 'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+    <!-- Full Screen Desert Hero with Scroll Indicator -->
+    <section class="hero-fullscreen">
+        <!-- Desert Particles -->
+        <div class="desert-particles">
+            <div class="particle" style="width: 40px; height: 40px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="width: 60px; height: 60px; top: 40%; left: 80%; animation-delay: 2s;"></div>
+            <div class="particle" style="width: 50px; height: 50px; top: 60%; left: 30%; animation-delay: 4s;"></div>
+            <div class="particle" style="width: 45px; height: 45px; top: 30%; left: 60%; animation-delay: 6s;"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-main-title">What can we create together?</h1>
+            <p class="hero-subtitle">
+                Unforgettable cities, breath-taking natural beauty, legendary hospitality - Explore the wonders of the Middle East with Arabian Adventures, Mesmerizing Incentives and Events
+            </p>
+            <a href="contact.html" class="contact-us-btn">CONTACT US</a>
+        </div>
+
+        <!-- Sand Dunes Overlay -->
+        <div class="sand-overlay"></div>
+
+        <!-- Animated Scroll Indicator - Desert Theme -->
+        <div class="scroll-indicator" onclick="document.getElementById('content').scrollIntoView({behavior: 'smooth'})">
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
+            <div class="scroll-text">Scroll to discover more</div>
+            <div class="scroll-subtext">experiences with Arabian Adventures</div>
+        </div>
+    </section>
+
+    <!-- Content Section - Desert Theme -->
+    <section id="content" class="content-section">
+        <div class="content-container">
+            <h2 class="section-subtitle">Desert Adventures Await</h2>
+            <h3 class="section-title">Explore the Golden Sands of Arabia</h3>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏜️</div>
+                    <h4 class="feature-title">Desert Safari</h4>
+                    <p class="feature-description">
+                        Experience the thrill of dune bashing, camel rides, and traditional Bedouin camps in the golden sands of the Arabian desert.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌅</div>
+                    <h4 class="feature-title">Sunrise & Sunset Tours</h4>
+                    <p class="feature-description">
+                        Witness the magical transformation of the desert as the sun paints the dunes in breathtaking colors.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏕️</div>
+                    <h4 class="feature-title">Overnight Camping</h4>
+                    <p class="feature-description">
+                        Sleep under a blanket of stars in luxury desert camps with authentic Arabian hospitality and entertainment.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🐪</div>
+                    <h4 class="feature-title">Camel Trekking</h4>
+                    <p class="feature-description">
+                        Journey through the ancient dunes on camelback, following the footsteps of Bedouin nomads.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎪</div>
+                    <h4 class="feature-title">Cultural Experiences</h4>
+                    <p class="feature-description">
+                        Immerse yourself in traditional music, dance, henna painting, and authentic Arabian cuisine.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏎️</div>
+                    <h4 class="feature-title">Dune Bashing</h4>
+                    <p class="feature-description">
+                        Feel the adrenaline rush as expert drivers navigate the towering sand dunes in powerful 4x4 vehicles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Optional: Add parallax effect on scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-fullscreen');
+            if (hero) {
+                hero.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
+            }
+        });
+
+        // Hide scroll indicator when user starts scrolling
+        window.addEventListener('scroll', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (window.pageYOffset > 100) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        });
+
+        // Animate particles
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach(particle => {
+            const randomDelay = Math.random() * 10;
+            particle.style.animationDelay = randomDelay + 's';
+        });
+    </script>
+</body>
+</html>
