@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Design Mockups - ARBA Tourism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            color: #3d2f23;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .mockup-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .mockup-wrapper {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mockup-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+        }
+
+        .mockup-label {
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            color: white;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mockup-features {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* OPTION 1: MINIMALIST LUXURY */
+        .footer-option-1 {
+            background-color: #3d2f23;
+            color: white;
+            padding: 50px 40px 30px 40px;
+            position: relative;
+        }
+
+        .footer-option-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                #a67c52 20%,
+                #c67b3e 40%,
+                #d4af37 50%,
+                #c67b3e 60%,
+                #a67c52 80%,
+                transparent 100%);
+            box-shadow: 0 2px 12px rgba(198, 123, 62, 0.6);
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p, .footer-column li {
+            color: #b8b8c0;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column li:hover {
+            color: #c67b3e;
+        }
+
+        .footer-bottom-1 {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom-1 .copyright {
+            color: #b8b8c0;
+            font-size: 14px;
+        }
+
+        .footer-bottom-1 .legal-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-1 .legal-links a {
+            color: #b8b8c0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-1 .legal-links a:hover {
+            color: #c67b3e;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: #c67b3e;
+            transform: translateY(-3px);
+        }
+
+        /* OPTION 2: TWO-TONE FOOTER */
+        .footer-option-2 {
+            background-color: #2a1f18;
+        }
+
+        .footer-option-2 .top-section {
+            padding: 50px 40px;
+        }
+
+        .footer-option-2 .bottom-section {
+            background-color: #4a3a2e;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-option-2 .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+
+        /* OPTION 3: NEWSLETTER + SOCIAL */
+        .footer-option-3 {
+            background-color: #3d2f23;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(135deg, rgba(198, 123, 62, 0.2), rgba(166, 124, 82, 0.2));
+            padding: 50px 40px;
+            text-align: center;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .newsletter-section h3 {
+            color: #d4af37;
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #a67c52;
+            border-radius: 6px;
+            font-size: 16px;
+            background: white;
+        }
+
+        .newsletter-form button {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #c67b3e, #a67c52);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(198, 123, 62, 0.4);
+        }
+
+        .footer-option-3 .main-section {
+            padding: 50px 40px 30px;
+        }
+
+        .footer-option-3 .bottom-centered {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 40px;
+            text-align: center;
+        }
+
+        .footer-option-3 .social-icons {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        /* OPTION 4: SPLIT LAYOUT */
+        .footer-option-4 {
+            background-color: #3d2f23;
+            padding: 50px 40px 30px;
+        }
+
+        .footer-option-4 .split-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .stats-box {
+            background: linear-gradient(135deg, rgba(198, 123, 62, 0.15), rgba(166, 124, 82, 0.15));
+            border: 2px solid #a67c52;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .stat-item .icon {
+            font-size: 24px;
+            color: #d4af37;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #c67b3e, #a67c52);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(198, 123, 62, 0.5);
+        }
+
+        /* OPTION 5: MODERN CARD STYLE */
+        .footer-option-5 {
+            background-color: #3d2f23;
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(166, 124, 82, 0.05) 35px, rgba(166, 124, 82, 0.05) 70px);
+            padding: 50px 40px 30px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .footer-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+            border-color: #a67c52;
+        }
+
+        .trust-badge-bottom {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-align: center;
+            color: #d4af37;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* OPTION 6: GRADIENT OVERLAY */
+        .footer-option-6 {
+            background-image: linear-gradient(rgba(30, 20, 15, 0.92), rgba(30, 20, 15, 0.95)),
+                              url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 40px 20px;
+        }
+
+        .contact-bar {
+            background: rgba(198, 123, 62, 0.2);
+            border: 1px solid rgba(198, 123, 62, 0.4);
+            padding: 20px 30px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-bar .contact-info {
+            display: flex;
+            gap: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .footer-columns,
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-option-4 .split-container {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-columns,
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Footer Design Mockups</h1>
+        <p>Choose your favorite design for ARBA Tourism website</p>
+    </div>
+
+    <div class="mockup-container">
+
+        <!-- OPTION 1: MINIMALIST LUXURY -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 1: Minimalist Luxury</span>
+                <span class="mockup-features">Golden line • Clean • Simple</span>
+            </div>
+            <div class="footer-option-1">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Get In Touch</h3>
+                        <p>+971 52 521 4149</p>
+                        <p>info@arbatourism.com</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Book Now</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Tours</h3>
+                        <ul>
+                            <li>Dubai City Tour</li>
+                            <li>Desert Safari</li>
+                            <li>Ferrari World</li>
+                            <li>Water Activities</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Operating Hours</h3>
+                        <p>Mon - Fri: 8AM - 10PM</p>
+                        <p>Sat - Sun: 8AM - 11PM</p>
+                        <p>24/7 Emergency Support</p>
+                    </div>
+                </div>
+                <div class="footer-bottom-1">
+                    <div class="copyright">© 2024 ARBA Tourism LLC · All Rights Reserved</div>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTION 2: TWO-TONE FOOTER -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 2: Two-Tone Footer</span>
+                <span class="mockup-features">Dual colors • Trust badge • Professional</span>
+            </div>
+            <div class="footer-option-2">
+                <div class="top-section">
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h3>Get In Touch</h3>
+                            <p>+971 52 521 4149</p>
+                            <p>info@arbatourism.com</p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>Home</li>
+                                <li>About Us</li>
+                                <li>Contact Us</li>
+                                <li>Book Now</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Popular Tours</h3>
+                            <ul>
+                                <li>Dubai City Tour</li>
+                                <li>Desert Safari</li>
+                                <li>Ferrari World</li>
+                                <li>Water Activities</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>We Accept</h3>
+                            <p>Visa • Mastercard</p>
+                            <p>Cash • Bank Transfer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <div style="color: #b8b8c0;">
+                        © 2024 ARBA Tourism ·
+                        <span class="trust-badge">🏆 Licensed by Dubai Tourism</span>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                    <div class="legal-links">
+                        <a href="#" style="color: #b8b8c0; text-decoration: none; margin: 0 10px;">Privacy</a>
+                        <a href="#" style="color: #b8b8c0; text-decoration: none; margin: 0 10px;">Terms</a>
+                        <a href="#" style="color: #b8b8c0; text-decoration: none; margin: 0 10px;">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTION 3: NEWSLETTER + SOCIAL -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 3: Newsletter Focus</span>
+                <span class="mockup-features">Email signup • Conversion-focused • Engaging</span>
+            </div>
+            <div class="footer-option-3">
+                <div class="newsletter-section">
+                    <h3>🌙 SUBSCRIBE TO EXCLUSIVE DESERT DEALS</h3>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+                <div class="main-section">
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h3>Get In Touch</h3>
+                            <p>+971 52 521 4149</p>
+                            <p>info@arbatourism.com</p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>Home</li>
+                                <li>About Us</li>
+                                <li>Contact Us</li>
+                                <li>Book Now</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Popular Tours</h3>
+                            <ul>
+                                <li>Dubai City Tour</li>
+                                <li>Desert Safari</li>
+                                <li>Ferrari World</li>
+                                <li>Water Activities</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Operating Hours</h3>
+                            <p>Mon - Fri: 8AM - 10PM</p>
+                            <p>Sat - Sun: 8AM - 11PM</p>
+                            <p>24/7 Emergency Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-centered">
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                    <div style="color: #b8b8c0; font-size: 14px;">
+                        © 2024 ARBA Tourism LLC · Privacy Policy · Terms of Service
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTION 4: SPLIT LAYOUT WITH STATS -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 4: Split Layout with Stats</span>
+                <span class="mockup-features">Stats showcase • CTA focused • Modern</span>
+            </div>
+            <div class="footer-option-4">
+                <div class="split-container">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li>Home</li>
+                                <li>About Us</li>
+                                <li>Contact Us</li>
+                                <li>Gallery</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Popular Tours</h3>
+                            <ul>
+                                <li>Dubai City Tour</li>
+                                <li>Desert Safari</li>
+                                <li>Ferrari World</li>
+                                <li>Water Activities</li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Operating Hours</h3>
+                            <p>Mon - Fri: 8AM - 10PM</p>
+                            <p>Sat - Sun: 8AM - 11PM</p>
+                            <p>24/7 Support</p>
+                        </div>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <span class="icon">⭐</span>
+                            <span>2000+ Successful Tours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="icon">⭐</span>
+                            <span>4.8 Average Rating</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="icon">⭐</span>
+                            <span>24/7 Customer Support</span>
+                        </div>
+                        <button class="cta-button">BOOK YOUR ADVENTURE</button>
+                    </div>
+                </div>
+                <div class="footer-bottom-1">
+                    <div class="copyright">© 2024 ARBA Tourism LLC</div>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                    <div class="legal-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTION 5: MODERN CARD STYLE -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 5: Modern Card Style</span>
+                <span class="mockup-features">Glass cards • Pattern background • Premium</span>
+            </div>
+            <div class="footer-option-5">
+                <div class="card-container">
+                    <div class="footer-card">
+                        <h3>Get In Touch</h3>
+                        <p style="color: #b8b8c0; margin-top: 15px; line-height: 1.8;">
+                            +971 52 521 4149<br>
+                            info@arbatourism.com
+                        </p>
+                    </div>
+                    <div class="footer-card">
+                        <h3>Quick Links</h3>
+                        <ul style="margin-top: 15px;">
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Book Now</li>
+                        </ul>
+                    </div>
+                    <div class="footer-card">
+                        <h3>Popular Tours</h3>
+                        <ul style="margin-top: 15px;">
+                            <li>Dubai City Tour</li>
+                            <li>Desert Safari</li>
+                            <li>Ferrari World</li>
+                            <li>Water Activities</li>
+                        </ul>
+                    </div>
+                    <div class="footer-card">
+                        <h3>We Accept</h3>
+                        <p style="color: #b8b8c0; margin-top: 15px; line-height: 1.8;">
+                            Visa • Mastercard<br>
+                            Cash • Bank Transfer
+                        </p>
+                    </div>
+                </div>
+                <div class="trust-badge-bottom">
+                    🏆 Licensed Tourism Operator · Dubai Tourism Authority
+                </div>
+                <div class="footer-bottom-1">
+                    <div class="copyright">© 2024 ARBA Tourism LLC</div>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OPTION 6: GRADIENT OVERLAY -->
+        <div class="mockup-wrapper">
+            <div class="mockup-label">
+                <span>Option 6: Desert Background with Overlay</span>
+                <span class="mockup-features">Image background • Visual impact • Atmospheric</span>
+            </div>
+            <div class="footer-option-6">
+                <div class="contact-bar">
+                    <div class="contact-info">
+                        <span>📞 +971 52 521 4149</span>
+                        <span>📧 info@arbatourism.com</span>
+                    </div>
+                    <div class="social-icons">
+                        <div class="social-icon">f</div>
+                        <div class="social-icon">i</div>
+                        <div class="social-icon">y</div>
+                    </div>
+                </div>
+                <div class="footer-columns" style="margin-bottom: 30px;">
+                    <div class="footer-column">
+                        <h3>Get In Touch</h3>
+                        <p>+971 52 521 4149</p>
+                        <p>info@arbatourism.com</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>Home</li>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Book Now</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Popular Tours</h3>
+                        <ul>
+                            <li>Dubai City Tour</li>
+                            <li>Desert Safari</li>
+                            <li>Ferrari World</li>
+                            <li>Water Activities</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Operating Hours</h3>
+                        <p>Mon - Fri: 8AM - 10PM</p>
+                        <p>Sat - Sun: 8AM - 11PM</p>
+                        <p>24/7 Emergency Support</p>
+                    </div>
+                </div>
+                <div style="text-align: center; color: #b8b8c0; font-size: 14px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    © 2024 ARBA Tourism LLC · Privacy Policy · Terms of Service
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

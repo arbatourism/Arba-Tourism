@@ -1,12 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)",
-      "Bash(git remote add:*)",
-      "Bash(git push:*)",
-      "Bash(for file in about-us.html abu-dhabi-city-tour.html dubai-city-tour.html ferrari-world.html index.html liwa-adventure.html miracle-garden.html mission-statement.html morning-safari-dubai.html overnight-camp-abudhabi.html overnight-camp-dubai.html sunrise-safari-abudhabi.html sunrise-safari-dubai.html vip-events.html vision-statement.html why-us.html wild-wadi.html yas-water-world.html)",
-      "Bash(do sed -i 's/href=\"\"#contact\"\"/href=\"\"contact.html\"\"/g' \"$file\")",
-      "Bash(done)"
+      "Bash(do sed -i 's|info@arba4tourism\\.com|info@arbatourism.com|g' \"$file\")",
+      "Bash(python:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill //F //PID 20320)",
+      "Bash(taskkill //F //PID 27900)",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\footer-mockups.html\")",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\invoice.html\")",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
