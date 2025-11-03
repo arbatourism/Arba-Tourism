@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(do sed -i 's|info@arba4tourism\\.com|info@arbatourism.com|g' \"$file\")",
+      "Bash(python:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill //F //PID 20320)",
+      "Bash(taskkill //F //PID 27900)",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\footer-mockups.html\")",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\invoice.html\")",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
