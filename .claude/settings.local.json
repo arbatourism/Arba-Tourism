@@ -9,7 +9,15 @@
       "Bash(taskkill //F //PID 27900)",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\footer-mockups.html\")",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\invoice.html\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\index.html\")",
+      "Bash(del update-nav.ps1)",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\about-us.html\")",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\contact.html\")",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\dubai-city-tour.html\")",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\sunrise-safari-dubai.html\")"
     ],
     "deny": [],
     "ask": []
