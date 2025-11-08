@@ -7,7 +7,7 @@ const headerHTML = `<header>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li class="dropdown">
-                <a href="#desert-safari" class="nav-link">Desert Safari <span class="dropdown-arrow">▼</span></a>
+                <a href="#desert-safari" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
                         <a href="#abu-dhabi-dunes" class="submenu-trigger">Abu Dhabi Dunes <span class="arrow-right">›</span></a>
@@ -31,7 +31,7 @@ const headerHTML = `<header>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#tours" class="nav-link">City Tour <span class="dropdown-arrow">▼</span></a>
+                <a href="#tours" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
                         <a href="#abu-dhabi" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
