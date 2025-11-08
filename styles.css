@@ -698,9 +698,13 @@ header.scrolled {
 
 /* Footer */
 .footer {
-    background-color: #3d2f23;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.imgur.com/zJ91O3N.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
     color: white;
     padding: 60px 40px 20px 40px;
+    position: relative;
 }
 
 .footer-container {
@@ -722,22 +726,25 @@ header.scrolled {
     font-weight: 600;
     margin-bottom: 20px;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .footer-description {
-    color: #b8b8c0;
+    color: #e8e8e8;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .footer-contact p {
-    color: #b8b8c0;
+    color: #e8e8e8;
     font-size: 15px;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .footer-links {
@@ -751,12 +758,13 @@ header.scrolled {
 }
 
 .footer-links a {
-    color: #b8b8c0;
+    color: #e8e8e8;
     text-decoration: none;
     font-size: 15px;
     transition: color 0.3s ease;
     position: relative;
     display: inline-block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .footer-links a::after {
@@ -771,7 +779,7 @@ header.scrolled {
 }
 
 .footer-links a:hover {
-    color: #c67b3e;
+    color: #ffd700;
 }
 
 .footer-links a:hover::after {
@@ -785,10 +793,11 @@ header.scrolled {
 }
 
 .footer-info li {
-    color: #b8b8c0;
+    color: #e8e8e8;
     font-size: 14px;
     margin-bottom: 10px;
     line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .footer-payment {
@@ -799,12 +808,13 @@ header.scrolled {
 }
 
 .footer-payment span {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #b8b8c0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 13px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .footer-bottom {
@@ -824,9 +834,10 @@ header.scrolled {
 }
 
 .footer-bottom p {
-    color: #b8b8c0;
+    color: #e8e8e8;
     font-size: 14px;
     margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .footer-social {
