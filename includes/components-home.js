@@ -10,7 +10,7 @@ const headerHTML = `<header id="home-header">
                 <a href="#desert-safari" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="#abu-dhabi-dunes" class="submenu-trigger">Abu Dhabi Dunes <span class="arrow-right">›</span></a>
+                        <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
                             <a href="#morning-safari">Morning Safari Abu Dhabi</a>
@@ -19,7 +19,7 @@ const headerHTML = `<header id="home-header">
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#dubai-dunes" class="submenu-trigger">Dubai Dunes <span class="arrow-right">›</span></a>
+                        <a href="#dubai-desert" class="submenu-trigger">Dubai Desert <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
                             <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
@@ -27,7 +27,13 @@ const headerHTML = `<header id="home-header">
                             <a href="overnight-camp-dubai.html">Overnight Camp Dubai</a>
                         </div>
                     </div>
-                    <a href="liwa-adventure.html">Liwa Adventure</a>
+                    <div class="submenu">
+                        <a href="#dune-drive" class="submenu-trigger">Dune Drive <span class="arrow-right">›</span></a>
+                        <div class="submenu-content">
+                            <a href="#dune-buggy">Dune Buggy</a>
+                            <a href="#quad-bike">Quad Bike</a>
+                        </div>
+                    </div>
                 </div>
             </li>
             <li class="dropdown">
@@ -36,19 +42,19 @@ const headerHTML = `<header id="home-header">
                     <div class="submenu">
                         <a href="#abu-dhabi" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="abu-dhabi-city-tour.html">Abu Dhabi City Tour</a>
-                            <a href="#camel-ride">Camel Ride</a>
-                            <a href="#dune-rides">Dune Rides</a>
-                            <a href="#dhow-cruise">Dhow Cruise</a>
+                            <a href="#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
+                            <a href="#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
+                            <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
+                            <a href="top-abu-dhabi-tours.html">Top Abu Dhabi Tours</a>
                         </div>
                     </div>
                     <div class="submenu">
                         <a href="#dubai" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="dubai-city-tour.html">Dubai City Tour</a>
-                            <a href="#camel-ride-dubai">Camel Ride</a>
-                            <a href="#dune-rides-dubai">Dune Rides</a>
-                            <a href="#dhow-cruise-dubai">Dhow Cruise</a>
+                            <a href="#half-day-city-tour-dubai">Half Day City Tour Dubai</a>
+                            <a href="#full-day-city-tour-dubai">Full Day City Tour Dubai</a>
+                            <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
+                            <a href="top-dubai-tours.html">Top Dubai Tours</a>
                         </div>
                     </div>
                     <a href="vip-events.html">VIP Events</a>
