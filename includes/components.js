@@ -40,7 +40,7 @@ const headerHTML = `<header>
                 <a href="#tours" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="#abu-dhabi" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
+                        <a href="abu-dhabi-city-tour.html" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="abu-dhabi-city-tour.html#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
                             <a href="abu-dhabi-city-tour.html#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
@@ -49,12 +49,12 @@ const headerHTML = `<header>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#dubai" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
+                        <a href="dubai-city-tour.html" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="#half-day-city-tour-dubai">Half Day City Tour Dubai</a>
-                            <a href="#full-day-city-tour-dubai">Full Day City Tour Dubai</a>
+                            <a href="dubai-city-tour.html#half-day-city-tour-dubai">Half Day City Tour Dubai</a>
+                            <a href="dubai-city-tour.html#full-day-city-tour-dubai">Full Day City Tour Dubai</a>
                             <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
-                            <a href="top-dubai-tours.html">Top Dubai Tours</a>
+                            <a href="dubai-city-tour.html#top-dubai-tours">Top Dubai Tours</a>
                         </div>
                     </div>
                     <a href="vip-events.html">VIP Events</a>
@@ -64,7 +64,7 @@ const headerHTML = `<header>
                 <a href="#cruise-boat" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <a href="#yacht-sailing">Yacht Sailing</a>
-                    <a href="#dhow-cruise">Dhow Cruise</a>
+                    <a href="dhow-cruise.html">Dhow Cruise</a>
                     <a href="#luxury-cruise">Luxury Cruise</a>
                 </div>
             </li>
@@ -121,12 +121,12 @@ const footerHTML = `<footer class="footer">
         <div class="footer-column">
             <h3 class="footer-title">Popular Tours</h3>
             <ul class="footer-links">
-                <li><a href="dubai-full-day-city-tour-burj-khalifa.html">Dubai City Tour</a></li>
+                <li><a href="abu-dhabi-city-tour.html">Abu Dhabi City Tours</a></li>
+                <li><a href="dubai-city-tour.html">Dubai City Tours</a></li>
                 <li><a href="sunrise-safari-dubai.html">Sunrise Desert Safari</a></li>
                 <li><a href="morning-safari-dubai.html">Morning Desert Safari</a></li>
                 <li><a href="overnight-camp-dubai.html">Overnight Desert Camp</a></li>
                 <li><a href="ferrari-world.html">Ferrari World</a></li>
-                <li><a href="dubai-jetski-burj-al-arab-view.html">Water Activities</a></li>
             </ul>
         </div>
 
