@@ -42,10 +42,10 @@ const headerHTML = `<header>
                     <div class="submenu">
                         <a href="#abu-dhabi" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
-                            <a href="#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
                             <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
-                            <a href="top-abu-dhabi-tours.html">Top Abu Dhabi Tours</a>
+                            <a href="abu-dhabi-city-tour.html#top-abu-dhabi-tours">Top Abu Dhabi Tours</a>
                         </div>
                     </div>
                     <div class="submenu">
