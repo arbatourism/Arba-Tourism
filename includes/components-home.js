@@ -64,7 +64,7 @@ const headerHTML = `<header id="home-header">
                 <a href="#cruise-boat" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <a href="#yacht-sailing">Yacht Sailing</a>
-                    <a href="#dhow-cruise">Dhow Cruise</a>
+                    <a href="dhow-cruise.html">Dhow Cruise</a>
                     <a href="#luxury-cruise">Luxury Cruise</a>
                 </div>
             </li>
