@@ -5,88 +5,308 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Icon styles */
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
+    <!-- Hero Section -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600') center/cover fixed;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 65px;
+                        font-weight: 900;
+                        margin-bottom: 25px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1;
+                        letter-spacing: -2px;">
+                        About Arba<br/>Tourism
+                    </h1>
+
+                    <a href="#who-we-are" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 12px;
+                        background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+                        color: white;
+                        padding: 18px 50px;
+                        border-radius: 50px;
+                        font-size: 17px;
+                        font-weight: 800;
+                        text-decoration: none;
+                        box-shadow: 0 12px 35px rgba(198, 123, 62, 0.6);
+                        transition: all 0.3s ease;
+                        border: 2px solid rgba(245, 212, 160, 0.3);"
+                        onmouseover="this.style.transform='translateY(-3px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <span>Learn More</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right Images -->
+                <div style="position: relative; height: 400px;">
+                    <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900" alt="Arba Tourism" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="UAE Tourism" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Who We Are Section -->
-    <section id="who-we-are" class="hero-section whoweare-hero">
-        <div class="hero-overlay">
-            <h1 class="hero-title">Who we are?</h1>
-        </div>
-    </section>
+    <section id="who-we-are" style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Who</span> We Are
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto;"></div>
+            </div>
 
-    <section class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800" alt="Arba Tourism">
-            </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourism's</h2>
-                <h3 class="section-title">Who we are?</h3>
-                <p class="section-text">
-                    Arba Tourism is a leading tour operator in the United Arab Emirates, offering an array of travel services and packages to both local and international travelers. We have a team of experienced professionals who are dedicated to providing top-quality services to our clients, ensuring that their travel experiences are both enjoyable and memorable.
-                </p>
-                <p class="section-text">
-                    At Arba Tourism, we believe that travel is not just about visiting new places, but also about experiencing new cultures, meeting new people, and creating lifelong memories. We are committed to providing our clients with authentic and immersive travel experiences that are tailored to their needs and preferences.
-                </p>
-                <p class="section-text">
-                    Whether you are looking to explore the bustling cities of Dubai and Abu Dhabi, experience the thrill of the desert, or relax on the pristine beaches of the UAE, Arba Tourism has got you covered. Our team is always ready to assist you in planning your dream vacation and making it a reality.
-                </p>
-            </div>
-        </div>
-    </section>
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" alt="Why Choose Us">
-            </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourism</h2>
-                <h3 class="section-title">Why Choose Us</h3>
-                <p class="section-text">
-                    At Arba Tourism, we believe that every journey should be an adventure. That's why we've made it our mission to provide our customers with an unforgettable experience that showcases the very best that the UAE has to offer. Here are just a few benefits of choosing Arba Tourism:
-                </p>
+                <!-- Left: Image -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=700" alt="Arba Tourism" style="width: 100%; height: 100%; min-height: 500px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                </div>
+
+                <!-- Right: Content -->
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2); margin-bottom: 20px;">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">About Arba Tourism</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 15px 0;">
+                            Arba Tourism is a leading tour operator in the United Arab Emirates, offering an array of travel services and packages to both local and international travelers. We have a team of experienced professionals who are dedicated to providing top-quality services to our clients, ensuring that their travel experiences are both enjoyable and memorable.
+                        </p>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 15px 0;">
+                            At Arba Tourism, we believe that travel is not just about visiting new places, but also about experiencing new cultures, meeting new people, and creating lifelong memories. We are committed to providing our clients with authentic and immersive travel experiences that are tailored to their needs and preferences.
+                        </p>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                            Whether you are looking to explore the bustling cities of Dubai and Abu Dhabi, experience the thrill of the desert, or relax on the pristine beaches of the UAE, Arba Tourism has got you covered. Our team is always ready to assist you in planning your dream vacation and making it a reality.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission Statement Section -->
-    <section id="mission" class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-details">
-                <h2 class="section-subtitle">Mission Statement</h2>
-                <h3 class="section-title">Adventures Await with Arba Tourism</h3>
-                <p class="section-text">
-                    At Arba Tourism, our mission is to provide our clients with exceptional travel experiences that showcase the beauty and diversity of the world while promoting responsible tourism practices.
-                </p>
+    <!-- Divider -->
+    <div style="height: 80px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" style="background: #f5e6d3; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Why</span> Choose Us
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto;"></div>
             </div>
-            <div class="tour-image">
-                <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800" alt="Mission Statement">
+
+            <!-- Benefits Grid -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 30px;">
+
+                <!-- Benefit 1 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="white">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">Expert Team</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        Our experienced professionals are dedicated to creating unforgettable travel experiences tailored to your preferences.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">Authentic Experiences</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        Immerse yourself in local culture with our carefully curated authentic travel experiences across the UAE.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">Quality Service</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        We ensure top-quality service at every step, making your journey enjoyable, safe, and memorable.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">Flexible Packages</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        Choose from a wide range of customizable tour packages designed to fit your schedule and budget.
+                    </p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">24/7 Support</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        Our customer support team is available around the clock to assist you with any questions or concerns.
+                    </p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 18px; font-weight: 700; color: #2d1f15; margin: 0;">Safe & Secure</h3>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #6a5f54; margin: 0;">
+                        Your safety is our priority. We follow strict safety protocols and partner with trusted service providers.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Vision Statement Section -->
-    <section id="vision" class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800" alt="Vision Statement">
+    <!-- Divider -->
+    <div style="height: 80px; background: linear-gradient(to bottom, #f5e6d3 0%, #fef3e2 50%, white 100%);"></div>
+
+    <!-- Mission Section -->
+    <section id="mission" style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center;">
+
+                <!-- Left: Content -->
+                <div>
+                    <h2 style="font-size: 16px; color: #c67b3e; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Mission Statement</h2>
+                    <h3 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 20px 0; line-height: 1.2; letter-spacing: -1px;">
+                        Adventures Await with <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Arba Tourism</span>
+                    </h3>
+                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                        <p style="font-size: 16px; line-height: 1.8; color: #4a403a; margin: 0;">
+                            At Arba Tourism, our mission is to provide our clients with exceptional travel experiences that showcase the beauty and diversity of the world while promoting responsible tourism practices. We strive to create memorable journeys that connect people with cultures, nature, and each other.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Image -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=700" alt="Mission Statement" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                </div>
             </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Vision Statement</h2>
-                <h3 class="section-title">Inspiring Memorable Journeys</h3>
-                <p class="section-text">
-                    Our vision at Arba Tourism is to become a leading global travel company recognized for our commitment to sustainable tourism and for creating unforgettable travel memories that inspire our clients to explore more of the world.
-                </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div style="height: 80px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
+
+    <!-- Vision Section -->
+    <section id="vision" style="background: #f5e6d3; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center;">
+
+                <!-- Left: Image -->
+                <div>
+                    <img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=700" alt="Vision Statement" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <h2 style="font-size: 16px; color: #a67c52; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Vision Statement</h2>
+                    <h3 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 20px 0; line-height: 1.2; letter-spacing: -1px;">
+                        Inspiring <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Memorable Journeys</span>
+                    </h3>
+                    <div style="background: white; padding: 30px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
+                        <p style="font-size: 16px; line-height: 1.8; color: #4a403a; margin: 0;">
+                            Our vision at Arba Tourism is to become a leading global travel company recognized for our commitment to sustainable tourism and for creating unforgettable travel memories that inspire our clients to explore more of the world. We aim to set new standards in the tourism industry.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-        <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>

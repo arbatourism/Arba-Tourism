@@ -20,7 +20,7 @@
             display: none !important;
         }
 
-        /* Premium Hero Section */
+        /* Premium Hero Section with Desert Background */
         .home-hero {
             height: 100vh;
             position: relative;
@@ -31,309 +31,27 @@
             text-align: center;
             color: white;
             overflow: hidden;
-            background: linear-gradient(135deg, #2d1f15 0%, #1a1410 50%, #0f0a07 100%);
-            animation: backgroundShift 20s infinite ease-in-out;
+            background-image: url('https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1920&q=90');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        @keyframes backgroundShift {
-            0%, 100% {
-                background: linear-gradient(135deg, #2d1f15 0%, #1a1410 50%, #0f0a07 100%);
-            }
-            50% {
-                background: linear-gradient(135deg, #3d2519 0%, #2d1f15 50%, #1a1410 100%);
-            }
-        }
-
-        /* Animated Desert Background */
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-background::before {
+        /* Dark overlay for better text readability */
+        .home-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://i.imgur.com/7Q3f7dA.jpeg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.25;
-            filter: blur(2px);
-            animation: zoomPulse 30s infinite ease-in-out;
+            background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.3) 0%,
+                rgba(0, 0, 0, 0.4) 50%,
+                rgba(0, 0, 0, 0.5) 100%);
+            z-index: 1;
         }
 
-        @keyframes zoomPulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        /* Floating Sand Particles */
-        .sand-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .sand-particle {
-            position: absolute;
-            background: radial-gradient(circle, rgba(212, 160, 100, 0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: floatSand 20s infinite ease-in-out;
-        }
-
-        @keyframes floatSand {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translate(100px, -800px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        /* Sparkles Effect */
-        .sparkles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 3;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #f5d4a0;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #f5d4a0;
-            animation: twinkle 3s infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.5);
-            }
-        }
-
-        /* Pulsing Ripple Circles */
-        .ripples {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .ripple {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100px;
-            height: 100px;
-            border: 2px solid rgba(198, 123, 62, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: rippleExpand 6s infinite ease-out;
-        }
-
-        .ripple:nth-child(2) {
-            animation-delay: 2s;
-        }
-
-        .ripple:nth-child(3) {
-            animation-delay: 4s;
-        }
-
-        @keyframes rippleExpand {
-            0% {
-                width: 100px;
-                height: 100px;
-                opacity: 0.6;
-            }
-            100% {
-                width: 1000px;
-                height: 1000px;
-                opacity: 0;
-            }
-        }
-
-        /* Light Beam Sweeps */
-        .light-beams {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .light-beam {
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(to bottom,
-                transparent 0%,
-                rgba(198, 123, 62, 0.3) 50%,
-                transparent 100%);
-            animation: beamSweep 10s infinite ease-in-out;
-            transform: skewX(-20deg);
-        }
-
-        .light-beam:nth-child(1) {
-            left: -10%;
-            animation-delay: 0s;
-        }
-
-        .light-beam:nth-child(2) {
-            left: 30%;
-            animation-delay: 3s;
-        }
-
-        .light-beam:nth-child(3) {
-            left: 70%;
-            animation-delay: 6s;
-        }
-
-        @keyframes beamSweep {
-            0% {
-                opacity: 0;
-                transform: translateX(0) skewX(-20deg);
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 0;
-                transform: translateX(200vw) skewX(-20deg);
-            }
-        }
-
-        /* Glowing Orbs with Mouse Follow */
-        .glow-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s infinite ease-in-out;
-            transition: transform 0.3s ease;
-        }
-
-        .orb-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(198, 123, 62, 0.6) 0%, transparent 70%);
-            top: -10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .orb-2 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(166, 124, 82, 0.5) 0%, transparent 70%);
-            bottom: -15%;
-            right: 5%;
-            animation-delay: 5s;
-        }
-
-        .orb-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(212, 160, 100, 0.4) 0%, transparent 70%);
-            top: 30%;
-            right: 15%;
-            animation-delay: 10s;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(50px, -80px) scale(1.1);
-            }
-            66% {
-                transform: translate(-30px, 60px) scale(0.9);
-            }
-        }
-
-        /* Curved Lines */
-        .curved-lines {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 2;
-        }
-
-        .line {
-            position: absolute;
-            background: linear-gradient(90deg,
-                transparent 0%,
-                rgba(198, 123, 62, 0.3) 20%,
-                rgba(166, 124, 82, 0.4) 50%,
-                rgba(198, 123, 62, 0.3) 80%,
-                transparent 100%);
-            height: 2px;
-            width: 120%;
-            transform-origin: center;
-            animation: lineMove 15s infinite ease-in-out;
-        }
-
-        .line-1 {
-            top: 25%;
-            left: -10%;
-            animation-delay: 0s;
-        }
-
-        .line-2 {
-            top: 50%;
-            left: -10%;
-            animation-delay: 3s;
-        }
-
-        .line-3 {
-            top: 75%;
-            left: -10%;
-            animation-delay: 6s;
-        }
-
-        @keyframes lineMove {
-            0%, 100% {
-                transform: translateX(0) rotate(-5deg);
-                opacity: 0.3;
-            }
-            50% {
-                transform: translateX(30px) rotate(2deg);
-                opacity: 0.6;
-            }
-        }
 
         /* Hero Content */
         .home-hero-overlay {
@@ -873,6 +591,169 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: linear-gradient(180deg, #1a1410 0%, #2d1f15 50%, #1a1410 100%);
+            padding: 100px 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .reviews-section h2 {
+            text-align: center;
+            font-size: 48px;
+            color: #f5d4a0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .reviews-section .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: rgba(245, 212, 160, 0.8);
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Auto-scrolling carousel container */
+        .reviews-carousel {
+            display: flex;
+            gap: 30px;
+            animation: scroll-reviews 40s linear infinite;
+            width: max-content;
+        }
+
+        .reviews-carousel:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-reviews {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Individual review card */
+        .review-card {
+            background: linear-gradient(135deg,
+                rgba(166, 124, 82, 0.2) 0%,
+                rgba(198, 123, 62, 0.15) 100%);
+            border: 2px solid rgba(198, 123, 62, 0.4);
+            border-radius: 20px;
+            padding: 30px;
+            min-width: 400px;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(198, 123, 62, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 160, 100, 0.8);
+            box-shadow: 0 15px 45px rgba(198, 123, 62, 0.4);
+        }
+
+        /* Review header with profile */
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(198, 123, 62, 0.6);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .review-author {
+            flex: 1;
+        }
+
+        .review-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .review-location {
+            font-size: 14px;
+            color: rgba(245, 212, 160, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Star rating */
+        .review-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 15px;
+        }
+
+        .review-stars .star {
+            color: #FBC02D;
+            font-size: 18px;
+        }
+
+        /* Review text */
+        .review-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* Review date */
+        .review-date {
+            font-size: 13px;
+            color: rgba(245, 212, 160, 0.6);
+            font-style: italic;
+        }
+
+        /* Verified badge */
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #4CAF50;
+            margin-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .reviews-section h2 {
+                font-size: 36px;
+            }
+
+            .review-card {
+                min-width: 320px;
+                max-width: 320px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -899,43 +780,8 @@
         </svg>
     </div>
 
-    <!-- Premium Animated Hero Banner -->
+    <!-- Premium Hero Banner with Desert Background -->
     <section class="home-hero">
-        <!-- Animated Background -->
-        <div class="hero-background">
-            <!-- Glowing Orbs -->
-            <div class="glow-orb orb-1"></div>
-            <div class="glow-orb orb-2"></div>
-            <div class="glow-orb orb-3"></div>
-
-            <!-- Curved Lines -->
-            <div class="curved-lines">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-            </div>
-
-            <!-- Light Beams -->
-            <div class="light-beams">
-                <div class="light-beam"></div>
-                <div class="light-beam"></div>
-                <div class="light-beam"></div>
-            </div>
-
-            <!-- Pulsing Ripples -->
-            <div class="ripples">
-                <div class="ripple"></div>
-                <div class="ripple"></div>
-                <div class="ripple"></div>
-            </div>
-
-            <!-- Sand Particles -->
-            <div class="sand-particles" id="sandParticles"></div>
-
-            <!-- Sparkles -->
-            <div class="sparkles" id="sparkles"></div>
-        </div>
-
         <!-- Hero Content -->
         <div class="home-hero-overlay">
             <div class="hero-badge">Plan your trip with us</div>
@@ -1916,6 +1762,272 @@
     </section>
 
 
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section">
+        <h2>What Our Travelers Say</h2>
+        <p class="section-subtitle">Real experiences from real adventurers who explored the Arabian desert with us</p>
+
+        <div class="reviews-carousel">
+            <!-- First set of reviews -->
+            <div class="reviews-track">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Anderson" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">James Anderson</div>
+                            <div class="review-location">📍 London, UK</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
+                    <div class="review-date">Visited November 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Mitchell" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Sarah Mitchell</div>
+                            <div class="review-location">📍 New York, USA</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
+                    <div class="review-date">Visited October 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Marco Rossi" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Marco Rossi</div>
+                            <div class="review-location">📍 Milan, Italy</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
+                    <div class="review-date">Visited September 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Emily Chen</div>
+                            <div class="review-location">📍 Singapore</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
+                    <div class="review-date">Visited November 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="David Thompson" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">David Thompson</div>
+                            <div class="review-location">📍 Sydney, Australia</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
+                    <div class="review-date">Visited October 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Priya Sharma" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Priya Sharma</div>
+                            <div class="review-location">📍 Mumbai, India</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
+                    <div class="review-date">Visited September 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+            </div>
+
+            <!-- Duplicate set for seamless loop -->
+            <div class="reviews-track">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Anderson" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">James Anderson</div>
+                            <div class="review-location">📍 London, UK</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
+                    <div class="review-date">Visited November 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Mitchell" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Sarah Mitchell</div>
+                            <div class="review-location">📍 New York, USA</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
+                    <div class="review-date">Visited October 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Marco Rossi" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Marco Rossi</div>
+                            <div class="review-location">📍 Milan, Italy</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
+                    <div class="review-date">Visited September 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Emily Chen</div>
+                            <div class="review-location">📍 Singapore</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
+                    <div class="review-date">Visited November 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="David Thompson" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">David Thompson</div>
+                            <div class="review-location">📍 Sydney, Australia</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
+                    <div class="review-date">Visited October 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Priya Sharma" class="review-avatar">
+                        <div class="review-author">
+                            <div class="review-name">Priya Sharma</div>
+                            <div class="review-location">📍 Mumbai, India</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
+                    <div class="review-date">Visited September 2024</div>
+                    <div class="verified-badge">✓ Verified Booking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1924,58 +2036,6 @@
     </button>
 
     <script>
-        // Custom Cursor Follow
-        const cursor = document.querySelector('.custom-cursor');
-        const cursorGlow = document.querySelector('.cursor-glow');
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            cursorGlow.style.left = e.clientX + 'px';
-            cursorGlow.style.top = e.clientY + 'px';
-        });
-
-        // Mouse Follow Effect for Orbs
-        document.addEventListener('mousemove', (e) => {
-            const orbs = document.querySelectorAll('.glow-orb');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-
-            orbs.forEach((orb, index) => {
-                const speed = (index + 1) * 30;
-                const x = (mouseX - 0.5) * speed;
-                const y = (mouseY - 0.5) * speed;
-                orb.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        });
-
-        // Generate Sand Particles
-        const sandContainer = document.getElementById('sandParticles');
-        for (let i = 0; i < 40; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'sand-particle';
-            const size = Math.random() * 6 + 2;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.bottom = '0';
-            particle.style.animationDelay = Math.random() * 20 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-            sandContainer.appendChild(particle);
-        }
-
-        // Generate Sparkles
-        const sparklesContainer = document.getElementById('sparkles');
-        for (let i = 0; i < 30; i++) {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * 100 + '%';
-            sparkle.style.top = Math.random() * 100 + '%';
-            sparkle.style.animationDelay = Math.random() * 3 + 's';
-            sparkle.style.animationDuration = (Math.random() * 2 + 2) + 's';
-            sparklesContainer.appendChild(sparkle);
-        }
-
         // Show/hide header and scroll indicators based on scroll position
         window.addEventListener('scroll', function() {
             const header = document.getElementById('home-header');
@@ -1999,16 +2059,6 @@
                 bigScrollButton.style.visibility = 'visible';
                 bigScrollButton.style.pointerEvents = 'auto';
             }
-        });
-
-        // Parallax effect for background
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const orbs = document.querySelectorAll('.glow-orb');
-            orbs.forEach((orb, index) => {
-                const speed = 0.3 + (index * 0.1);
-                orb.style.transform = `translateY(${scrolled * speed}px)`;
-            });
         });
 
         // Carousel Functionality
