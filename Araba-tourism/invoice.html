@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Arba Tourism Website Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide Default Cursor */
+        body {
+            cursor: none;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+        }
+
+        /* Hide system cursor on interactive elements */
+        a, button, .print-btn, .download-btn {
+            cursor: none !important;
+        }
+
+        /* Custom Cursor */
+        .custom-cursor {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(0, 0, 0, 1);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 10000;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4),
+                        0 0 40px rgba(0, 0, 0, 0.2),
+                        inset 0 0 10px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .cursor-glow {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 40%, transparent 70%);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.15s ease;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .custom-cursor.hover {
+            width: 40px;
+            height: 40px;
+            border-width: 4px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6),
+                        0 0 60px rgba(0, 0, 0, 0.4),
+                        inset 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cursor-glow.hover {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Invoice Container */
+        .invoice-wrapper {
+            max-width: 900px;
+            margin: 140px auto 60px;
+            padding: 20px;
+        }
+
+        .invoice-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Invoice Header */
+        .invoice-header {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+            padding: 50px 60px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .invoice-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .invoice-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cahcio-logo {
+            width: 120px;
+            height: 120px;
+            filter: brightness(0) invert(1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .invoice-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .invoice-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .invoice-subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Company Info Section */
+        .company-info-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 60px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .company-details h3 {
+            color: #000000;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .company-logo-text {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .company-logo-small {
+            width: 50px;
+            height: 50px;
+        }
+
+        .company-details p {
+            color: #666;
+            line-height: 1.8;
+            margin: 5px 0;
+        }
+
+        .invoice-meta {
+            text-align: right;
+        }
+
+        .invoice-number {
+            background: linear-gradient(135deg, #000000 0%, #2a2a2a 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .invoice-date {
+            color: #666;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        /* Invoice Items Table */
+        .invoice-body {
+            padding: 40px 60px;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .invoice-table thead {
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+        }
+
+        .invoice-table th {
+            padding: 20px;
+            text-align: left;
+            color: #000000;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid #000000;
+        }
+
+        .invoice-table th:last-child,
+        .invoice-table td:last-child {
+            text-align: right;
+        }
+
+        .invoice-table tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .invoice-table tbody tr:hover {
+            background: #fafafa;
+            transform: translateX(5px);
+        }
+
+        .invoice-table td {
+            padding: 25px 20px;
+            color: #333;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            font-size: 13px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .item-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        /* Totals Section */
+        .invoice-totals {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 16px;
+        }
+
+        .total-row.subtotal {
+            color: #666;
+        }
+
+        .total-row.tax {
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 20px;
+        }
+
+        .total-row.grand-total {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 20px;
+            padding: 25px;
+            background: linear-gradient(135deg, #000000 0%, #2a2a2a 100%);
+            border-radius: 15px;
+            border: 2px solid #000000;
+        }
+
+        /* Payment Terms */
+        .payment-terms {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+            border-radius: 15px;
+            border-left: 5px solid #000000;
+        }
+
+        .payment-terms h3 {
+            color: #000000;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .payment-terms p {
+            color: #666;
+            line-height: 1.8;
+            margin: 8px 0;
+        }
+
+        /* Footer */
+        .invoice-footer {
+            padding: 40px 60px;
+            background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .invoice-footer p {
+            color: #888;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .invoice-footer .highlight {
+            color: #000000;
+            font-weight: 600;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .action-btn {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .print-btn {
+            background: linear-gradient(135deg, #000000 0%, #2a2a2a 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .download-btn {
+            background: white;
+            color: #000000;
+            border: 2px solid #000000;
+        }
+
+        .download-btn:hover {
+            background: #000000;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                cursor: auto;
+            }
+
+            .custom-cursor, .cursor-glow {
+                display: none;
+            }
+
+            .invoice-wrapper {
+                margin: 0;
+                padding: 0;
+            }
+
+            .action-buttons {
+                display: none;
+            }
+
+            header {
+                display: none;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .invoice-header {
+                padding: 30px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .invoice-title {
+                font-size: 32px;
+            }
+
+            .cahcio-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .company-logo-small {
+                width: 40px;
+                height: 40px;
+            }
+
+            .company-info-section {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px;
+            }
+
+            .invoice-meta {
+                text-align: left;
+            }
+
+            .invoice-body {
+                padding: 30px;
+            }
+
+            .invoice-table th,
+            .invoice-table td {
+                padding: 15px 10px;
+                font-size: 13px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-glow"></div>
+    <div class="custom-cursor"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="Arba Tourism Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about-us.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Invoice Container -->
+    <div class="invoice-wrapper">
+        <div class="invoice-container">
+            <!-- Invoice Header -->
+            <div class="invoice-header">
+                <div class="invoice-header-content">
+                    <div class="invoice-title">INVOICE</div>
+                    <div class="invoice-subtitle">Professional Web Services</div>
+                </div>
+                <img src="https://i.postimg.cc/bvqjMFRn/image.png" alt="Cahcio Logo" class="cahcio-logo">
+            </div>
+
+            <!-- Company Information -->
+            <div class="company-info-section">
+                <div class="company-details">
+                    <h3>From:</h3>
+                    <div class="company-logo-text">
+                        <img src="https://i.postimg.cc/bvqjMFRn/image.png" alt="Cahcio Logo" class="company-logo-small">
+                        <strong style="font-size: 24px; font-weight: bold;">CAHCIO</strong>
+                    </div>
+                    <p><strong>Arba Tourism LLC</strong></p>
+                    <p>Premium Travel & Tourism Services</p>
+                    <p>Dubai, United Arab Emirates</p>
+                    <p>Email: info@arbatourism.com</p>
+                    <p>Phone: +971 XX XXX XXXX</p>
+                </div>
+                <div class="invoice-meta">
+                    <div class="invoice-number">INV-2025-001</div>
+                    <p class="invoice-date"><strong>Date:</strong> November 1, 2025</p>
+                    <p class="invoice-date"><strong>Due Date:</strong> November 15, 2025</p>
+                </div>
+            </div>
+
+            <!-- Invoice Body -->
+            <div class="invoice-body">
+                <table class="invoice-table">
+                    <thead>
+                        <tr>
+                            <th>Service Description</th>
+                            <th>Details</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="item-name">Website Creation & Development</div>
+                                <div class="item-description">Premium custom website design and development</div>
+                            </td>
+                            <td>
+                                <div class="item-description">Complete responsive website with multiple pages, custom animations, premium UI/UX design, and interactive features</div>
+                            </td>
+                            <td class="item-price">AED 15,000</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-name">Website Hosting</div>
+                                <div class="item-description">Annual premium hosting service</div>
+                            </td>
+                            <td>
+                                <div class="item-description">High-performance cloud hosting with 99.9% uptime guarantee, SSL certificate, CDN, and daily backups</div>
+                            </td>
+                            <td class="item-price">AED 1,500</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-name">Email Hosting</div>
+                                <div class="item-description">Professional business email hosting (Annual)</div>
+                            </td>
+                            <td>
+                                <div class="item-description">Custom domain email addresses (info@arbatourism.com), 50GB storage, spam protection, and mobile sync</div>
+                            </td>
+                            <td class="item-price">AED 800</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Totals Section -->
+                <div class="invoice-totals">
+                    <div class="total-row subtotal">
+                        <span>Subtotal:</span>
+                        <span>AED 17,300</span>
+                    </div>
+                    <div class="total-row tax">
+                        <span>VAT (5%):</span>
+                        <span>AED 865</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total Amount Due:</span>
+                        <span>AED 18,165</span>
+                    </div>
+                </div>
+
+                <!-- Payment Terms -->
+                <div class="payment-terms">
+                    <h3>Payment Terms & Information</h3>
+                    <p><strong>Payment Due:</strong> Within 14 days of invoice date</p>
+                    <p><strong>Accepted Payment Methods:</strong> Bank Transfer, Cash, Credit Card</p>
+                    <p><strong>Bank Details:</strong> Will be provided upon request</p>
+                    <p><strong>Notes:</strong> Annual hosting and email services will auto-renew unless notified 30 days prior to expiration.</p>
+                </div>
+            </div>
+
+            <!-- Invoice Footer -->
+            <div class="invoice-footer">
+                <p><strong class="highlight">Thank you for choosing Arba Tourism!</strong></p>
+                <p>For any questions regarding this invoice, please contact us at info@arbatourism.com</p>
+                <p style="margin-top: 20px; font-size: 12px;">This is a computer-generated invoice and is valid without signature.</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn print-btn" onclick="window.print()">Print Invoice</button>
+            <a href="#" class="action-btn download-btn" onclick="window.print(); return false;">Download PDF</a>
+        </div>
+    </div>
+
+    <script>
+        // Custom Cursor Script
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorGlow = document.querySelector('.cursor-glow');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+
+        // Hover effect for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .action-btn');
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                cursorGlow.classList.add('hover');
+            });
+
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                cursorGlow.classList.remove('hover');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

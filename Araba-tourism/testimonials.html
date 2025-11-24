@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials - Arba Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Icon styles */
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #c67b3e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600') center/cover fixed;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;">
+
+        <div style="text-align: center; padding: 0 20px;">
+            <h1 style="
+                font-size: 65px;
+                font-weight: 900;
+                margin-bottom: 25px;
+                background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                line-height: 1.1;
+                letter-spacing: -2px;">
+                Customer Testimonials
+            </h1>
+            <p style="font-size: 20px; color: rgba(255,255,255,0.95); max-width: 700px; margin: 0 auto; line-height: 1.7;">
+                Read what our satisfied customers say about their unforgettable desert adventures
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section style="background: white; padding: 80px 20px;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+
+            <!-- Section Header -->
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 48px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Authentic Reviews</span> From Real Travelers
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 20px;"></div>
+                <p style="font-size: 18px; color: #6a5f54; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                    Join thousands of happy travelers who have experienced the magic of Arabian desert with Arba Tourism
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 35px;">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Rajesh Kumar</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Absolutely amazing experience! The overnight desert camp was spectacular. The traditional BBQ dinner, cultural entertainment, and sleeping under the stars made it unforgettable. Our guide was professional and friendly. Highly recommend Arba Tourism!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Jennifer Martinez</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Best tour company in Dubai! The sunrise safari was breathtaking - watching the sun rise over the dunes was magical. Dune bashing was thrilling, and the camel ride was so peaceful. Everything was perfectly organized. Will definitely book again!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Ahmed Al Mansouri</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Excellent service from start to finish! Took my family on the Abu Dhabi city tour and everyone loved it. The Sheikh Zayed Mosque visit was incredible, and our guide was very knowledgeable. Professional, punctual, and great value for money."
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Priya Patel</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "The evening desert safari was the highlight of our Dubai trip! Dune bashing was so much fun, the BBQ dinner was delicious, and the cultural shows were entertaining. The whole family enjoyed it. Thanks to Arba Tourism for the wonderful experience!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Michael Johnson</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Quad biking through the desert was incredible! Safety was top priority, equipment was excellent, and the guides were very professional. The combination of adventure and cultural experience was perfect. Highly recommended for thrill-seekers!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Fatima Al-Rashid</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Perfect blend of adventure and culture! The morning desert safari was wonderful - great timing to avoid the heat. Sandboarding was so much fun, and the traditional Arabic breakfast was authentic and delicious. Professional team and great hospitality!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 7 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Aisha Mohammed</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Amazing family experience! The kids absolutely loved the falconry demonstration and camel rides. The camp setup was luxurious and comfortable. Food was delicious with plenty of vegetarian options. Thank you for making our vacation memorable!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 8 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Sanjay Sharma</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "The dune buggy experience was absolutely thrilling! Well-maintained vehicles, safety briefing was thorough, and the guides were very supportive. Sunset views from the dunes were breathtaking. One of the best adventure activities I've done!"
+                    </p>
+                    
+                </div>
+
+                <!-- Testimonial 9 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 20px; font-weight: 800; color: #2d1f15; margin: 0;">Sarah Williams</h4>
+                        </div>
+                    </div>
+                    <p style="font-size: 16px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                        "Spectacular hot air balloon experience! Watching the sunrise over the desert from above was magical. The pilot was experienced and made everyone feel comfortable. Champagne breakfast after landing was a lovely touch. Highly recommend this unique experience!"
+                    </p>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 80px 20px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 42px; font-weight: 900; color: white; margin-bottom: 20px; line-height: 1.2;">
+                Ready to Create Your Own Story?
+            </h2>
+
+            <p style="font-size: 18px; line-height: 1.7; color: rgba(255,255,255,0.95); margin-bottom: 35px;">
+                Join thousands of satisfied travelers and book your unforgettable desert adventure today!
+            </p>
+
+            <a href="contact.html" style="
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                background: white;
+                color: #2d1f15;
+                padding: 20px 50px;
+                border-radius: 50px;
+                font-size: 18px;
+                font-weight: 900;
+                text-decoration: none;
+                box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+                transition: all 0.3s ease;"
+                onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 60px rgba(0,0,0,0.5)'"
+                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 50px rgba(0,0,0,0.4)'">
+                <span>Book Your Adventure</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="includes/components.js"></script>
+</body>
+</html>

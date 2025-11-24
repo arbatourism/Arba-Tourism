@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE MOCKUP - Activity Cards Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .mockup-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .mockup-header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .mockup-header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero-placeholder {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1600') center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Activity Showcase Section */
+        .activity-showcase-section {
+            padding: 60px 40px;
+            background-color: #ffffff;
+        }
+
+        .showcase-title {
+            text-align: center;
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        .activity-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Activity Card */
+        .activity-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .activity-card-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .activity-card-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .activity-card-content {
+            padding: 20px;
+        }
+
+        .activity-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .activity-card-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            height: 40px;
+            overflow: hidden;
+        }
+
+        .activity-card-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 15px;
+        }
+
+        .activity-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .duration, .location {
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-label {
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        .price {
+            color: #00a0e3;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .rating {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            color: #f39c12;
+            font-size: 16px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 40px;
+            border-radius: 4px;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mockup-header">
+        <h1>🎨 HOME PAGE MOCKUP</h1>
+        <p>This is how the activity cards will look when you scroll down on your home page</p>
+    </div>
+
+    <!-- Hero Placeholder -->
+    <div class="hero-placeholder">
+        Your Hero/Banner Section Here
+    </div>
+
+    <div class="note">
+        <strong>⬇️ SCROLL DOWN:</strong> Below is what users will see after your hero section - clickable activity cards showcasing all your tours and experiences
+    </div>
+
+    <!-- Activity Showcase Section -->
+    <section class="activity-showcase-section">
+        <h2 class="showcase-title">Explore Our Activities</h2>
+
+        <div class="activity-grid">
+
+            <!-- Card 1: Desert Safari -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-10%</div>
+                <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&h=300&fit=crop" alt="Desert Safari" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai Premium Safari, Camels, 3-Cuisine Buffet at Al...</h3>
+                    <p class="activity-card-description">Enjoy an adventurous and astounding evening with the...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 6 - 7 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">385</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Red Dunes -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-15%</div>
+                <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=400&h=300&fit=crop" alt="Red Dunes" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai Red Dunes Quad Bike Safari, Camels & BBQ at Al...</h3>
+                    <p class="activity-card-description">Explore the Lahbab desert with quad biking and sandboarding...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 6 - 7 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">294</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Abu Dhabi Tour -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-9%</div>
+                <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&h=300&fit=crop" alt="Abu Dhabi Tour" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Premium Abu Dhabi Full-Day Sightseeing Tour from Dubai</h3>
+                    <p class="activity-card-description">Visit the top sightseeing attractions of Abu Dhabi in a day...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 9 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">393</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: City Tour -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-25%</div>
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Dubai City Tour" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai: Half-Day City Tour with Blue Mosque, Creek &...</h3>
+                    <p class="activity-card-description">Explore the iconic destinations of Dubai on a memorable...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 4 - 5 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">143</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Sheikh Zayed Mosque -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-25%</div>
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Sheikh Zayed Mosque" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Abu Dhabi Sheikh Zayed Mosque Half-Day Tour from Dubai</h3>
+                    <p class="activity-card-description">Visit Sheikh Zayed Grand Mosque from Dubai on a...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 5 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">217</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Overnight Desert -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-19%</div>
+                <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=300&fit=crop" alt="Overnight Desert" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai Overnight Desert Safari with BBQ Dinner at Al...</h3>
+                    <p class="activity-card-description">Enjoy and experience a fun-filled desert safari in the Al...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 16 - 17 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">661</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Frame Tour -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-20%</div>
+                <img src="https://images.unsplash.com/photo-1580974852861-c381510bc98a?w=400&h=300&fit=crop" alt="Dubai Frame" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai City Tour with Frame Ticket, Creek, Al Seef Souks...</h3>
+                    <p class="activity-card-description">Savor the fun of a memorable trip exploring Dubai's most...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 4 - 5 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">239</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Desert Safari Quad -->
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Desert Safari" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai: Half-Day Desert Safari, Quad Bike, Camels &...</h3>
+                    <p class="activity-card-description">Enjoy the magical atmosphere of the desert on a morning...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 4 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">147</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9: Vintage Safari -->
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1553531384-397c4a218b8e?w=400&h=300&fit=crop" alt="Vintage Safari" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai: Vintage G-Class Evening Heritage Safari at Al...</h3>
+                    <p class="activity-card-description">Traverse Al Marmoom in a vintage Mercedes Benz G-Class and...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 5 - 6 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">694</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10: Quad Bike -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-25%</div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Quad Bike" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Dubai: Quad Bike Safari, Camel Ride and Refreshments</h3>
+                    <p class="activity-card-description">Explore the best of Dubai Desert Adventures with Morning...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ 1 - 4 hours</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">202</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11: Ferrari World -->
+            <div class="activity-card">
+                <div class="activity-card-badge">-15%</div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Ferrari World" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">Ferrari World Abu Dhabi: Entry Ticket with Transfers</h3>
+                    <p class="activity-card-description">Experience the world's first Ferrari-branded theme park...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ Full day</span>
+                            <span class="location">📍 Abu Dhabi, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">325</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12: VIP Events -->
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop" alt="VIP Events" class="activity-card-image">
+                <div class="activity-card-content">
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <h3 class="activity-card-title">VIP Events - Customized Desert Experiences</h3>
+                    <p class="activity-card-description">Create your perfect event with customized lighting, private...</p>
+                    <div class="activity-card-footer">
+                        <div class="activity-info">
+                            <span class="duration">⏱ Custom</span>
+                            <span class="location">📍 Dubai, UAE</span>
+                        </div>
+                        <div class="price-row">
+                            <span class="price-label">From AED</span>
+                            <span class="price">Contact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="note" style="margin-top: 40px; margin-bottom: 40px;">
+        <strong>✅ WHEN CLICKED:</strong> Each card will take users to the full activity page (same as clicking from header navigation)
+    </div>
+
+</body>
+</html>
