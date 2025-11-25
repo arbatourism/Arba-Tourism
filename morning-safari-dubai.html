@@ -1,74 +1,226 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morning Safari in Dubai - Desert Safari Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Icon styles */
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section style="background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%), url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=1600') center/cover fixed; min-height: 65vh; display: flex; align-items: center; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, rgba(198, 123, 62, 0.15) 0%, transparent 50%);"></div>
-        <div style="max-width: 1400px; margin: 0 auto; padding: 60px 40px; position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; width: 100%;">
-            <div>
-                <div style="display: inline-block; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 12px 28px; border-radius: 50px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.3);">
-                    <span style="color: #fff; font-size: 15px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Action-Packed Adventure</span>
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=1600') center/cover fixed;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 65px;
+                        font-weight: 900;
+                        margin-bottom: 25px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1;
+                        letter-spacing: -2px;">
+                        Morning Desert Safari<br/>In Dubai
+                    </h1>
+
+                    <a href="#tour-details" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 12px;
+                        background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+                        color: white;
+                        padding: 18px 50px;
+                        border-radius: 50px;
+                        font-size: 17px;
+                        font-weight: 800;
+                        text-decoration: none;
+                        box-shadow: 0 12px 35px rgba(198, 123, 62, 0.6);
+                        transition: all 0.3s ease;
+                        border: 2px solid rgba(245, 212, 160, 0.3);"
+                        onmouseover="this.style.transform='translateY(-3px)'"
+                        onmouseout="this.style.transform='translateY(0)'">
+                        <span>Explore Tour</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
-                <h1 style="font-size: 72px; font-weight: 900; color: #fff; margin: 0 0 30px 0; line-height: 1.1; letter-spacing: -2px; text-shadow: 2px 2px 20px rgba(0,0,0,0.3);">
-                    Morning Safari<br>
-                    <span style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(2px 2px 10px rgba(255, 215, 0, 0.4));">In Dubai</span>
-                </h1>
-                <p style="font-size: 20px; color: rgba(255, 255, 255, 0.95); line-height: 1.7; margin: 0 0 40px 0; max-width: 600px; text-shadow: 1px 1px 10px rgba(0,0,0,0.3);">
-                    Get ready for an adventure-packed day in the heart of the Arabian desert with our Morning Desert Safari in Dubai.
-                </p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; transform: rotate(-3deg);">
-                <img src="https://i.imgur.com/jnCES3H.png" alt="Morning Safari" style="width: 100%; height: 280px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 4px solid rgba(255, 255, 255, 0.2); transform: translateY(20px);">
-                <img src="https://i.imgur.com/9YtKPFk.png" alt="Desert Adventure" style="width: 100%; height: 280px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 4px solid rgba(255, 255, 255, 0.2); transform: translateY(-20px);">
+
+                <!-- Right Images -->
+                <div style="position: relative; height: 400px;">
+                    <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
+                        <img src="images/24.png" alt="Morning Safari" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
+                        <img src="images/80.png" alt="Desert Adventure" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Divider -->
-    <div style="height: 8px; background: linear-gradient(to right, #c67b3e 0%, #a67c52 50%, #c67b3e 100%);"></div>
-
-    <!-- Main Content Section -->
-    <section style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 100px 20px;">
-        <div style="max-width: 1400px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 70px;">
-                <h2 style="font-size: 56px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Morning Safari</span> In Dubai
+    <!-- Tour Section -->
+    <section id="tour-details" style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Morning Desert Safari</span> Experience
                 </h2>
-                <div style="width: 120px; height: 5px; background: linear-gradient(to right, #c67b3e, #a67c52); margin: 0 auto; border-radius: 3px;"></div>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 16px; color: #8b6914; font-weight: 700;">ACTION-PACKED ADVENTURE</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
+
+                <!-- Left: Image and Description -->
                 <div>
-                    <img src="https://i.imgur.com/jnCES3H.png" alt="Morning Safari Dubai" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
-                </div>
-                <div>
-                    <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-left: 5px solid #c67b3e; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <p style="font-size: 18px; color: #4a4a4a; line-height: 1.8; margin: 0;">
+                    <img src="https://i.imgur.com/jnCES3H.png" alt="Morning Safari Dubai" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
                             Get ready for an adventure-packed day in the heart of the Arabian desert with our Morning Desert Safari in Dubai. Our experienced guides will take you on a thrilling journey through the rolling dunes, as you immerse yourself in the timeless charm of the desert.
                         </p>
                     </div>
-                    <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-left: 5px solid #c67b3e; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <p style="font-size: 18px; color: #4a4a4a; line-height: 1.8; margin: 0;">
-                            Our fleet of top-of-the-line vehicles will take you on an exhilarating ride over the dunes, allowing you to take in the breathtaking views of the desert landscape. Get your adrenaline pumping with our exciting activities such as sandboarding and dune bashing, as you surf down the steep dunes on a specially designed board.
-                        </p>
+                </div>
+
+                <!-- Right: Highlights and Inclusions -->
+                <div>
+                    <!-- Highlights -->
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <div style="display: grid; gap: 10px; margin-bottom: 20px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Thrilling Dune Bashing</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Adrenaline-pumping 4x4 adventure</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+                                    <rect x="9" y="8" width="6" height="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sandboarding</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Surf down steep desert dunes</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Camel Rides</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional desert transportation</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                    <line x1="6" y1="1" x2="6" y2="4"/>
+                                    <line x1="10" y1="1" x2="10" y2="4"/>
+                                    <line x1="14" y1="1" x2="14" y2="4"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Delicious Lunch</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Local delicacies and refreshments</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Expert Guides</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Insights into local culture and traditions</p>
+                            </div>
+                        </div>
                     </div>
-                    <div style="background: white; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-left: 5px solid #c67b3e; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <p style="font-size: 18px; color: #4a4a4a; line-height: 1.8; margin: 0;">
-                            For a more traditional experience, hop on the back of a gentle camel and enjoy a relaxing ride through the dunes. Our expert guides will be on hand to provide fascinating insights into the local culture and traditions.
-                        </p>
-                    </div>
-                    <div style="background: white; padding: 30px; border-radius: 15px; border-left: 5px solid #c67b3e; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <p style="font-size: 18px; color: #4a4a4a; line-height: 1.8; margin: 0;">
-                            After an action-packed morning of adventure, it's time to unwind with a delicious lunch spread featuring local delicacies and refreshing beverages. Take a break in the shade of a traditional Bedouin tent, and soak in the tranquil desert atmosphere.
-                        </p>
+
+                    <!-- Inclusions -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); padding: 18px; border-radius: 12px; border: 2px solid #10b981;">
+                            <h5 style="color: #065f46; font-size: 13px; margin-bottom: 8px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#065f46" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                Included
+                            </h5>
+                            <ul style="color: #047857; font-size: 12px; line-height: 1.8; list-style: none; padding: 0; margin: 0; font-weight: 600;">
+                                <li>• 4X4 pickup/drop-off</li>
+                                <li>• Dune bashing</li>
+                                <li>• Sandboarding</li>
+                                <li>• Camel rides</li>
+                                <li>• Lunch</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); padding: 18px; border-radius: 12px; border: 2px solid #ef4444;">
+                            <h5 style="color: #7f1d1d; font-size: 13px; margin-bottom: 8px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7f1d1d" stroke-width="3">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                Not Included
+                            </h5>
+                            <ul style="color: #991b1b; font-size: 12px; line-height: 1.8; list-style: none; padding: 0; margin: 0; font-weight: 600;">
+                                <li>• Quad bikes rental</li>
+                                <li>• Personal expenses</li>
+                                <li>• Gratuities</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,91 +228,80 @@
     </section>
 
     <!-- Divider -->
-    <div style="height: 8px; background: linear-gradient(to right, #c67b3e 0%, #a67c52 50%, #c67b3e 100%);"></div>
+    <div style="height: 80px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
 
-    <!-- Tour Details Section -->
-    <section style="background: white; padding: 100px 20px;">
-        <div style="max-width: 1400px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 48px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tour Details</span>
+    <!-- Additional Info Section -->
+    <section style="background: #f5e6d3; padding: 50px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tour Details</span>
                 </h2>
-                <p style="font-size: 18px; color: #4a4a4a; max-width: 800px; margin: 0 auto; line-height: 1.7;">
-                    With our Morning Desert Safari in Dubai, you'll have a one-of-a-kind experience that showcases the natural beauty and cultural richness of the Arabian desert.
-                </p>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto;"></div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
                 <div>
-                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border-radius: 20px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                        <div style="margin-bottom: 35px; padding-bottom: 25px; border-bottom: 3px solid rgba(198, 123, 62, 0.2);">
-                            <h3 style="font-size: 20px; color: #c67b3e; margin: 0 0 15px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Pick Up</h3>
-                            <p style="font-size: 17px; color: #4a4a4a; margin: 0; line-height: 1.6;">From across any hotel, malls or popular landmark in Dubai</p>
-                        </div>
+                    <div style="background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">Pick Up Information</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                            Pick up available from any hotel, mall or popular landmark in Dubai. Our professional drivers ensure a comfortable journey to the desert.
+                        </p>
+                    </div>
 
-                        <div style="margin-bottom: 35px; padding-bottom: 25px; border-bottom: 3px solid rgba(198, 123, 62, 0.2);">
-                            <h3 style="font-size: 20px; color: #c67b3e; margin: 0 0 15px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Time Duration</h3>
-                            <p style="font-size: 17px; color: #4a4a4a; margin: 0; line-height: 1.6;">TBC</p>
-                        </div>
-
-                        <div style="margin-bottom: 35px; padding-bottom: 25px; border-bottom: 3px solid rgba(198, 123, 62, 0.2);">
-                            <h3 style="font-size: 20px; color: #c67b3e; margin: 0 0 20px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Tour Package Includes</h3>
-                            <div style="display: grid; gap: 12px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Pick Up in 4X4 Vehicle</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Dune Bashing</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Sand-boarding</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Camel Rides</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Drop Off to Your Destination</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✓</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Dates and Traditional Arabic Coffee</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 style="font-size: 20px; color: #c67b3e; margin: 0 0 20px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Tour Package Excludes</h3>
-                            <div style="display: grid; gap: 12px;">
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✗</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Lunch (Available for purchase)</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✗</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Alcohol (Available for purchase)</p>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 12px;">
-                                    <span style="color: #c67b3e; font-size: 20px;">✗</span>
-                                    <p style="font-size: 17px; color: #4a4a4a; margin: 0;">Dune Buggies and Quad Bikes (Available for rent)</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">Duration</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                            Morning experience with action-packed activities. Perfect timing to enjoy the desert before the midday heat.
+                        </p>
                     </div>
                 </div>
 
                 <div>
-                    <img src="https://i.imgur.com/9YtKPFk.png" alt="Desert Safari Experience" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                    <img src="https://i.imgur.com/9YtKPFk.png" alt="Morning Desert Experience" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-        <div id="footer-placeholder"></div>
+
+    <!-- Divider -->
+    <div style="height: 60px; background: linear-gradient(to bottom, #f5e6d3 0%, #fef3e2 50%, white 100%);"></div>
+
+    <!-- CTA -->
+    <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 38px; font-weight: 900; color: white; margin-bottom: 18px; line-height: 1.2;">
+                Ready for an Action-Packed Adventure?
+            </h2>
+
+            <p style="font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.95); margin-bottom: 30px;">
+                Book your morning desert safari today and experience the thrill of Dubai's desert landscape.
+            </p>
+
+            <a href="contact.html" style="
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                background: white;
+                color: #2d1f15;
+                padding: 18px 50px;
+                border-radius: 50px;
+                font-size: 17px;
+                font-weight: 900;
+                text-decoration: none;
+                box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+                transition: all 0.3s ease;"
+                onmouseover="this.style.transform='translateY(-4px)'"
+                onmouseout="this.style.transform='translateY(0)'">
+                <span>Book Now</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>

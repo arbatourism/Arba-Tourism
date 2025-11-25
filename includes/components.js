@@ -71,7 +71,7 @@ const headerHTML = `<header>
             <li class="dropdown">
                 <a href="#gallery" class="nav-link">Gallery <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
-                    <a href="#photo">Photo</a>
+                    <a href="gallery.html">Photo</a>
                     <a href="testimonials.html">Testimonials</a>
                     <a href="#blogs">Blogs</a>
                 </div>
