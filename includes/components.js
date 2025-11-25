@@ -7,53 +7,53 @@ const headerHTML = `<header>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li class="dropdown">
-                <a href="#desert-safari" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
+                <a href="top-dubai-tours.html" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
+                        <a href="top-abu-dhabi-tours.html" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
-                            <a href="#morning-safari">Morning Safari Abu Dhabi</a>
-                            <a href="#evening-safari">Evening Safari Abu Dhabi</a>
+                            <a href="abudhabi-morning-desert-safari-dune-ride.html">Morning Safari Abu Dhabi</a>
+                            <a href="abudhabi-desert-safari-bbq-camel-ride.html">Evening Safari Abu Dhabi</a>
                             <a href="overnight-camp-abudhabi.html">Overnight Camp Abu Dhabi</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#dubai-desert" class="submenu-trigger">Dubai Desert <span class="arrow-right">›</span></a>
+                        <a href="top-dubai-tours.html" class="submenu-trigger">Dubai Desert <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
                             <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
-                            <a href="#evening-safari-dubai">Evening Safari Dubai</a>
+                            <a href="dubai-red-dunes-quad-bike-safari.html">Evening Safari Dubai</a>
                             <a href="overnight-camp-dubai.html">Overnight Camp Dubai</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#dune-drive" class="submenu-trigger">Dune Drive <span class="arrow-right">›</span></a>
+                        <a href="dubai-adventure-dune-buggy-camel-bbq.html" class="submenu-trigger">Dune Drive <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="#dune-buggy">Dune Buggy</a>
-                            <a href="#quad-bike">Quad Bike</a>
+                            <a href="dubai-adventure-dune-buggy-camel-bbq.html">Dune Buggy</a>
+                            <a href="dubai-quad-bike-safari-camel-ride.html">Quad Bike</a>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#tours" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
+                <a href="top-dubai-tours.html" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="submenu">
                         <a href="abu-dhabi-city-tour.html" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
-                            <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
-                            <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
+                            <a href="dubai-half-day-tour-blue-mosque-creek.html">Half Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html">Full Day City Tour Abu Dhabi</a>
+                            <a href="combo-dubai-city-tour-evening-safari.html">COMBO Abu Dhabi City Tour & Desert Safari</a>
                             <a href="top-abu-dhabi-tours.html">Top Abu Dhabi Tours</a>
                         </div>
                     </div>
                     <div class="submenu">
                         <a href="dubai-city-tour.html" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
-                            <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
-                            <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
+                            <a href="dubai-half-day-tour-blue-mosque-creek.html">Half Day City Tour Dubai</a>
+                            <a href="dubai-full-day-city-tour-burj-khalifa.html">Full Day City Tour Dubai</a>
+                            <a href="combo-dubai-city-tour-evening-safari.html">COMBO Dubai City Tour & Desert Safari</a>
                             <a href="top-dubai-tours.html">Top Dubai Tours</a>
                         </div>
                     </div>
@@ -61,19 +61,19 @@ const headerHTML = `<header>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#cruise-boat" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
+                <a href="dhow-cruise.html" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
-                    <a href="#yacht-sailing">Yacht Sailing</a>
+                    <a href="dubai-jetski-burj-al-arab-view.html">Yacht & Jet Ski</a>
                     <a href="dhow-cruise.html">Dhow Cruise</a>
-                    <a href="#luxury-cruise">Luxury Cruise</a>
+                    <a href="dhow-cruise.html">Luxury Cruise</a>
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#gallery" class="nav-link">Gallery <span class="dropdown-arrow">▼</span></a>
+                <a href="gallery.html" class="nav-link">Gallery <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
-                    <a href="gallery.html">Photo</a>
+                    <a href="gallery.html">Photo Gallery</a>
                     <a href="testimonials.html">Testimonials</a>
-                    <a href="#blogs">Blogs</a>
+                    <a href="about-us.html">About Us</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -87,7 +87,7 @@ const headerHTML = `<header>
             </li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <button class="search-btn">
+        <button class="search-btn" onclick="window.location.href='top-dubai-tours.html'" title="Browse Tours">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.35-4.35"></path>
@@ -112,9 +112,9 @@ const footerHTML = `<footer class="footer">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#booking">Book Now</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="contact.html">Book Now</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
             </ul>
         </div>
 

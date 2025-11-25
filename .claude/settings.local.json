@@ -19,7 +19,10 @@
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\dubai-city-tour.html\")",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\sunrise-safari-dubai.html\")",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\dubai-half-day-tour-blue-mosque-creek.html\")",
-      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\top-abu-dhabi-tours.html\")"
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\top-abu-dhabi-tours.html\")",
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\.claude-worktrees\\Arba website\\serene-goldstine\\dubai-city-tour.html\")"
     ],
     "deny": [],
     "ask": []
