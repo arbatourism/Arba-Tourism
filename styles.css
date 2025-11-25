@@ -1,7 +1,25 @@
+/* Emirates Font */
+@font-face {
+    font-family: 'Emirates';
+    src: url('fonts/Emirates Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Apply Emirates font to all headings */
+h1, h2, h3, h4, h5, h6,
+.showcase-title,
+.city-section-title,
+.home-hero-title,
+.home-hero-subtitle {
+    font-family: 'Emirates', 'Calibri', 'Arial', sans-serif;
 }
 
 /* Smooth transitions for interactive elements */
@@ -343,8 +361,9 @@ header.scrolled {
 /* Abu Dhabi City Tour Hero */
 .abudhabi-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=1600');
+                      url('images/27.png');
     background-position: center;
+    background-size: cover;
 }
 
 /* Ferrari World Hero */

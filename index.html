@@ -382,9 +382,79 @@
             }
         }
 
+        /* Hero Section - Sticky effect */
+        .home-hero {
+            position: relative;
+        }
+
+        /* Scroll-triggered overlay that appears when scrolling */
+        .hero-scroll-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                transparent 50%,
+                rgba(26, 20, 16, 0.3) 70%,
+                rgba(26, 20, 16, 0.7) 85%,
+                #1a1410 100%);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 2;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-scroll-overlay.active {
+            opacity: 1;
+        }
+
+        /* Scroll Animation Classes */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-animate-delay-1 {
+            transition-delay: 0.15s;
+        }
+
+        .scroll-animate-delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .scroll-animate-delay-3 {
+            transition-delay: 0.45s;
+        }
+
         /* Enhanced Activity Cards */
         .activity-showcase-section {
             background: linear-gradient(180deg, #1a1410 0%, #2d1f15 50%, #1a1410 100%);
+            padding-top: 100px;
+            position: relative;
+            z-index: 3;
+            margin-top: -80px;
+        }
+
+        .activity-showcase-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                rgba(26, 20, 16, 0.5) 40%,
+                #1a1410 100%);
+            pointer-events: none;
         }
 
         .activity-card {
@@ -790,13 +860,16 @@
         </div>
     </section>
 
+    <!-- Scroll-triggered overlay for smooth transition -->
+    <div class="hero-scroll-overlay" id="heroScrollOverlay"></div>
+
     <!-- Activity Showcase Section -->
     <section id="activities" class="activity-showcase-section">
-        <h2 class="showcase-title">Explore Our Activities</h2>
+        <h2 class="showcase-title scroll-animate">Explore Our Activities</h2>
 
         <!-- Dubai Activities -->
-        <h3 class="city-section-title">Dubai Activities</h3>
-        <div class="carousel-container">
+        <h3 class="city-section-title scroll-animate scroll-animate-delay-1">Dubai Activities</h3>
+        <div class="carousel-container scroll-animate scroll-animate-delay-2">
             <button class="carousel-arrow carousel-arrow-left" data-carousel="dubai">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="15 18 9 12 15 6"></polyline>
@@ -1355,8 +1428,8 @@
         </div>
 
         <!-- Abu Dhabi Activities -->
-        <h3 class="city-section-title">Abu Dhabi Activities</h3>
-        <div class="carousel-container">
+        <h3 class="city-section-title scroll-animate">Abu Dhabi Activities</h3>
+        <div class="carousel-container scroll-animate scroll-animate-delay-1">
             <button class="carousel-arrow carousel-arrow-left" data-carousel="abudhabi">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="15 18 9 12 15 6"></polyline>
@@ -1747,10 +1820,10 @@
 
     <!-- Customer Reviews Section -->
     <section class="reviews-section">
-        <h2>What Our Travelers Say</h2>
-        <p class="section-subtitle">Real experiences from real adventurers who explored the Arabian desert with us</p>
+        <h2 class="scroll-animate">What Our Travelers Say</h2>
+        <p class="section-subtitle scroll-animate scroll-animate-delay-1">Real experiences from real adventurers who explored the Arabian desert with us</p>
 
-        <div class="reviews-carousel">
+        <div class="reviews-carousel scroll-animate scroll-animate-delay-2">
             <!-- First set of reviews -->
             <div class="reviews-track">
                 <!-- Review 1 -->
@@ -1995,12 +2068,32 @@
     </button>
 
     <script>
-        // Show/hide header and scroll indicators based on scroll position
+        // Show/hide header, scroll indicators, and hero overlay based on scroll position
         window.addEventListener('scroll', function() {
             const header = document.getElementById('home-header');
             const scrollIndicator = document.querySelector('.scroll-indicator');
             const bigScrollButton = document.querySelector('.big-scroll-button');
+            const heroOverlay = document.getElementById('heroScrollOverlay');
             const scrollPosition = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+
+            // Calculate overlay opacity based on scroll (starts at 200px, full at 600px)
+            const overlayStart = 150;
+            const overlayEnd = 500;
+            let overlayOpacity = 0;
+
+            if (scrollPosition > overlayStart) {
+                overlayOpacity = Math.min((scrollPosition - overlayStart) / (overlayEnd - overlayStart), 1);
+            }
+
+            heroOverlay.style.opacity = overlayOpacity;
+
+            // Hide overlay completely after scrolling past hero
+            if (scrollPosition > windowHeight) {
+                heroOverlay.style.display = 'none';
+            } else {
+                heroOverlay.style.display = 'block';
+            }
 
             // Show header when scrolling down (after 100px)
             if (scrollPosition > 100) {
@@ -2068,6 +2161,24 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+
+        // Scroll Animation using Intersection Observer
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            scrollElements.forEach(el => observer.observe(el));
         });
     </script>
 
