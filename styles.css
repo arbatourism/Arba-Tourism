@@ -1275,13 +1275,11 @@ header.scrolled {
 
 .showcase-title {
     text-align: center;
-    font-size: 52px;
-    color: #a67c52;
+    font-size: 48px;
+    color: #f5d4a0;
     margin-bottom: 50px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 3px 6px rgba(166, 124, 82, 0.2);
+    font-weight: 700;
+    line-height: 1.2;
     position: relative;
     padding-bottom: 20px;
 }
@@ -1302,12 +1300,12 @@ header.scrolled {
 .city-section-title {
     text-align: left;
     font-size: 32px;
-    color: #a67c52;
+    color: #f5d4a0;
     margin: 50px auto 30px;
     max-width: 1400px;
-    font-weight: 600;
-    padding-left: 10px;
-    border-left: 5px solid #c67b3e;
+    font-weight: 700;
+    padding-left: 15px;
+    border-left: 5px solid #f5d4a0;
 }
 
 .city-section-title:first-of-type {

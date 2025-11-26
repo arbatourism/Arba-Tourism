@@ -45,7 +45,7 @@ const headerHTML = `<header id="home-header">
                             <a href="#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
                             <a href="#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
                             <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
-                            <a href="top-abu-dhabi-tours.html">Top Abu Dhabi Tours</a>
+                            <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
                         </div>
                     </div>
                     <div class="submenu">
@@ -54,7 +54,7 @@ const headerHTML = `<header id="home-header">
                             <a href="#half-day-city-tour-dubai">Half Day City Tour Dubai</a>
                             <a href="#full-day-city-tour-dubai">Full Day City Tour Dubai</a>
                             <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
-                            <a href="top-dubai-tours.html">Top Dubai Tours</a>
+                            <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
                         </div>
                     </div>
                     <a href="vip-events.html">VIP Events</a>
