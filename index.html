@@ -65,7 +65,7 @@
         .hero-badge {
             display: inline-block;
             background: rgba(198, 123, 62, 0.15);
-            border: 2px solid rgba(198, 123, 62, 0.4);
+            border: 2px solid rgba(245, 212, 160, 0.5);
             padding: 10px 28px;
             border-radius: 30px;
             font-size: 14px;
@@ -75,7 +75,7 @@
             color: #f5d4a0;
             text-transform: uppercase;
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(198, 123, 62, 0.2);
+            box-shadow: 0 4px 20px rgba(198, 123, 62, 0.3);
             animation: badgeSlideIn 1s ease-out;
         }
 
@@ -90,6 +90,41 @@
             }
         }
 
+        /* Floating Corner Logo */
+        .floating-corner-logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 100px;
+            height: auto;
+            z-index: 100;
+            opacity: 0.95;
+            filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.4));
+            transition: opacity 0.4s ease, transform 0.3s ease;
+            animation: floatIn 0.8s ease-out;
+        }
+
+        .floating-corner-logo:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        .floating-corner-logo.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 0.95;
+                transform: translateX(0);
+            }
+        }
+
         /* Main Title with Enhanced Gradient & Glow */
         .home-hero-title {
             font-size: 90px;
@@ -100,7 +135,7 @@
             background: linear-gradient(135deg,
                 #ffffff 0%,
                 #f5e6d3 30%,
-                #d4a574 60%,
+                #f5d4a0 60%,
                 #c67b3e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -129,11 +164,11 @@
             line-height: 1.8;
             font-weight: 400;
             margin-bottom: 50px;
-            color: rgba(245, 230, 211, 0.9);
+            color: rgba(245, 212, 160, 0.95);
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
             animation: subtitleFadeIn 2s ease-out 0.5s both;
         }
 
@@ -184,7 +219,7 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 8px 30px rgba(198, 123, 62, 0.4),
+            box-shadow: 0 8px 30px rgba(198, 123, 62, 0.5),
                         inset 0 1px 0 rgba(255, 255, 255, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
@@ -226,9 +261,9 @@
 
         /* Secondary Button */
         .learn-more-btn {
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(245, 212, 160, 0.08);
+            color: #f5d4a0;
+            border: 2px solid rgba(245, 212, 160, 0.5);
             padding: 18px 50px;
             font-size: 16px;
             font-weight: 600;
@@ -242,10 +277,10 @@
         }
 
         .learn-more-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(198, 123, 62, 0.6);
+            background: rgba(245, 212, 160, 0.15);
+            border-color: rgba(198, 123, 62, 0.8);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(198, 123, 62, 0.3);
         }
 
         /* Scroll Indicator */
@@ -279,7 +314,7 @@
         .mouse-icon {
             width: 28px;
             height: 45px;
-            border: 2px solid rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(245, 212, 160, 0.6);
             border-radius: 14px;
             position: relative;
             background: rgba(198, 123, 62, 0.1);
@@ -289,7 +324,7 @@
         .mouse-wheel {
             width: 4px;
             height: 10px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(245, 212, 160, 0.9);
             border-radius: 2px;
             position: absolute;
             top: 8px;
@@ -310,7 +345,7 @@
         }
 
         .scroll-text {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(245, 212, 160, 0.8);
             font-size: 13px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -325,7 +360,7 @@
             width: 80px;
             height: 80px;
             background: linear-gradient(135deg, rgba(198, 123, 62, 0.9) 0%, rgba(166, 124, 82, 0.9) 100%);
-            border: 3px solid rgba(255, 255, 255, 0.3);
+            border: 3px solid rgba(245, 212, 160, 0.4);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -835,6 +870,9 @@
 
     <!-- Premium Hero Banner with Desert Background -->
     <section class="home-hero">
+        <!-- Floating Corner Logo -->
+        <img src="https://i.imgur.com/p4uERZs.png" alt="Arba Tourism Logo" class="floating-corner-logo" id="floatingLogo">
+
         <!-- Hero Content -->
         <div class="home-hero-overlay">
             <div class="hero-badge">Plan your trip with us</div>
@@ -881,7 +919,7 @@
             <a href="sunrise-safari-dubai.html" class="activity-card">
                 <div class="discount-badge">-10%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/Veu5RVv.png" alt="Sunrise Safari Dubai" class="activity-card-image">
+                    <img src="images/69.png" alt="Sunrise Safari Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -910,7 +948,7 @@
             <a href="morning-safari-dubai.html" class="activity-card">
                 <div class="discount-badge">-9%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=400&h=300&fit=crop" alt="Morning Safari Dubai" class="activity-card-image">
+                    <img src="images/58.png" alt="Morning Safari Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -939,7 +977,7 @@
             <a href="overnight-camp-dubai.html" class="activity-card">
                 <div class="discount-badge">-19%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=300&fit=crop" alt="Overnight Camp Dubai" class="activity-card-image">
+                    <img src="images/66.png" alt="Overnight Camp Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -968,7 +1006,7 @@
             <a href="dubai-city-tour.html" class="activity-card">
                 <div class="discount-badge">-25%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/N8wwiy2.png" alt="Dubai City Tour" class="activity-card-image">
+                    <img src="images/31.png" alt="Dubai City Tour" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -996,7 +1034,7 @@
             <!-- VIP Events -->
             <a href="vip-events.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/oL8wGMJ.png" alt="VIP Events" class="activity-card-image">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/3f/35/ed/interiors.jpg?w=900&h=-1&s=1" alt="VIP Events" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1024,7 +1062,7 @@
             <!-- Miracle Garden -->
             <a href="miracle-garden.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/hjTENbr.png" alt="Miracle Garden Dubai" class="activity-card-image">
+                    <img src="images/48.png" alt="Miracle Garden Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1053,7 +1091,7 @@
             <a href="wild-wadi.html" class="activity-card">
                 <div class="discount-badge">-12%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/zBxYfb3.png" alt="Wild Wadi Dubai" class="activity-card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s" alt="Wild Wadi" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1082,7 +1120,7 @@
             <a href="dubai-premium-safari-al-khayma.html" class="activity-card">
                 <div class="discount-badge">-10%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&h=300&fit=crop" alt="Dubai Premium Safari" class="activity-card-image">
+                    <img src="images/84.png" alt="Dubai Premium Safari" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1111,7 +1149,7 @@
             <a href="dubai-red-dunes-quad-bike-safari.html" class="activity-card">
                 <div class="discount-badge">-15%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1558979158-65a1eaa08691?w=400&h=300&fit=crop" alt="Red Dunes Quad Bike" class="activity-card-image">
+                    <img src="images/24.png" alt="Red Dunes Quad Bike" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1139,7 +1177,7 @@
             <!-- Dubai Half Day Desert Safari -->
             <a href="dubai-half-day-desert-safari-quad-bike.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=400&h=300&fit=crop" alt="Half Day Desert Safari" class="activity-card-image">
+                    <img src="images/71.png" alt="Half Day Desert Safari" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1168,7 +1206,7 @@
             <a href="dubai-vintage-gclass-heritage-safari.html" class="activity-card">
                 <div class="discount-badge">-22%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&h=300&fit=crop" alt="Vintage G-Class Safari" class="activity-card-image">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/d9/4f/d3/caption.jpg?w=1200&h=-1&s=1" alt="Vintage G-Class Safari" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1196,7 +1234,7 @@
             <!-- Dubai Quad Bike Safari -->
             <a href="dubai-quad-bike-safari-camel-ride.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Quad Bike Safari" class="activity-card-image">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/33/91/29/caption.jpg?w=1200&h=-1&s=1" alt="Quad Bike Safari" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1224,7 +1262,7 @@
             <!-- Dubai JetSki Burj Al Arab -->
             <a href="dubai-jetski-burj-al-arab-view.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="JetSki Dubai" class="activity-card-image">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/f0/95/70.jpg" alt="JetSki Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1252,7 +1290,7 @@
             <!-- Dubai Al Fahidi Heritage Tour -->
             <a href="dubai-al-fahidi-heritage-tour.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" alt="Al Fahidi Heritage" class="activity-card-image">
+                    <img src="https://www.cdn.travejar.com/storage/india_attraction_tour_image/1750317387_6853b94bc6636.webp" alt="Al Fahidi Heritage" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1281,7 +1319,7 @@
             <a href="dubai-full-day-city-tour-burj-khalifa.html" class="activity-card">
                 <div class="discount-badge">-28%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&h=300&fit=crop" alt="Dubai Full Day Tour" class="activity-card-image">
+                    <img src="images/47.png" alt="Dubai Full Day Tour" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1309,7 +1347,7 @@
             <!-- Dubai Half Day City Tour Blue Mosque -->
             <a href="dubai-half-day-tour-blue-mosque-creek.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&h=300&fit=crop" alt="Blue Mosque Dubai" class="activity-card-image">
+                    <img src="images/29.png" alt="Blue Mosque Dubai" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1365,7 +1403,7 @@
             <!-- Dubai Adventure Dune Buggy -->
             <a href="dubai-adventure-dune-buggy-camel-bbq.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=400&h=300&fit=crop" alt="Dune Buggy Dubai" class="activity-card-image">
+                    <img src="https://i.imgur.com/jnCES3H.png" alt="Morning Safari Dubai" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1393,7 +1431,7 @@
             <!-- Dubai Al Marmoom Oasis -->
             <a href="dubai-al-marmoom-oasis-camp.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=300&fit=crop" alt="Al Marmoom Oasis" class="activity-card-image">
+                    <img src="images/66.png" alt="Al Marmoom Oasis" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1442,7 +1480,7 @@
             <a href="sunrise-safari-abudhabi.html" class="activity-card">
                 <div class="discount-badge">-15%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=400&h=300&fit=crop" alt="Sunrise Safari Abu Dhabi" class="activity-card-image">
+                    <img src="images/51.png" alt="Sunrise Safari Abu Dhabi" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1499,7 +1537,7 @@
             <!-- Liwa Adventure -->
             <a href="liwa-adventure.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/VR9HAcg.png" alt="Liwa Desert Tour" class="activity-card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5siQAo8SjDGid6UNZRhC21LSXQF0jCC2dvw&s" alt="Liwa Desert Tour" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1586,7 +1624,7 @@
             <a href="yas-water-world.html" class="activity-card">
                 <div class="discount-badge">-18%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1567360425618-1594206637d2?w=400&h=300&fit=crop" alt="Yas Water World" class="activity-card-image">
+                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/61/68/4a.jpg" alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1614,7 +1652,7 @@
             <!-- Premium Abu Dhabi Sightseeing from Dubai -->
             <a href="premium-abudhabi-sightseeing-from-dubai.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&h=300&fit=crop" alt="Abu Dhabi Sightseeing" class="activity-card-image">
+                    <img src="images/28.png" alt="Abu Dhabi Sightseeing" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1670,7 +1708,7 @@
             <!-- Abu Dhabi Desert Safari BBQ -->
             <a href="abudhabi-desert-safari-bbq-camel-ride.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&h=300&fit=crop" alt="Abu Dhabi Desert Safari" class="activity-card-image">
+                    <img src="images/54.png" alt="Abu Dhabi Desert Safari" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1698,7 +1736,7 @@
             <!-- Exploring Abu Dhabi Qasr Al Watan -->
             <a href="exploring-abudhabi-qasr-al-watan-palace.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&h=300&fit=crop" alt="Qasr Al Watan" class="activity-card-image">
+                    <img src="images/45.png" alt="Qasr Al Watan" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1746,34 +1784,6 @@
                         <div class="activity-price">
                             <span class="price-label">From AED</span>
                             <span class="price">184</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Combo Dubai City Tour Evening Safari -->
-            <a href="combo-dubai-city-tour-evening-safari.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Combo City Tour Safari" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <div class="rating">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <h3 class="activity-card-title">Combo: Dubai City Tour & Evening Safari with BBQ at Al Khayma Camp</h3>
-                    <p class="activity-card-description">Dive deep into BBQ camel riding city tour at Al Khayma Camp...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 9 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
-                        </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">539</span>
                         </div>
                     </div>
                 </div>
@@ -1833,16 +1843,7 @@
                             <div class="review-name">James Anderson</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
-                    <div class="review-date">Visited November 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 2 -->
@@ -1852,16 +1853,7 @@
                             <div class="review-name">Sarah Mitchell</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
-                    <div class="review-date">Visited October 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 3 -->
@@ -1871,16 +1863,7 @@
                             <div class="review-name">Marco Rossi</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
-                    <div class="review-date">Visited September 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 4 -->
@@ -1890,16 +1873,7 @@
                             <div class="review-name">Emily Chen</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
-                    <div class="review-date">Visited November 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 5 -->
@@ -1909,16 +1883,7 @@
                             <div class="review-name">David Thompson</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
-                    <div class="review-date">Visited October 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 6 -->
@@ -1928,16 +1893,7 @@
                             <div class="review-name">Priya Sharma</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
-                    <div class="review-date">Visited September 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
             </div>
 
@@ -1950,16 +1906,7 @@
                             <div class="review-name">James Anderson</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
-                    <div class="review-date">Visited November 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 2 -->
@@ -1969,16 +1916,7 @@
                             <div class="review-name">Sarah Mitchell</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
-                    <div class="review-date">Visited October 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 3 -->
@@ -1988,16 +1926,7 @@
                             <div class="review-name">Marco Rossi</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
-                    <div class="review-date">Visited September 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 4 -->
@@ -2007,16 +1936,7 @@
                             <div class="review-name">Emily Chen</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
-                    <div class="review-date">Visited November 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 5 -->
@@ -2026,16 +1946,7 @@
                             <div class="review-name">David Thompson</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
-                    <div class="review-date">Visited October 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
 
                 <!-- Review 6 -->
@@ -2045,16 +1956,7 @@
                             <div class="review-name">Priya Sharma</div>
                         </div>
                     </div>
-                    <div class="review-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
                     <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
-                    <div class="review-date">Visited September 2024</div>
-                    <div class="verified-badge">✓ Verified Booking</div>
                 </div>
             </div>
         </div>
@@ -2240,5 +2142,20 @@
     <div id="footer-placeholder"></div>
 
     <script src="includes/components-home.js"></script>
+
+    <!-- Floating Logo Scroll Handler -->
+    <script>
+        // Hide floating logo when header becomes visible (after 100px scroll)
+        window.addEventListener('scroll', function() {
+            const floatingLogo = document.getElementById('floatingLogo');
+            if (floatingLogo) {
+                if (window.scrollY > 100) {
+                    floatingLogo.classList.add('hidden');
+                } else {
+                    floatingLogo.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
