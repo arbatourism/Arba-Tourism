@@ -90,33 +90,193 @@
             }
         }
 
-        /* Floating Corner Logo Container */
-        .logo-container {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 100;
-            transition: opacity 0.4s ease, transform 0.3s ease;
-            animation: containerFadeIn 0.8s ease-out;
+        /* Initial Transparent Header */
+        #initial-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: transparent !important;
+            padding: 10px 40px;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            animation: initialHeaderFadeIn 0.8s ease-out;
+            box-shadow: none !important;
+            border: none !important;
+            border-bottom: none !important;
         }
 
-        .logo-container:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-container.hidden {
+        #initial-header.hidden {
             opacity: 0;
             pointer-events: none;
         }
 
-        .floating-corner-logo {
-            width: 200px;
-            height: auto;
-            display: block;
+        #initial-header .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        #initial-header .logo img {
+            height: 80px;
+            width: auto;
+            margin: -10px 0;
             filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
         }
 
-        @keyframes containerFadeIn {
+        #initial-header .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        #initial-header .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: 0.3px;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        #initial-header .nav-link:hover {
+            color: #CFA460;
+            border-color: #CFA460;
+        }
+
+        #initial-header .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 2px;
+        }
+
+        #initial-header .search-btn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        #initial-header .search-btn:hover {
+            color: #CFA460;
+        }
+
+        /* Dropdown Styles for Initial Header */
+        #initial-header .dropdown {
+            position: relative;
+        }
+
+        #initial-header .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            padding: 15px 0;
+            border-top: 3px solid #CFA460;
+            backdrop-filter: blur(10px);
+        }
+
+        #initial-header .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: transparent;
+        }
+
+        #initial-header .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #initial-header .dropdown-content a {
+            color: #999999;
+            padding: 12px 25px;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            text-shadow: none;
+            border-left: 3px solid transparent;
+        }
+
+        #initial-header .dropdown-content a:hover {
+            color: #a67c52;
+            background-color: #fafafa;
+            border-left: 3px solid #a67c52;
+        }
+
+        #initial-header .arrow-right {
+            color: #cccccc;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        /* Submenu Styles for Initial Header */
+        #initial-header .submenu {
+            position: relative;
+        }
+
+        #initial-header .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: -15px;
+            background-color: #ffffff;
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            border-top: 3px solid #a67c52;
+            margin-left: 0;
+            z-index: 1002;
+        }
+
+        #initial-header .submenu-content a {
+            color: #999999;
+            padding: 12px 25px;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        #initial-header .submenu-content a:hover {
+            color: #a67c52;
+            background-color: #fafafa;
+            border-left: 3px solid #a67c52;
+        }
+
+        #initial-header .submenu:hover .submenu-content {
+            display: block;
+        }
+
+        @keyframes initialHeaderFadeIn {
             from {
                 opacity: 0;
                 transform: translateY(-15px);
@@ -124,6 +284,14 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Hide initial header on mobile - show hamburger menu instead */
+        @media (max-width: 992px) {
+            #initial-header .nav-menu,
+            #initial-header .search-btn {
+                display: none;
             }
         }
 
@@ -290,11 +458,11 @@
             position: absolute;
             bottom: 40px;
             left: 50%;
-            transform: translateX(-50%) scale(1.8);
+            transform: translateX(-50%) scale(1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 10px;
             cursor: pointer;
             z-index: 10;
             animation: bounce 2s infinite;
@@ -303,33 +471,33 @@
 
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) scale(1.8) translateY(0);
+                transform: translateX(-50%) scale(1) translateY(0);
             }
             40% {
-                transform: translateX(-50%) scale(1.8) translateY(-12px);
+                transform: translateX(-50%) scale(1) translateY(-8px);
             }
             60% {
-                transform: translateX(-50%) scale(1.8) translateY(-6px);
+                transform: translateX(-50%) scale(1) translateY(-4px);
             }
         }
 
         .mouse-icon {
-            width: 28px;
-            height: 45px;
+            width: 22px;
+            height: 36px;
             border: 2px solid rgba(207, 164, 96, 0.6);
-            border-radius: 14px;
+            border-radius: 11px;
             position: relative;
             background: rgba(207, 164, 96, 0.1);
             backdrop-filter: blur(10px);
         }
 
         .mouse-wheel {
-            width: 4px;
-            height: 10px;
+            width: 3px;
+            height: 7px;
             background: #CFA460;
             border-radius: 2px;
             position: absolute;
-            top: 8px;
+            top: 6px;
             left: 50%;
             transform: translateX(-50%);
             animation: scrollWheel 2s infinite;
@@ -342,13 +510,13 @@
             }
             100% {
                 opacity: 0;
-                transform: translateX(-50%) translateY(16px);
+                transform: translateX(-50%) translateY(12px);
             }
         }
 
         .scroll-text {
             color: #CFA460;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 500;
             letter-spacing: 1px;
         }
@@ -359,10 +527,10 @@
             left: 40px;
             top: 50%;
             transform: translateY(-50%);
-            width: 80px;
-            height: 80px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, rgba(207, 164, 96, 0.9) 0%, rgba(184, 145, 79, 0.9) 100%);
-            border: 3px solid rgba(207, 164, 96, 0.4);
+            border: 2px solid rgba(207, 164, 96, 0.4);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -372,7 +540,7 @@
             opacity: 1;
             visibility: visible;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease, visibility 0.5s ease;
-            box-shadow: 0 8px 30px rgba(207, 164, 96, 0.5),
+            box-shadow: 0 6px 20px rgba(207, 164, 96, 0.5),
                         inset 0 1px 0 rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             animation: buttonPulse 2s infinite ease-in-out;
@@ -399,10 +567,10 @@
         }
 
         .big-scroll-button svg {
-            width: 40px;
-            height: 40px;
+            width: 26px;
+            height: 26px;
             stroke: white;
-            stroke-width: 3;
+            stroke-width: 2.5;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
             animation: arrowBounce 2s infinite;
         }
@@ -870,13 +1038,106 @@
         </svg>
     </div>
 
+    <!-- Initial Transparent Header (visible on page load, hides on scroll) -->
+    <header id="initial-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/colored-logo.png" alt="Arba Tourism Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#desert-safari" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
+                            <div class="submenu-content">
+                                <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
+                                <a href="#morning-safari">Morning Safari Abu Dhabi</a>
+                                <a href="#evening-safari">Evening Safari Abu Dhabi</a>
+                                <a href="overnight-camp-abudhabi.html">Overnight Camp Abu Dhabi</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a href="#dubai-desert" class="submenu-trigger">Dubai Desert <span class="arrow-right">›</span></a>
+                            <div class="submenu-content">
+                                <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
+                                <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
+                                <a href="#evening-safari-dubai">Evening Safari Dubai</a>
+                                <a href="overnight-camp-dubai.html">Overnight Camp Dubai</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a href="#dune-drive" class="submenu-trigger">Dune Drive <span class="arrow-right">›</span></a>
+                            <div class="submenu-content">
+                                <a href="#dune-buggy">Dune Buggy</a>
+                                <a href="#quad-bike">Quad Bike</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#tours" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a href="abu-dhabi-city-tour.html" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
+                            <div class="submenu-content">
+                                <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
+                                <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
+                                <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
+                                <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a href="dubai-city-tour.html" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
+                            <div class="submenu-content">
+                                <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
+                                <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
+                                <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
+                                <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
+                            </div>
+                        </div>
+                        <a href="vip-events.html">VIP Events</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#cruise-boat" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="#yacht-sailing">Yacht Sailing</a>
+                        <a href="dhow-cruise.html">Dhow Cruise</a>
+                        <a href="#luxury-cruise">Luxury Cruise</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#gallery" class="nav-link">Gallery <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Photo</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="#blogs">Blogs</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="about-us.html" class="nav-link">About Us <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="about-us.html#who-we-are">Who We Are ?</a>
+                        <a href="about-us.html#why-us">Why Us?</a>
+                        <a href="about-us.html#mission">Mission Statement</a>
+                        <a href="about-us.html#vision">Vision Statement</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="search-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
     <!-- Premium Hero Banner with Desert Background -->
     <section class="home-hero">
-        <!-- Floating Corner Logo -->
-        <div class="logo-container" id="logoContainer">
-            <img src="images/colored-logo.png" alt="Arba Tourism Logo" class="floating-corner-logo">
-        </div>
-
         <!-- Hero Content -->
         <div class="home-hero-overlay">
             <div class="hero-badge">Plan your trip with us</div>
@@ -2031,6 +2292,7 @@
         // Show/hide header, scroll indicators, and hero overlay based on scroll position
         window.addEventListener('scroll', function() {
             const header = document.getElementById('home-header');
+            const initialHeader = document.getElementById('initial-header');
             const scrollIndicator = document.querySelector('.scroll-indicator');
             const bigScrollButton = document.querySelector('.big-scroll-button');
             const heroOverlay = document.getElementById('heroScrollOverlay');
@@ -2055,8 +2317,12 @@
                 heroOverlay.style.display = 'block';
             }
 
-            // Show header when scrolling down (after 100px)
+            // Show/hide headers when scrolling (after 100px)
             if (scrollPosition > 100) {
+                // Hide initial transparent header, show normal header
+                if (initialHeader) {
+                    initialHeader.classList.add('hidden');
+                }
                 header.classList.add('visible');
                 scrollIndicator.style.opacity = '0';
                 scrollIndicator.style.pointerEvents = 'none';
@@ -2064,6 +2330,10 @@
                 bigScrollButton.style.visibility = 'hidden';
                 bigScrollButton.style.pointerEvents = 'none';
             } else {
+                // Show initial transparent header, hide normal header
+                if (initialHeader) {
+                    initialHeader.classList.remove('hidden');
+                }
                 header.classList.remove('visible');
                 scrollIndicator.style.opacity = '0.7';
                 scrollIndicator.style.pointerEvents = 'auto';
@@ -2147,19 +2417,5 @@
 
     <script src="includes/components-home.js"></script>
 
-    <!-- Floating Logo Scroll Handler -->
-    <script>
-        // Hide floating logo container when header becomes visible (after 100px scroll)
-        window.addEventListener('scroll', function() {
-            const logoContainer = document.getElementById('logoContainer');
-            if (logoContainer) {
-                if (window.scrollY > 100) {
-                    logoContainer.classList.add('hidden');
-                } else {
-                    logoContainer.classList.remove('hidden');
-                }
-            }
-        });
-    </script>
 </body>
 </html>
