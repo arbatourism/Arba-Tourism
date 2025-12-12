@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo: Abu Dhabi City Tour & Desert Safari | Arba Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Icon styles */
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* Floating Combo Badge */
+        .combo-floating-badge {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite, pulse 2s ease-in-out infinite;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Combo Banner Strip */
+        .combo-banner-strip {
+            background: linear-gradient(90deg, #ff6b35, #f7931e, #ff6b35, #f7931e);
+            background-size: 300% 100%;
+            animation: bannerScroll 5s linear infinite;
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes bannerScroll {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Section number badges */
+        .section-number {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            border: 4px solid white;
+        }
+
+        /* Connector line between sections */
+        .combo-connector {
+            position: relative;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .combo-connector::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #c67b3e, #ff6b35, #a67c52);
+            transform: translateX(-50%);
+        }
+
+        .combo-connector-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+            border: 4px solid white;
+        }
+
+        /* Special Deal Box */
+        .special-deal-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 3px solid #ff6b35;
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-deal-box::before {
+            content: '2 IN 1';
+            position: absolute;
+            top: -10px;
+            right: 30px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 0 0 15px 15px;
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .deal-content h3 {
+            color: white;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .deal-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .deal-features {
+            display: flex;
+            gap: 20px;
+        }
+
+        .deal-feature {
+            text-align: center;
+            padding: 15px 25px;
+            background: rgba(255, 107, 53, 0.15);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .deal-feature span {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .deal-feature strong {
+            color: #ff6b35;
+            font-size: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Floating Combo Badge -->
+    <div class="combo-floating-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        COMBO DEAL
+    </div>
+
+    <!-- Combo Banner Strip -->
+    <div class="combo-banner-strip">
+        ★ SPECIAL COMBO PACKAGE ★ City Tour + Desert Safari ★ Best Value ★ Full Day Experience ★
+    </div>
+
+    <!-- Hero Section -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('images/33.png') center/cover fixed;
+        min-height: 65vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <div style="display: inline-block; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); color: white; padding: 8px 20px; border-radius: 25px; font-size: 14px; font-weight: 700; margin-bottom: 20px;">
+                        COMBO PACKAGE
+                    </div>
+                    <h1 style="
+                        font-size: 55px;
+                        font-weight: 900;
+                        margin-bottom: 25px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1.1;
+                        letter-spacing: -2px;">
+                        Abu Dhabi City Tour<br/>& Desert Safari
+                    </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.6; margin-bottom: 30px; max-width: 500px;">
+                        Experience the best of Abu Dhabi in one day - explore the city's iconic landmarks in the morning and enjoy a thrilling desert safari in the evening
+                    </p>
+
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="#city-tour" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 12px;
+                            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+                            color: white;
+                            padding: 18px 40px;
+                            border-radius: 50px;
+                            font-size: 16px;
+                            font-weight: 800;
+                            text-decoration: none;
+                            box-shadow: 0 12px 35px rgba(198, 123, 62, 0.6);
+                            transition: all 0.3s ease;
+                            border: 2px solid rgba(245, 212, 160, 0.3);"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'">
+                            <span>City Tour</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#desert-safari" style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 12px;
+                            background: transparent;
+                            color: white;
+                            padding: 18px 40px;
+                            border-radius: 50px;
+                            font-size: 16px;
+                            font-weight: 800;
+                            text-decoration: none;
+                            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+                            transition: all 0.3s ease;
+                            border: 2px solid rgba(255,255,255,0.5);"
+                            onmouseover="this.style.transform='translateY(-3px)'; this.style.background='rgba(255,255,255,0.1)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.background='transparent'">
+                            <span>Desert Safari</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Images -->
+                <div style="position: relative; height: 400px;">
+                    <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
+                        <img src="images/20.png" alt="Abu Dhabi City Tour" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
+                        <img src="images/33.png" alt="Desert Safari" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deal Box -->
+    <section style="background: white; padding: 40px 80px 0;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <div class="special-deal-box">
+                <div class="deal-content">
+                    <h3>Ultimate Abu Dhabi Combo Package</h3>
+                    <p>Experience the best of Abu Dhabi - City landmarks in the morning, Desert adventure in the evening!</p>
+                </div>
+                <div class="deal-features">
+                    <div class="deal-feature">
+                        <span>Duration</span>
+                        <strong>Full Day</strong>
+                    </div>
+                    <div class="deal-feature">
+                        <span>Tours</span>
+                        <strong>2 in 1</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- HALF DAY CITY TOUR SECTION -->
+    <!-- ============================================== -->
+    <section id="city-tour" style="background: white; padding: 60px 80px; position: relative;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Section Number Badge -->
+            <div class="section-number">1</div>
+
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 40px; padding-top: 20px;">
+                <h2 style="font-size: 45px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Half-Day</span> Abu Dhabi City Tour
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 16px; color: #8b6914; font-weight: 700;">MORNING EXPERIENCE • 4-5 HOURS</p>
+            </div>
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+
+                <!-- Left: Image and Description -->
+                <div>
+                    <img src="images/20.png" alt="Sheikh Zayed Mosque" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                            Explore the magnificent capital of the UAE on this captivating half-day city tour. From the stunning Sheikh Zayed Grand Mosque to the luxurious Emirates Palace and the vibrant Corniche, discover Abu Dhabi's perfect blend of culture, heritage, and modern luxury.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Highlights and Inclusions -->
+                <div>
+                    <!-- Highlights -->
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <div style="display: grid; gap: 10px; margin-bottom: 20px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 366.559 366.559" fill="white">
+                                    <path d="M315.15,227.859l-6.93-13.65c-1.13-2.23-3.43-3.64-5.92-3.64h-9.15v-6.31c0-3.59-2.91-6.5-6.5-6.5h-1.87v-37.93 c0-1.07-0.26-2.08-0.73-2.97v-18.67h4.82c2.26,0,4.09-1.83,4.09-4.09v-4.35h6.22c2.26,0,4.09-1.83,4.09-4.09v-4.1h4.29 c2.88,0,5.22-2.34,5.22-5.22v-0.71c0-2.88-2.34-5.22-5.22-5.22h-10.74c0.39-0.9,0.62-1.88,0.62-2.92V96.469 c0-1.83-0.69-3.59-1.93-4.93l-3.88-4.22c-0.01-0.02-0.03-0.03-0.05-0.05l-23.21-25.22c-1.31-1.42-3.15-2.23-5.08-2.23h-29.9 c-1.93,0-3.77,0.81-5.08,2.23l-23.21,25.22c-0.01,0.02-0.03,0.03-0.05,0.05l-3.88,4.22c-1.24,1.35-1.93,3.11-1.93,4.93v10.999 c0,1.04,0.22,2.02,0.62,2.92h-10.74c-2.88,0-5.22,2.34-5.22,5.22v0.71c0,2.88,2.34,5.22,5.22,5.22h4.29v4.1 c0,2.26,1.83,4.09,4.09,4.09h6.22v4.35c0,2.26,1.83,4.09,4.09,4.09h4.82v18.67c-0.47,0.89-0.73,1.9-0.73,2.97v37.93h-1.87 c-3.59,0-6.5,2.91-6.5,6.5v6.31h-9.15c-2.49,0-4.79,1.41-5.92,3.64l-6.93,13.65c-0.45,0.88-0.68,1.85-0.68,2.84v9.45h-18.32 l-6.93-13.65c-1.13-2.23-3.43-3.64-5.92-3.64h-9.15v-6.31c0-3.59-2.91-6.5-6.5-6.5h-1.87v-37.93c0-1.07-0.26-2.08-0.73-2.97v-18.67 h4.82c2.26,0,4.09-1.83,4.09-4.09v-4.35h6.22c2.26,0,4.09-1.83,4.09-4.09v-4.1h4.29c2.88,0,5.22-2.34,5.22-5.22v-0.71 c0-2.88-2.34-5.22-5.22-5.22h-10.74c0.39-0.9,0.62-1.88,0.62-2.92V96.469c0-1.83-0.69-3.59-1.93-4.93l-3.88-4.22 c-0.01-0.02-0.03-0.03-0.05-0.05l-23.21-25.22c-1.31-1.42-3.15-2.23-5.08-2.23h-29.9c-1.93,0-3.77,0.81-5.08,2.23l-23.21,25.22 c-0.01,0.02-0.03,0.03-0.05,0.05l-3.88,4.22c-1.24,1.35-1.93,3.11-1.93,4.93v10.999c0,1.04,0.22,2.02,0.62,2.92H57.41 c-2.88,0-5.22,2.34-5.22,5.22v0.71c0,2.88,2.34,5.22,5.22,5.22h4.29v4.1c0,2.26,1.83,4.09,4.09,4.09h6.22v4.35 c0,2.26,1.83,4.09,4.09,4.09h4.82v18.67c-0.47,0.89-0.73,1.9-0.73,2.97v37.93h-1.87c-3.59,0-6.5,2.91-6.5,6.5v6.31H63.2 c-2.49,0-4.79,1.41-5.92,3.64l-6.93,13.65c-0.45,0.88-0.68,1.85-0.68,2.84v9.45H31.35v-64.22c0-3.87-3.14-7.01-7.01-7.01H7.01 c-3.87,0-7.01,3.14-7.01,7.01v77.45c0,3.87,3.14,7.01,7.01,7.01h17.33c3.87,0,7.01-3.14,7.01-7.01v-4.21h305.89v4.21 c0,3.87,3.14,7.01,7.01,7.01h17.33c3.87,0,7.01-3.14,7.01-7.01v-77.45c0-3.87-3.14-7.01-7.01-7.01h-17.33 c-3.87,0-7.01,3.14-7.01,7.01v64.22h-18.32v-9.45C315.83,229.709,315.6,228.739,315.15,227.859z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sheikh Zayed Grand Mosque</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">One of the world's largest and most beautiful mosques</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 14 14" fill="white">
+                                    <path d="M 7,1 C 7,1 4,2 4,4 l 6,0 C 10,2 7,1 7,1 z M 1.5,2 C 1.5,2 0,3 0,4.5 L 0,5 3,5 3,4.5 C 3,3 1.5,2 1.5,2 z m 11,0 C 12.5,2 11,3 11,4.5 L 11,5 14,5 14,4.5 C 14,3 12.5,2 12.5,2 z M 4,5 4,7 3,7 3,6 0,6 l 0,7 5,0 c 0,-1 0,-3 2,-3 2,0 2,2 2,3 l 5,0 0,-7 -3,0 0,1 -1,0 0,-2 z M 5.5,6 C 6,6 6,6.7902542 6,7 L 6,8 5,8 5,7 C 5,6.7330508 5,6 5.5,6 z m 3,0 C 9,6 9,6.7902542 9,7 L 9,8 8,8 8,7 C 8,6.7330508 8,6 8.5,6 z m -7,1 C 2.012353,7 2,7.6752871 2,8 L 2,9 1,9 1,8 C 1,7.6752871 1.01461,7 1.5,7 z m 11,0 C 13.012353,7 13,7.6752871 13,8 l 0,1 -1,0 0,-1 c 0,-0.3247129 0.01461,-1 0.5,-1 z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Emirates Palace</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxurious 7-star hotel photo stop</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                        <path d="M.5,3.4c1.92,0,1.92.95,3.83.95S6.25,3.4,8.16,3.4s1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
+                                        <path d="M.5,9.15c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
+                                        <path d="M.5,14.9c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
+                                        <path d="M.5,20.65c1.92,0,1.92,1,3.83,1s1.92-1,3.83-1,1.92,1,3.83,1,1.92-1,3.83-1,1.92,1,3.84,1,1.92-1,3.84-1"/>
+                                    </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Corniche Waterfront</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Scenic beachfront promenade with stunning views</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 512 512" fill="white">
+                                    <path d="M502.88,425.28,420.48,267.52l4.16-33.28,27.2-8.32a16.011,16.011,0,0,0,9.92-20.16l-32-96a15.974,15.974,0,0,0-14.4-10.88l-54.08-2.56-64-64A15.869,15.869,0,0,0,285.92,28l-29.6,7.68L226.72,6.08A15.953,15.953,0,0,0,204.8,1.92l-72,32a16.065,16.065,0,0,0-9.28,17.6l8.96,56L77.92,139.2a15.844,15.844,0,0,0-5.28,9.92L67.2,195.84,9.12,225.28a15.878,15.878,0,0,0-6.72,21.44l48,80a15.822,15.822,0,0,0,6.72,6.08l49.28,25.28-16,16a15.88,15.88,0,0,0-4.64,12.64l8,96a16.045,16.045,0,0,0,12.48,14.08l64,14.24a15.728,15.728,0,0,0,17.28-7.36l21.44-37.12,19.52,45.6a16.04,16.04,0,0,0,14.72,9.76h68.48a16,16,0,0,0,14.72-9.6l19.84-45.92,21.28,36.96a15.728,15.728,0,0,0,17.28,7.36l64-14.24a16.045,16.045,0,0,0,12.48-14.08l8-96a15.88,15.88,0,0,0-4.64-12.64l-18.88-18.88Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Heritage Village</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional Bedouin culture and heritage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions -->
+                    <div style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 150px;">
+                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    What's Included
+                                </h5>
+                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Professional guide</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> AC vehicle</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Photo stops</li>
+                                </ul>
+                            </div>
+                            <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
+                            <div style="flex: 1; min-width: 150px;">
+                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                    </svg>
+                                    Not Included
+                                </h5>
+                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Entrance fees</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Meals</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Connector -->
+    <div class="combo-connector" style="background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);">
+        <div class="combo-connector-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                <path d="M12 5v14M5 12h14"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- DESERT SAFARI SECTION -->
+    <!-- ============================================== -->
+    <section id="desert-safari" style="background: #f5e6d3; padding: 60px 80px; position: relative;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <!-- Section Number Badge -->
+            <div class="section-number">2</div>
+
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 40px; padding-top: 20px;">
+                <h2 style="font-size: 45px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Abu Dhabi</span> Desert Safari
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 16px; color: #8b6914; font-weight: 700;">EVENING ADVENTURE • 4-6 HOURS</p>
+            </div>
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 30px;">
+
+                <!-- Left: Highlights and Inclusions -->
+                <div>
+                    <!-- Highlights -->
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Safari Highlights</h3>
+                    <div style="display: grid; gap: 10px; margin-bottom: 20px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 99.088 99.087" fill="white">
+                                    <path d="M15.078,51.768c-5.832,0-10.562,4.728-10.562,10.562c0,0.451,0.037,0.891,0.094,1.328 c0.655,5.205,5.086,9.233,10.468,9.233c5.526,0,10.058-4.25,10.516-9.66c0.024-0.298,0.045-0.597,0.045-0.901 C25.639,56.496,20.911,51.768,15.078,51.768z M11.107,59.339l1.617,1.618c-0.126,0.216-0.225,0.449-0.287,0.697h-2.28 C10.274,60.792,10.605,60.002,11.107,59.339z M10.147,63.029h2.298c0.064,0.245,0.16,0.475,0.287,0.688l-1.621,1.621 C10.609,64.675,10.27,63.889,10.147,63.029z M14.392,67.255c-0.859-0.12-1.641-0.457-2.301-0.956l1.611-1.611 c0.213,0.125,0.445,0.215,0.689,0.277L14.392,67.255L14.392,67.255z M14.392,59.691c-0.251,0.063-0.483,0.164-0.701,0.292 l-1.615-1.617c0.664-0.504,1.452-0.838,2.316-0.958V59.691z M15.766,57.409c0.864,0.12,1.653,0.454,2.316,0.959l-1.616,1.616 c-0.216-0.128-0.451-0.229-0.7-0.292V57.409z M15.766,67.253v-2.288c0.244-0.062,0.475-0.155,0.688-0.279l1.612,1.612 C17.406,66.797,16.623,67.133,15.766,67.253z M19.049,65.342l-1.626-1.627c0.128-0.214,0.23-0.44,0.295-0.687h2.28 C19.875,63.887,19.552,64.683,19.049,65.342z M17.721,61.655c-0.063-0.249-0.162-0.481-0.287-0.697l1.618-1.618 c0.5,0.664,0.831,1.452,0.949,2.315H17.721z"/>
+                                    <path d="M80.286,51.768c-5.831,0-10.562,4.728-10.562,10.562c0,0.451,0.037,0.891,0.095,1.328 c0.655,5.205,5.085,9.233,10.467,9.233c5.527,0,10.06-4.25,10.517-9.66c0.023-0.298,0.045-0.597,0.045-0.901 C90.848,56.496,86.12,51.768,80.286,51.768z M76.315,59.339l1.618,1.618c-0.127,0.216-0.226,0.449-0.289,0.697h-2.278 C75.483,60.792,75.813,60.002,76.315,59.339z M75.356,63.029h2.298c0.062,0.245,0.16,0.475,0.287,0.688l-1.622,1.621 C75.817,64.675,75.479,63.889,75.356,63.029z M79.6,67.255c-0.858-0.12-1.641-0.457-2.301-0.956l1.612-1.611 c0.212,0.125,0.444,0.215,0.688,0.277V67.255L79.6,67.255z M79.6,59.691c-0.25,0.063-0.482,0.164-0.7,0.292l-1.615-1.617 c0.664-0.504,1.452-0.838,2.315-0.958V59.691z M80.975,57.409c0.865,0.12,1.652,0.454,2.315,0.959l-1.614,1.616 c-0.218-0.128-0.453-0.229-0.701-0.292V57.409z M80.975,67.253v-2.288c0.244-0.062,0.476-0.155,0.688-0.279l1.613,1.612 C82.615,66.797,81.832,67.133,80.975,67.253z M84.258,65.342l-1.627-1.627c0.129-0.214,0.23-0.44,0.297-0.687h2.278 C85.084,63.887,84.762,64.683,84.258,65.342z M82.93,61.655c-0.063-0.249-0.162-0.481-0.287-0.697l1.619-1.618 c0.5,0.664,0.83,1.452,0.947,2.315H82.93z"/>
+                                    <path d="M75.914,26.198l-28.335,0.357c-0.85,0.01-1.53,0.708-1.519,1.558c0.009,0.837,0.688,1.509,1.52,1.519 c0.014,0,0.025,0,0.038,0l28.335-0.357c0.85-0.01,1.53-0.708,1.52-1.558C77.461,26.867,76.74,26.166,75.914,26.198z"/>
+                                    <path d="M64.707,62.041H31.253c-0.85,0-1.538,0.689-1.538,1.539c0,0.851,0.688,1.539,1.538,1.539h33.454 c0.85,0,1.538-0.688,1.538-1.539C66.245,62.73,65.557,62.041,64.707,62.041z"/>
+                                    <path d="M98.658,53.259c-0.357-0.436-0.895-0.688-1.458-0.688h-1.749l-1.777-19.458c-0.098-1.074-1.006-1.891-2.086-1.875 l-50.028,0.75c-0.778,0.012-1.51,0.376-1.988,0.991l-6.631,8.523l-21.714,1.345c-1.181,0.074-2.262,0.689-2.926,1.668 l-1.223,1.799c0,0-2.094,0.737-2.655,1.201c-0.487,0.403-1.456,2.069-1.456,2.069c-0.184,0.26-0.206,0.603-0.059,0.884 c0.146,0.283,0.438,0.46,0.757,0.46v1.896H1.858C0.831,52.825,0,53.657,0,54.682v3.424c0,1.272,1.031,2.305,2.305,2.305H3.54 l3.183-8.782c0.29-0.8,1.05-1.333,1.9-1.333h11.11c0.63,0,1.225,0.294,1.607,0.796l7.484,9.824h39.064l5.482-9.25 c0.363-0.614,1.023-0.99,1.738-0.99h10.201c0.72,0,1.385,0.383,1.748,1.005l5.375,9.236h1.928c2.027,0,3.773-1.435,4.165-3.425 l0.524-2.666C99.162,54.271,99.018,53.697,98.658,53.259z M51.068,43.467H39.54v-3.541h-2.335l3.494-4.613 c0.15-0.199,0.384-0.317,0.633-0.321l11.694-0.174v5.108L51.068,43.467z M70.131,43.467H57.699v-8.719l14.993-0.223v6.38 L70.131,43.467z M76.538,43.467v-9l12.907-0.192c0.22-0.003,0.402,0.166,0.419,0.385l0.606,8.807H76.538z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Thrilling Dune Bashing</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Adrenaline-pumping 4x4 adventure over golden dunes</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <line x1="12" y1="1" x2="12" y2="3"/>
+                                    <line x1="12" y1="21" x2="12" y2="23"/>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Stunning Sunset Views</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Watch the desert transform at golden hour</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 512 512" fill="white">
+                                        <path d="M420.8 26.91c-11.4.76-23.7 4.65-33.6 10.29-5.3-4.86-13.5-10.52-19.3-6.11-12.5 9.46-2.4 20.76 6.8 27.94 5.5 35.86 20.7 93.17-9.8 105.97C317 183.1 308.4 36.14 241 37.94c-40.4 1.08-22.6 59.65-62.6 61.65-29.5 1.51-27.3-54.51-51.9-55.36-25.9-.9-44.62 18.9-57.71 86.97-25.63-.1-35.73 20.1-47.42 59.2-11.686 39-3 115.6 1.2 162.4l7.87-76.3c2.43 12 6.19 24.1 11.91 36.7 3.91 18.7 5.44 37.4 5.81 56-8.2 10.2-8.8 26.2-.42 35.5-.92 26.8-2.67 53.5-1.68 80.3 34.48.5 66.04-1 99.54 0 1.8-11.9-14.9-20.4-34.3-30.3.3-13.7.2-30.5 0-47.5 8.8-10.2 9-28.1-.2-36.8.1-21.3.8-38.6 3.3-43.9 8-17.1 20.6-31.9 29.1-47.2 28.7 5.3 59.7 2.9 91.9-4.7l.7 85.5c-7.7 11.3-8 27.7.3 37.8 4.7 29 .6 58.1.8 87.1h58c2.3-15-22.5-23.1-34.6-30.1 0-22.1-3.9-38.8-.4-60.3 5-9.9 5.3-21.5.4-30.8.9-33 3.3-66 10.7-99 1.6-.6 7.9-3.7 9.3-5.3l10.9 98.4c-5.6 11.9-4.4 27.3 4 36.7 6.6 30.1 4.5 59.5 7.9 89.6l61.2.8c.3-12.3-29.1-20-40.3-25.5-6.4-21.4-5.7-43.1-6.7-64.9 8-12.1 7.6-28.9-1.1-39.5.5-38.3 5.5-76.8 18.4-114.6 106.6-5.9 96.2-72 99.3-133.2 1.4-27.24 55.5 1.7 60-11.61 2.4-6.92 3.6-13.89 0-21.84-8.6-19.29-23.9-20.32-36.7-20.63-12.3-7.36-22.6-25.96-35.5-26.31zm6.7 19.58c4.9 2.64 3.8 7.47 2.7 10.11-6.6 1.96-16.3-1.08-20.8-4.59 3.9-2.99 12.2-5.39 18.1-5.52zM80.6 302.3c3.05 7.8 5.74 15.6 7.35 23.2 3.22 15.3 4.91 30.7 5.72 46.2-7.48 10.3-7.78 26.1.59 35-.25 21.6-1.3 43.2-1.52 64.7-4.54-7.5-12.92-14-24.94-17.1.16-14.4-.44-32.4-1.08-50.6 6.91-10.2 7.01-25.6-1.11-34.3-.67-27-.34-49.4 3.78-54.1 3.95-4.5 7.67-8.8 11.21-13z"/>
+                                    </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Camel Rides</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional desert transportation experience</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 50 50" fill="white">
+                                    <ellipse cx="19.188" cy="47.606" rx="1.356" ry="1.394"></ellipse>
+                                    <path d="M30.148 48.974c.748 0 1.354-.63 1.354-1.411 0-.772-.605-1.399-1.354-1.399-.75 0-1.355.627-1.355 1.399 0 .781.605 1.411 1.355 1.411zm-2.339-40.57c1.988 0 3.604-1.663 3.604-3.708-.001-2.044-1.616-3.696-3.604-3.696-1.987 0-3.604 1.652-3.604 3.696 0 2.045 1.617 3.708 3.604 3.708zm-19.543 32.394c-.17.328-.266.7-.266 1.103 0 1.302 1.032 2.364 2.307 2.364.915 0 1.701-.547 2.073-1.335l7.861-13.9-3.264-3.358-8.711 15.126zm17.033-.624c-.371.788-1.158 1.336-2.072 1.336-1.265 0-2.295-1.062-2.295-2.364 0-.404.095-.775.266-1.104l3.423-6.189-6.676-6.826c-2.562-2.646-.733-5.511-.733-5.511l3.593-6.529-9.53.011c-1.052 0-1.892-.933-1.892-2.005-.001-1.061.839-1.993 1.891-1.993h28.843c1.043 0 1.883.934 1.883 2.005 0 1.072-.84 1.995-1.883 1.995h-11.002l-5.25 9.458 5.346 5.435c1.873 1.849.66 3.926.66 3.926l-4.572 8.355zm8.701 3.826c0 .553-.447 1-1 1h-17c-.552 0-1-.447-1-1 0-.553.448-1 1-1h17c.553 0 1 .447 1 1z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sandboarding</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Surf down steep desert dunes</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 -20.55 122.88 122.88" fill="white">
+                                        <path d="M18,33.84c3.46-2.36,5.2-5.45,4.9-12.52V3.14c-0.03-2.54-4.64-2.85-4.87,0l-0.18,14.75 c-0.01,2.76-4.16,2.85-4.15,0l0.18-15.25c-0.05-2.73-4.45-3-4.51,0c0,4.23-0.18,11.02-0.18,15.25c0.22,2.67-3.63,3.02-3.53,0 L5.85,2.73c-0.1-2.06-2.36-2.79-3.9-1.83C0.31,1.95,0.64,4.05,0.57,5.82L0,23.22c0.09,5.06,1.42,9.17,5.38,10.92 c0.6,0.26,1.44,0.47,2.41,0.62L6.42,77.18c-0.08,2.52,1.98,4.57,4.39,4.57h0.55c2.72,0,5.01-2.32,4.94-5.15l-1.2-41.86 C16.36,34.54,17.41,34.25,18,33.84L18,33.84L18,33.84z M113.36,44.66h1.48c0,10.83-0.04,23.34-0.39,34.12 c-0.15,4.13,7.59,3.97,7.45-0.43l-0.29-33.69h1.27V0C106.9,2.45,112.41,33.39,113.36,44.66L113.36,44.66z M105.56,41.11 c0,10.91-3.84,20.22-11.52,27.91c-7.7,7.7-17,11.55-27.91,11.55c-10.86,0-20.17-3.84-27.88-11.55c-7.7-7.69-11.57-17-11.57-27.91 c0-10.88,3.86-20.15,11.57-27.86c7.73-7.7,17.02-11.57,27.88-11.57c10.91,0,20.21,3.86,27.91,11.57 C101.71,20.95,105.56,30.23,105.56,41.11L105.56,41.11z M89.09,41.07c0,6.36-2.23,11.78-6.73,16.28 c-4.48,4.48-9.91,6.73-16.26,6.73c-6.31,0-11.73-2.25-16.22-6.73c-4.49-4.5-6.73-9.92-6.73-16.28c0-6.31,2.24-11.73,6.73-16.21 c4.5-4.48,9.91-6.73,16.22-6.73C78.86,18.15,89.09,28.29,89.09,41.07L89.09,41.07z M86.19,21.06c-5.53-5.53-12.23-8.28-20.09-8.28 c-7.84,0-14.52,2.75-20.01,8.28c-5.53,5.53-8.31,12.21-8.31,20.01c0,7.83,2.78,14.5,8.31,20.06c5.5,5.54,12.17,8.32,20.01,8.32 c7.85,0,14.55-2.78,20.09-8.32c5.51-5.55,8.28-12.23,8.28-20.06C94.47,33.26,91.71,26.59,86.19,21.06L86.19,21.06z"/>
+                                    </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">BBQ Dinner & Entertainment</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Delicious buffet with live shows</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions -->
+                    <div style="background: white; padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 150px;">
+                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    What's Included
+                                </h5>
+                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> 4X4 pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Dune bashing</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Camel rides</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> BBQ dinner</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Live entertainment</li>
+                                </ul>
+                            </div>
+                            <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
+                            <div style="flex: 1; min-width: 150px;">
+                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <line x1="15" y1="9" x2="9" y2="15"/>
+                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                    </svg>
+                                    Not Included
+                                </h5>
+                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Alcoholic beverages</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Souvenir photos</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Gratuities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image and Description -->
+                <div>
+                    <img src="images/33.png" alt="Desert Safari Abu Dhabi" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                    <div style="background: white; padding: 25px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Safari</h3>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                            Experience the magical beauty of Abu Dhabi's desert landscape with our evening desert safari. As the sun sets over the horizon, the landscape transforms into a stunning array of colors and shadows.
+                        </p>
+                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                            Enjoy thrilling dune bashing, camel rides, sandboarding, and end your adventure with a delicious BBQ dinner and live entertainment under the stars.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div style="height: 60px; background: linear-gradient(to bottom, #f5e6d3 0%, #fef3e2 50%, white 100%);"></div>
+
+    <!-- ============================================== -->
+    <!-- COMBO BENEFITS SECTION -->
+    <!-- ============================================== -->
+    <section style="background: white; padding: 60px 80px;">
+        <div style="max-width: 1500px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Why Book the Combo?</span>
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px;">
+                <!-- Save Money -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px 25px; border-radius: 15px; text-align: center; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                            <path d="M12 18V6"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 16px; font-weight: 800; color: #2d1f15; margin-bottom: 8px;">Save Money</h4>
+                    <p style="font-size: 13px; color: #6a5f54; line-height: 1.5; margin: 0;">Get both experiences at a discounted combo price</p>
+                </div>
+
+                <!-- Full Day Experience -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px 25px; border-radius: 15px; text-align: center; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 16px; font-weight: 800; color: #2d1f15; margin-bottom: 8px;">Full Day Experience</h4>
+                    <p style="font-size: 13px; color: #6a5f54; line-height: 1.5; margin: 0;">Make the most of your day in Abu Dhabi</p>
+                </div>
+
+                <!-- Seamless Logistics -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px 25px; border-radius: 15px; text-align: center; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 16px; font-weight: 800; color: #2d1f15; margin-bottom: 8px;">Seamless Logistics</h4>
+                    <p style="font-size: 13px; color: #6a5f54; line-height: 1.5; margin: 0;">We handle all transportation between tours</p>
+                </div>
+
+                <!-- Best of Both Worlds -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px 25px; border-radius: 15px; text-align: center; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h4 style="font-size: 16px; font-weight: 800; color: #2d1f15; margin-bottom: 8px;">Best of Both Worlds</h4>
+                    <p style="font-size: 13px; color: #6a5f54; line-height: 1.5; margin: 0;">City culture meets desert adventure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div style="height: 60px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 60px 80px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 42px; font-weight: 900; color: white; margin-bottom: 18px; line-height: 1.2;">
+                Ready for the Ultimate Abu Dhabi Experience?
+            </h2>
+
+            <p style="font-size: 17px; line-height: 1.7; color: rgba(255,255,255,0.95); margin-bottom: 30px;">
+                Book your combo package today and experience the best of Abu Dhabi - city exploration in the morning and desert adventure in the evening.
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+                <div style="background: rgba(255,255,255,0.15); padding: 15px 30px; border-radius: 15px; text-align: center;">
+                    <span style="font-size: 14px; color: rgba(255,255,255,0.8); display: block;">Duration</span>
+                    <span style="font-size: 24px; font-weight: 800; color: white;">Full Day</span>
+                </div>
+                <div style="background: rgba(255,255,255,0.15); padding: 15px 30px; border-radius: 15px; text-align: center;">
+                    <span style="font-size: 14px; color: rgba(255,255,255,0.8); display: block;">Experiences</span>
+                    <span style="font-size: 24px; font-weight: 800; color: white;">2 in 1</span>
+                </div>
+            </div>
+
+            <a href="contact.html" style="
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                background: white;
+                color: #2d1f15;
+                padding: 20px 55px;
+                border-radius: 50px;
+                font-size: 18px;
+                font-weight: 900;
+                text-decoration: none;
+                box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+                transition: all 0.3s ease;"
+                onmouseover="this.style.transform='translateY(-4px)'"
+                onmouseout="this.style.transform='translateY(0)'">
+                <span>Book Combo Package</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="includes/components.js"></script>
+</body>
+</html>

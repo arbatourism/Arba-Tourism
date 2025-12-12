@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overnight Camp Safari in Abu Dhabi - Desert Safari Website</title>
+    <title>Evening Desert Safari in Abu Dhabi - Desert Safari Website</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Icon styles */
@@ -23,6 +23,59 @@
             height: 20px;
             fill: white;
         }
+
+        /* FAQ Styles */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: #2d1f15;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #fef3e2;
+        }
+
+        .faq-question .arrow {
+            transition: transform 0.3s;
+            color: #c67b3e;
+            font-size: 18px;
+        }
+
+        .faq-item.active .faq-question .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 25px 18px;
+            color: #5a4a3a;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -31,7 +84,7 @@
     <!-- Hero Section -->
     <section style="
         background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
-                    url('https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=1600') center/cover fixed;
+                    url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600') center/cover fixed;
         min-height: 65vh;
         display: flex;
         align-items: center;">
@@ -51,8 +104,27 @@
                         filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
                         line-height: 1;
                         letter-spacing: -2px;">
-                        Overnight Camp<br/>Safari in Abu Dhabi
+                        Evening Desert Safari<br/>In Abu Dhabi
                     </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.6; margin-bottom: 30px; max-width: 500px;">
+                        Experience the magic of Abu Dhabi's desert with thrilling dune bashing, stunning sunset views, and an authentic Arabian night under the stars!
+                    </p>
+
+                    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                        <div style="background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <span style="color: #d4a574; font-weight: 800; font-size: 14px;">PICKUP</span>
+                            <p style="color: white; font-size: 16px; margin: 2px 0 0; font-weight: 600;">3:00 PM</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <span style="color: #d4a574; font-weight: 800; font-size: 14px;">DURATION</span>
+                            <p style="color: white; font-size: 16px; margin: 2px 0 0; font-weight: 600;">5-6 Hours</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 10px; backdrop-filter: blur(10px);">
+                            <span style="color: #d4a574; font-weight: 800; font-size: 14px;">DROP OFF</span>
+                            <p style="color: white; font-size: 16px; margin: 2px 0 0; font-weight: 600;">9:00 PM</p>
+                        </div>
+                    </div>
 
                     <a href="#tour-details" style="
                         display: inline-flex;
@@ -80,10 +152,10 @@
                 <!-- Right Images -->
                 <div style="position: relative; height: 400px;">
                     <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
-                        <img src="https://i.imgur.com/Ye5I2mj.png" alt="Overnight Camp" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/33.png" alt="Evening Safari" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
-                        <img src="https://i.imgur.com/O2ey1wH.png" alt="Desert Camp" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/51.png" alt="Desert Sunset" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -96,10 +168,10 @@
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
                 <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Overnight Camp Safari</span> Experience
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Evening Desert Safari</span> Experience
                 </h2>
                 <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
-                <p style="font-size: 16px; color: #8b6914; font-weight: 700;">OVERNIGHT ADVENTURE</p>
+                <p style="font-size: 16px; color: #8b6914; font-weight: 700;">SUNSET ADVENTURE • 5-6 HOURS</p>
             </div>
 
             <!-- Content Grid -->
@@ -107,15 +179,34 @@
 
                 <!-- Left: Image and Description -->
                 <div>
-                    <img src="images/50.png" alt="Overnight Camp Abu Dhabi" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="images/58.png" alt="Evening Safari Abu Dhabi" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+                    <!-- Tour Highlight Images Gallery -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
+                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/51.png" alt="Dune Bashing" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/52.png" alt="Desert Camp" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="https://images.pexels.com/photos/13070618/pexels-photo-13070618.jpeg?cs=srgb&dl=pexels-lukebarky-13070618.jpg&fm=jpg" alt="Camel Ride" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
                         <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
-                        <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
-                            Experience the ultimate desert adventure with our overnight camp safari in Abu Dhabi. Our expert guides will take you on a thrilling ride through the rolling dunes, providing breathtaking views of the desert as the sun sets on the horizon.
-                        </p>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            After an exciting evening of dune bashing and desert activities, settle in for the night in our comfortable campsite equipped with all necessary amenities. Enjoy a traditional BBQ dinner, entertainment, and stargazing under the Arabian night sky.
+                            Experience the magic of Abu Dhabi's desert with an unforgettable evening safari. Take part in an evening of adventure unlike any other on this 5-6 hour excursion. Leave the city in the afternoon and head toward the desert to discover the true Abu Dhabi. Enjoy thrilling dune bashing, camel rides like the Bedouins, sand skiing, and stunning sunset views before settling into an authentic Arabian night at a traditional desert camp.
                         </p>
                     </div>
                 </div>
@@ -132,21 +223,26 @@
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Dune Bashing Adventure</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Thrilling 4x4 ride through golden dunes</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Thrilling Dune Bashing</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Take a wild and exciting ride over the sand dunes in a 4x4 Land Cruiser</p>
                             </div>
                         </div>
 
                         <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <line x1="12" y1="1" x2="12" y2="3"/>
+                                    <line x1="12" y1="21" x2="12" y2="23"/>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                    <line x1="1" y1="12" x2="3" y2="12"/>
+                                    <line x1="21" y1="12" x2="23" y2="12"/>
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Traditional Desert Camp</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxurious campsite with facilities</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Stunning Sunset Views</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Watch the sun set over the open desert landscape from the summit of a dune</p>
                             </div>
                         </div>
 
@@ -157,8 +253,21 @@
                                     </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Camel Riding & Falconry</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Experience authentic Bedouin culture</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Camel Riding</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Experience crossing the desert just like the Bedouins did</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+                                    <rect x="9" y="8" width="6" height="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sand Skiing</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Surf down the steep golden desert dunes</p>
                             </div>
                         </div>
 
@@ -169,20 +278,20 @@
                                     </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Entertainment & BBQ Dinner</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Belly dance, Tanura show, Arabic cuisine</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">BBQ Dinner & Entertainment</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Feast on authentic Arabic BBQ with live belly dance show under the stars</p>
                             </div>
                         </div>
 
                         <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Starry Night Experience</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Sleep under the stars in the desert</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Traditional Arabic Experience</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Shisha, henna painting, Arabic coffee, tea and dates</p>
                             </div>
                         </div>
                     </div>
@@ -200,11 +309,12 @@
                                 <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
                                     <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> 4X4 pickup/drop-off</li>
                                     <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Dune bashing</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Camel rides</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Sandboarding</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> BBQ dinner & breakfast</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Live shows</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Tent accommodation</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Camel riding</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Sand skiing</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> BBQ dinner</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Belly dance show</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Shisha</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Arabic coffee & dates</li>
                                 </ul>
                             </div>
                             <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
@@ -218,9 +328,9 @@
                                     Not Included
                                 </h5>
                                 <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Alcohol drinks</li>
                                     <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Quad bikes rental</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Dune buggies rental</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Gratuities</li>
                                 </ul>
                             </div>
                         </div>
@@ -238,7 +348,7 @@
         <div style="max-width: 1500px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 35px;">
                 <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What to Expect</span>
+                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tour Details</span>
                 </h2>
                 <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto;"></div>
             </div>
@@ -246,22 +356,22 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
                 <div>
                     <div style="background: white; padding: 25px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">Pick Up Information</h3>
+                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">The Desert Camp Experience</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Pick up available from any hotel, mall or popular landmark in Abu Dhabi. Our professional drivers will ensure a comfortable journey to the desert.
+                            After the sunset, you will be escorted to a traditional Arabic desert camp where steaming Qahwa (Arabic coffee), tea and dates will be waiting for you. Relax as you learn firsthand what Arabic hospitality means, with refreshments served as they have been for centuries. Give henna painting or sheesha a try before sitting down for a delicious BBQ dinner accompanied by a live belly dance performance.
                         </p>
                     </div>
 
                     <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">Duration</h3>
+                        <h3 style="font-size: 18px; font-weight: 800; color: #c67b3e; margin-bottom: 12px;">Pick Up & Duration</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Full overnight experience - departing in the afternoon and returning the next morning. Time to be confirmed upon booking.
+                            Pick up starts around 3:00 PM in the afternoon with comfortable 4x4 vehicles. The safari includes approximately 5-6 hours of adventure, ending around 9:00 PM. We offer convenient hotel pickup and drop-off from any location in Abu Dhabi.
                         </p>
                     </div>
                 </div>
 
                 <div>
-                    <img src="images/55.png" alt="Desert Experience" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="images/53.png" alt="Evening Desert Experience" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                 </div>
             </div>
         </div>
@@ -270,15 +380,79 @@
     <!-- Divider -->
     <div style="height: 60px; background: linear-gradient(to bottom, #f5e6d3 0%, #fef3e2 50%, white 100%);"></div>
 
+    <!-- FAQ Section -->
+    <section style="background: white; padding: 50px 80px;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Frequently Asked</span> Questions
+                </h2>
+                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto;"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What time does the evening desert safari start and end?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The safari starts with a pickup around 3:00 PM in the afternoon and ends with a drop-off around 9:00 PM.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What activities are included in the evening desert safari?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The safari includes dune bashing, camel riding, sand skiing, sunset viewing, BBQ dinner, belly dance show, shisha, henna painting, and traditional Arabic coffee and dates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What type of food is served at the BBQ dinner?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>An authentic Arabic BBQ dinner is served under the starlit sky, featuring grilled meats, salads, and traditional Arabian dishes. Vegetarian options are also available upon request.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can children participate in the evening desert safari?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, children can participate in the evening safari. It's a family-friendly experience, though the dune bashing may not be suitable for very young children or pregnant women.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What should I wear for the evening safari?</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend comfortable, light clothing. Since it can get cooler in the evening, bringing a light jacket is advisable. Avoid high heels and opt for sandals or comfortable shoes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 38px; font-weight: 900; color: white; margin-bottom: 18px; line-height: 1.2;">
-                Ready for Your Desert Adventure?
+                Ready for an Unforgettable Evening?
             </h2>
 
             <p style="font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.95); margin-bottom: 30px;">
-                Book your overnight camp safari today and experience the magic of the Arabian desert under the stars.
+                Book your evening desert safari today and experience the magic of Abu Dhabi's desert under the stars with authentic Arabian hospitality.
             </p>
 
             <a href="contact.html" style="
@@ -357,6 +531,22 @@
                 if (e.key === 'Escape') {
                     closeLightbox();
                 }
+            });
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', function() {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
             });
         });
 

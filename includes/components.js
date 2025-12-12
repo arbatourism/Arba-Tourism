@@ -13,8 +13,8 @@ const headerHTML = `<header>
                         <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
                             <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
-                            <a href="#morning-safari">Morning Safari Abu Dhabi</a>
-                            <a href="#evening-safari">Evening Safari Abu Dhabi</a>
+                            <a href="morning-safari-abudhabi.html">Morning Safari Abu Dhabi</a>
+                            <a href="evening-safari-abudhabi.html">Evening Safari Abu Dhabi</a>
                             <a href="overnight-camp-abudhabi.html">Overnight Camp Abu Dhabi</a>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ const headerHTML = `<header>
                         <div class="submenu-content">
                             <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
                             <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
-                            <a href="#evening-safari-dubai">Evening Safari Dubai</a>
+                            <a href="evening-safari-dubai.html">Evening Safari Dubai</a>
                             <a href="overnight-camp-dubai.html">Overnight Camp Dubai</a>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const headerHTML = `<header>
                         <div class="submenu-content">
                             <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
                             <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
-                            <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
+                            <a href="combo-abu-dhabi-city-tour-desert-safari.html">COMBO City Tour & Desert Safari</a>
                             <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const headerHTML = `<header>
                         <div class="submenu-content">
                             <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
                             <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
-                            <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
+                            <a href="combo-dubai-city-tour-desert-safari.html">COMBO City Tour & Desert Safari</a>
                             <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
                         </div>
                     </div>

@@ -19,7 +19,13 @@
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\dubai-city-tour.html\")",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\sunrise-safari-dubai.html\")",
       "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\dubai-half-day-tour-blue-mosque-creek.html\")",
-      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\top-abu-dhabi-tours.html\")"
+      "Bash(start \"\" \"c:\\Users\\ABDUL HADI\\Desktop\\Arba website\\top-abu-dhabi-tours.html\")",
+      "Bash(start \"\" \"http://localhost:8000\")",
+      "Bash(start \"\" \"c:\\Araba\\index.html\")",
+      "Bash(git pull:*)",
+      "Bash(start \"\" \"c:\\Araba\\dhow-cruise.html\")",
+      "Bash(git log:*)",
+      "Bash(copy \"C:\\Users\\dell\\Downloads\\image-removebg-preview.png\" \"c:\\Araba\\images\\watermark-logo.png\")"
     ],
     "deny": [],
     "ask": []
