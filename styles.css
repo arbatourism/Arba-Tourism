@@ -52,6 +52,8 @@ header {
     z-index: 1000;
     transition: all 0.3s ease;
     transform: translateY(0);
+    height: 100px;
+    max-height: 100px;
 }
 
 /* Hide header on homepage only */
@@ -75,6 +77,7 @@ header.scrolled {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    height: 80px;
 }
 
 .logo {

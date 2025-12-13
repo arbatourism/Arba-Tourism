@@ -113,8 +113,8 @@ const footerHTML = `<footer class="footer">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="#booking">Book Now</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
             </ul>
         </div>
 
@@ -147,7 +147,7 @@ const footerHTML = `<footer class="footer">
     </div>
 
     <div class="footer-bottom">
-        <div class="footer-bottom-content">
+        <div class="footer-bottom-content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
             <div class="footer-social">
                 <a href="https://www.facebook.com/share/19mqXYMotN/" target="_blank" rel="noopener noreferrer" class="social-btn" data-platform="Facebook" aria-label="Facebook">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
@@ -168,6 +168,8 @@ const footerHTML = `<footer class="footer">
                     <span class="social-label">YouTube</span>
                 </a>
             </div>
+            <a href="https://pay.ziina.com/Shanimeethal" target="_blank" rel="noopener noreferrer" id="pay-now-link" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(198, 123, 62, 0.4); transition: all 0.3s; font-size: 15px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(198, 123, 62, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(198, 123, 62, 0.4)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Pay Now</a>
+            <div style="width: 150px;"></div>
         </div>
     </div>
 </footer>
@@ -332,6 +334,26 @@ function setActiveNav() {
         }
         // Special case for contact page
         else if (currentPage === 'contact.html' && href === 'contact.html') {
+            link.classList.add('active');
+        }
+        // Special case for VIP Events - highlight City Attractions parent
+        else if (currentPage === 'vip-events.html' && href === '#tours') {
+            link.classList.add('active');
+        }
+        // Special case for Dhow Cruise - highlight Cruise & Boat parent
+        else if (currentPage === 'dhow-cruise.html' && href === '#cruise-boat') {
+            link.classList.add('active');
+        }
+        // Special case for Gallery and Testimonials - highlight Gallery parent
+        else if ((currentPage === 'gallery.html' || currentPage === 'testimonials.html') && href === '#gallery') {
+            link.classList.add('active');
+        }
+        // Special case for Desert Safari pages - highlight Desert Adventures parent
+        else if ((currentPage.includes('safari') || currentPage.includes('overnight-camp')) && href === '#desert-safari') {
+            link.classList.add('active');
+        }
+        // Special case for City Tour pages - highlight City Attractions parent
+        else if ((currentPage.includes('city-tour') || currentPage.includes('combo-')) && href === '#tours') {
             link.classList.add('active');
         }
     });
