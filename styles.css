@@ -1501,7 +1501,7 @@ header.scrolled {
 }
 
 .activity-card:hover .activity-card-title {
-    color: #a67c52;
+    color: #8b5a2b;
 }
 
 .activity-card-description {
@@ -1561,7 +1561,7 @@ header.scrolled {
 
 .activity-card:hover .price {
     transform: scale(1.1);
-    color: #a67c52;
+    color: #8b5a2b;
 }
 
 /* Responsive Design for Activity Cards */

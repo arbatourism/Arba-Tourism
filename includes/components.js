@@ -63,9 +63,9 @@ const headerHTML = `<header>
             <li class="dropdown">
                 <a href="#cruise-boat" class="nav-link">Cruise & Boat <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
-                    <a href="#yacht-sailing">Yacht Sailing</a>
+                    <a href="yacht-sailing.html">Yacht Sailing</a>
                     <a href="dhow-cruise.html">Dhow Cruise</a>
-                    <a href="#luxury-cruise">Luxury Cruise</a>
+                    <a href="yacht-sailing.html#luxury-cruise">Luxury Cruise</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -340,8 +340,8 @@ function setActiveNav() {
         else if (currentPage === 'vip-events.html' && href === '#tours') {
             link.classList.add('active');
         }
-        // Special case for Dhow Cruise - highlight Cruise & Boat parent
-        else if (currentPage === 'dhow-cruise.html' && href === '#cruise-boat') {
+        // Special case for Dhow Cruise and Yacht Sailing - highlight Cruise & Boat parent
+        else if ((currentPage === 'dhow-cruise.html' || currentPage === 'yacht-sailing.html') && href === '#cruise-boat') {
             link.classList.add('active');
         }
         // Special case for Gallery and Testimonials - highlight Gallery parent
