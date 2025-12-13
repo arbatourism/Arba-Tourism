@@ -87,11 +87,6 @@ const headerHTML = `<header>
             </li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <button class="search-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
@@ -99,55 +94,7 @@ const headerHTML = `<header>
             </svg>
         </button>
     </nav>
-</header>
-<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-<nav class="mobile-nav-panel" id="mobileNavPanel">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-            <div class="mobile-dropdown-toggle" data-target="desertMenu">Desert Adventures</div>
-            <ul class="mobile-submenu" id="desertMenu" style="display: none;">
-                <li><a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a></li>
-                <li><a href="morning-safari-dubai.html">Morning Safari Dubai</a></li>
-                <li><a href="evening-safari-dubai.html">Evening Safari Dubai</a></li>
-                <li><a href="overnight-camp-dubai.html">Overnight Camp Dubai</a></li>
-                <li><a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a></li>
-                <li><a href="morning-safari-abudhabi.html">Morning Safari Abu Dhabi</a></li>
-                <li><a href="evening-safari-abudhabi.html">Evening Safari Abu Dhabi</a></li>
-                <li><a href="overnight-camp-abudhabi.html">Overnight Camp Abu Dhabi</a></li>
-            </ul>
-        </li>
-        <li>
-            <div class="mobile-dropdown-toggle" data-target="cityMenu">City Attractions</div>
-            <ul class="mobile-submenu" id="cityMenu" style="display: none;">
-                <li><a href="abu-dhabi-city-tour.html">Abu Dhabi City Tour</a></li>
-                <li><a href="dubai-city-tour.html">Dubai City Tour</a></li>
-                <li><a href="vip-events.html">VIP Events</a></li>
-                <li><a href="ferrari-world.html">Ferrari World</a></li>
-                <li><a href="yas-water-world.html">Yas Water World</a></li>
-                <li><a href="miracle-garden.html">Miracle Garden</a></li>
-                <li><a href="wild-wadi.html">Wild Wadi</a></li>
-            </ul>
-        </li>
-        <li>
-            <div class="mobile-dropdown-toggle" data-target="cruiseMenu">Cruise & Boat</div>
-            <ul class="mobile-submenu" id="cruiseMenu" style="display: none;">
-                <li><a href="yacht-sailing.html">Yacht Sailing</a></li>
-                <li><a href="dhow-cruise.html">Dhow Cruise</a></li>
-                <li><a href="yacht-sailing.html#luxury-cruise">Luxury Cruise</a></li>
-            </ul>
-        </li>
-        <li>
-            <div class="mobile-dropdown-toggle" data-target="galleryMenu">Gallery</div>
-            <ul class="mobile-submenu" id="galleryMenu" style="display: none;">
-                <li><a href="gallery.html">Photo Gallery</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-            </ul>
-        </li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>`;
+</header>`;
 
 const footerHTML = `<footer class="footer">
     <div class="footer-container">
@@ -411,59 +358,3 @@ function setActiveNav() {
         }
     });
 }
-
-// Mobile Menu Functionality
-function initMobileMenu() {
-    const hamburger = document.getElementById('hamburgerMenu');
-    const mobileNavPanel = document.getElementById('mobileNavPanel');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-
-    if (!hamburger || !mobileNavPanel || !mobileMenuOverlay) return;
-
-    // Toggle mobile menu
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        mobileNavPanel.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        document.body.style.overflow = mobileNavPanel.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Close menu when clicking overlay
-    mobileMenuOverlay.addEventListener('click', function() {
-        hamburger.classList.remove('active');
-        mobileNavPanel.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-
-    // Mobile dropdown toggles
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            const targetMenu = document.getElementById(targetId);
-
-            if (targetMenu) {
-                const isOpen = targetMenu.style.display === 'block';
-                targetMenu.style.display = isOpen ? 'none' : 'block';
-                this.classList.toggle('active', !isOpen);
-            }
-        });
-    });
-
-    // Close menu when clicking a link
-    const mobileLinks = mobileNavPanel.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            mobileNavPanel.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-}
-
-// Initialize mobile menu when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-});
