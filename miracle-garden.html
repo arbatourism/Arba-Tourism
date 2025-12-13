@@ -1,40 +1,178 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miracle Garden Dubai - Desert Safari Website</title>
+    <title>Miracle Garden Dubai - Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        .image-with-watermark {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .image-with-watermark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-with-watermark::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 18.75%;
+            aspect-ratio: 1;
+            background: url('images/watermark-logo.png') no-repeat center/contain;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Miracle Garden Section -->
-    <section id="miracle-garden" class="hero-section miracle-hero">
-        <div class="hero-overlay">
-            <h1 class="hero-title">Miracle Garden Dubai</h1>
+    <!-- Hero Section - Compact -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1490750967868-88aa4486c946') center/cover fixed;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 55px;
+                        font-weight: 900;
+                        margin-bottom: 20px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1.1;
+                        letter-spacing: -2px;">
+                        Miracle Garden Dubai
+                    </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
+                        The world's largest natural flower garden with over 45 million blooming flowers in vibrant displays
+                    </p>
+
+                </div>
+
+                <!-- Right Image -->
+                <div style="position: relative; height: 320px;">
+                    <div class="image-with-watermark" style="position: absolute; top: 0; right: 0; width: 90%; height: 280px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.5); border: 5px solid rgba(245, 212, 160, 0.4);">
+                        <img src="https://i.imgur.com/hjTENbr.png" alt="Miracle Garden Dubai" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://i.imgur.com/hjTENbr.png" alt="Miracle Garden Dubai">
+    <!-- Content Section - Compact -->
+    <section style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Miracle Garden</span> Experience
+                </h2>
+                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">WORLD'S LARGEST NATURAL FLOWER GARDEN</p>
             </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourisms</h2>
-                <h3 class="section-title">Miracle Garden Dubai</h3>
-                <p class="section-text">
-                    If you're looking to experience a truly breathtaking display of nature's beauty, the Miracle Garden Dubai is an attraction that should be at the top of your list. Spanning over 72,000 square meters, this stunning garden is home to more than 45 million blooming flowers and plants in vibrant colors and unique patterns. The Miracle Garden Dubai is a sight to behold, and Arba Tourism is proud to offer packages that include transportation and entry to this magnificent attraction.
-                </p>
-                <p class="section-text">
-                    Visitors to the Miracle Garden can stroll through multiple themed areas, each offering a different experience. From the heart-shaped pathway adorned with thousands of red and white petunias to the giant floral clock that blooms with a different set of flowers every season, there is something to captivate everyone's attention. Arba Tourism's packages for the Miracle Garden can be customized to include additional activities in Dubai, allowing you to make the most of your visit to this beautiful city.
-                </p>
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Left Description -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Experience</h3>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        If you're looking to experience a truly breathtaking display of nature's beauty, the Miracle Garden Dubai is an attraction that should be at the top of your list. Spanning over 72,000 square meters, this stunning garden is home to more than 45 million blooming flowers and plants in vibrant colors.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                        Visitors can stroll through multiple themed areas, each offering a different experience. From the heart-shaped pathway adorned with thousands of petunias to the giant floral clock that blooms with different flowers every season, there is something to captivate everyone's attention.
+                    </p>
+                </div>
+
+                <!-- Right Highlights -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Garden Highlights</h3>
+                    <div style="display: grid; gap: 10px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">45 Million Flowers</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Stunning displays in vibrant colors and unique patterns</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Giant Floral Clock</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Blooms with different flowers every season</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Themed Areas</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Heart-shaped pathways and unique floral sculptures</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Seasonal Experience</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Open from November to May with new themes yearly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
-        <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>

@@ -1,40 +1,178 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wild Wadi in Dubai - Desert Safari Website</title>
+    <title>Wild Wadi Waterpark Dubai - Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        .image-with-watermark {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .image-with-watermark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-with-watermark::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 18.75%;
+            aspect-ratio: 1;
+            background: url('images/watermark-logo.png') no-repeat center/contain;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Wild Wadi Section -->
-    <section id="wild-wadi" class="hero-section wildwadi-hero">
-        <div class="hero-overlay">
-            <h1 class="hero-title">Wild Wadi in Dubai</h1>
+    <!-- Hero Section - Compact -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1534604972129-5f2f0b9e0c82') center/cover fixed;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 55px;
+                        font-weight: 900;
+                        margin-bottom: 20px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1.1;
+                        letter-spacing: -2px;">
+                        Wild Wadi Waterpark
+                    </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
+                        Dubai's iconic waterpark with 30+ thrilling rides and attractions for all ages
+                    </p>
+
+                </div>
+
+                <!-- Right Image -->
+                <div style="position: relative; height: 320px;">
+                    <div class="image-with-watermark" style="position: absolute; top: 0; right: 0; width: 90%; height: 280px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.5); border: 5px solid rgba(245, 212, 160, 0.4);">
+                        <img src="https://i.imgur.com/zBxYfb3.png" alt="Wild Wadi Dubai" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://i.imgur.com/zBxYfb3.png" alt="Wild Wadi Dubai">
+    <!-- Content Section - Compact -->
+    <section style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Wild Wadi</span> Experience
+                </h2>
+                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">DUBAI'S ICONIC WATERPARK</p>
             </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourism's</h2>
-                <h3 class="section-title">Wild Wadi in Dubai</h3>
-                <p class="section-text">
-                    Wild Wadi is a waterpark located in Dubai that provides visitors with an unforgettable experience of thrilling water rides and attractions. With more than 30 rides and attractions, Wild Wadi offers something for everyone, from families with young children to thrill-seekers looking for an adrenaline rush. One of the most popular attractions is the Jumeirah Sceirah, a high-speed water slide that reaches speeds of up to 80 km/h, and propels riders through a tunnel that passes through a shark-filled lagoon. For those looking for a more relaxed experience, the park also features a lazy river and a wave pool.
-                </p>
-                <p class="section-text">
-                    Arba Tourism offers visitors to Dubai the opportunity to experience Wild Wadi as part of their package tours. With our expert guidance and transport services, visitors can enjoy a hassle-free trip to the park and spend a fun-filled day with family and friends. Whether you're looking to cool off from the desert heat or seeking an adventurous day out, Wild Wadi is a must-visit destination in Dubai, and we at Arba Tourism are here to ensure you have an unforgettable experience.
-                </p>
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Left Description -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Experience</h3>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        Wild Wadi is a waterpark located in Dubai that provides visitors with an unforgettable experience of thrilling water rides and attractions. With more than 30 rides and attractions, Wild Wadi offers something for everyone, from families with young children to thrill-seekers looking for an adrenaline rush.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                        Arba Tourism offers visitors to Dubai the opportunity to experience Wild Wadi as part of their package tours. With our expert guidance and transport services, visitors can enjoy a hassle-free trip to the park and spend a fun-filled day with family and friends.
+                    </p>
+                </div>
+
+                <!-- Right Highlights -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Park Highlights</h3>
+                    <div style="display: grid; gap: 10px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Jumeirah Sceirah</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">High-speed slide reaching 80 km/h through shark-filled lagoon</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">30+ Rides & Attractions</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Thrilling slides to relaxing lazy rivers and wave pools</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Family Friendly</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Activities for all ages from kids to thrill-seekers</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Prime Location</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Located near Burj Al Arab with stunning views</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
-        <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>

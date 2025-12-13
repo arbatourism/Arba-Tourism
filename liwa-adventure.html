@@ -1,60 +1,192 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liwa Desert Tour - Desert Safari Website</title>
+    <title>Liwa Desert Tour - Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .content-section {
-            background-color: #E5DDD5 !important;
-            padding-top: 0px !important;
-            margin-top: -60px !important;
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        .image-with-watermark {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .image-with-watermark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-with-watermark::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 18.75%;
+            aspect-ratio: 1;
+            background: url('images/watermark-logo.png') no-repeat center/contain;
+            opacity: 0.9;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Liwa Desert Tour Section -->
-    <section id="liwa-adventure" class="hero-section liwa-hero">
-        <div class="hero-overlay">
-            <h1 class="hero-title">Liwa Desert Tour</h1>
+    <!-- Hero Section -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1509316785289-025f5b846b35') center/cover fixed;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 55px;
+                        font-weight: 900;
+                        margin-bottom: 20px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1.1;
+                        letter-spacing: -2px;">
+                        Liwa Desert Tour
+                    </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
+                        Explore the breathtaking Empty Quarter with towering dunes and mesmerizing desert landscapes
+                    </p>
+
+                </div>
+
+                <!-- Right Image -->
+                <div style="position: relative; height: 320px;">
+                    <div class="image-with-watermark" style="position: absolute; top: 0; right: 0; width: 90%; height: 280px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.5); border: 5px solid rgba(245, 212, 160, 0.4);">
+                        <img src="https://i.imgur.com/VR9HAcg.png" alt="Liwa Desert" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://i.imgur.com/VR9HAcg.png" alt="Liwa Desert">
+    <!-- Content Section -->
+    <section style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Liwa Desert</span> Experience
+                </h2>
+                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">THE LEGENDARY EMPTY QUARTER</p>
             </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourism's</h2>
-                <h3 class="section-title">Liwa Desert Tour</h3>
-                <p class="section-text">
-                    Arba Tourism offers a one-of-a-kind experience to explore the breathtaking Liwa Desert. Located in the southern region of Abu Dhabi, the Liwa Desert boasts of towering sand dunes and mesmerizing landscapes. This full-day trip offers a unique opportunity to experience the culture and traditions of the region, while also enjoying the thrill of dune bashing and camel riding. The trip includes a visit to the Liwa Oasis, known for its lush date plantations and picturesque scenery.Visitors can also witness traditional Bedouin life and enjoy a sumptuous meal under the stars.
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Left Description -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Experience</h3>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        Arba Tourism offers a one-of-a-kind experience to explore the breathtaking Liwa Desert. Located in the southern region of Abu Dhabi, the Liwa Desert boasts of towering sand dunes and mesmerizing landscapes.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        This full-day trip offers a unique opportunity to experience the culture and traditions of the region, while also enjoying the thrill of dune bashing and camel riding. The trip includes a visit to the Liwa Oasis, known for its lush date plantations.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                        The Liwa Desert trip is a perfect getaway for those looking to escape the hustle and immerse themselves in the tranquility and beauty of the desert.
+                    </p>
+                </div>
+
+                <!-- Right Highlights -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <div style="display: grid; gap: 10px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Towering Sand Dunes</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Experience the world's largest sand dunes in the Empty Quarter</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Thrilling Dune Bashing</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Adventure rides through the dramatic desert terrain</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Liwa Oasis Visit</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Explore lush date plantations and picturesque scenery</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Bedouin Experience</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional camp and dinner under the stars</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Quarter Section -->
+            <div style="margin-top: 40px; background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                <h3 style="font-size: 22px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Mesmerizing Empty Quarter</h3>
+                <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                    Liwa Desert, also known as the Empty Quarter, is a mesmerizing and vast desert located in Abu Dhabi, United Arab Emirates. The Empty Quarter is renowned for its infinite dunes that stretch as far as the eye can see, creating a captivating landscape that captivates adventurers and photographers alike.
                 </p>
-                <p class="section-text">
-                    The Liwa Desert trip is a perfect getaway for those looking to escape the hustle and bustle of the city and immerse themselves in the tranquility and beauty of the desert. Arba Tourism ensures a comfortable and memorable experience for all its guests.
+                <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                    As part of the Empty Quarter, which is one of the largest deserts in the world, Liwa offers a breathtaking canvas for capturing stunning photographs and creating lasting memories. Surprisingly, within this arid landscape lies the Liwa Oasis, a region historically cultivated by bedouin tribes. The presence of lush palm forests amidst the desert's expanse adds an unexpected element of beauty and intrigue.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Mesmerizing Empty Quarter Section -->
-    <section class="content-section">
-        <div class="container">
-            <h3 class="section-title" style="text-align: left;">Mesmerizing Empty Quarter</h3>
-            <p class="section-text">
-                Liwa Desert, also known as the Empty Quarter, is a mesmerizing and vast desert located in Abu Dhabi, United Arab Emirates. The Empty Quarter is renowned for its infinite dunes that stretch as far as the eye can see, creating a captivating landscape that captivates adventurers and photographers alike. Visiting Liwa Desert is a remarkable experience for travelers and photographers who seek to immerse themselves in its vastness.
-            </p>
-            <p class="section-text">
-                As part of the Empty Quarter, which is one of the largest deserts in the world, Liwa offers a breathtaking canvas for capturing stunning photographs and creating lasting memories. Surprisingly, within this arid landscape, lies the Liwa Oasis, a region historically cultivated by bedouin tribes. The presence of lush palm forests amidst the desert's expanse adds an unexpected element of beauty and intrigue to the Liwa Desert experience.
-            </p>
-        </div>
-    </section>
     <!-- Footer -->
-        <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>

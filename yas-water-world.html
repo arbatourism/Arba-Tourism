@@ -1,45 +1,181 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yas Water World - Desert Safari Website</title>
+    <title>Yas Water World - Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        .image-with-watermark {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .image-with-watermark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .image-with-watermark::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 18.75%;
+            aspect-ratio: 1;
+            background: url('images/watermark-logo.png') no-repeat center/contain;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <!-- Yas Water World Section -->
-    <section id="yas-water-world" class="hero-section yas-hero">
-        <img src="https://images.unsplash.com/photo-1534604972129-5f2f0b9e0c82" alt="Water Park" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-        <div class="hero-overlay" style="position: relative; z-index: 1;">
-            <h1 class="hero-title">Yas Water World</h1>
+    <!-- Hero Section -->
+    <section style="
+        background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
+                    url('https://images.unsplash.com/photo-1534604972129-5f2f0b9e0c82') center/cover fixed;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;">
+
+        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+
+                <!-- Left Content -->
+                <div>
+                    <h1 style="
+                        font-size: 55px;
+                        font-weight: 900;
+                        margin-bottom: 20px;
+                        background: linear-gradient(135deg, #ffffff 0%, #f5e6d3 20%, #d4a574 40%, #f5d4a0 60%, #ffffff 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
+                        line-height: 1.1;
+                        letter-spacing: -2px;">
+                        Yas Water World
+                    </h1>
+
+                    <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
+                        Abu Dhabi's ultimate waterpark destination with over 40 thrilling rides and attractions
+                    </p>
+
+                </div>
+
+                <!-- Right Image -->
+                <div style="position: relative; height: 320px;">
+                    <div class="image-with-watermark" style="position: absolute; top: 0; right: 0; width: 90%; height: 280px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.5); border: 5px solid rgba(245, 212, 160, 0.4);">
+                        <img src="https://i.imgur.com/6d4ikb0.png" alt="Yas Water World" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tour-content-section">
-        <div class="tour-container">
-            <div class="tour-image">
-                <img src="https://i.imgur.com/6d4ikb0.png" alt="Yas Water World">
+    <!-- Content Section -->
+    <section style="background: white; padding: 50px 80px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Yas Water World</span> Experience
+                </h2>
+                <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">ABU DHABI'S PREMIER WATERPARK</p>
             </div>
-            <div class="tour-details">
-                <h2 class="section-subtitle">Arba Tourism's</h2>
-                <h3 class="section-title">Yas Water World</h3>
-                <p class="section-text">
-                    Arba Tourism offers an exciting opportunity for thrill-seekers to experience Yas Waterworld in Abu Dhabi. This water park is a hub of adventure and fun, featuring over 40 rides, slides, and attractions. It has something for everyone, from adrenaline-pumping rollercoasters and extreme water slides to calm, relaxing pools for families and young children.
-                </p>
-                <p class="section-text">
-                    Visitors to Yas Waterworld can experience the region's unique culture and heritage with attractions such as the Pearl Diving Experience and the Al Raha River. The park also features a range of restaurants and cafes, serving up delicious food and beverages for visitors to enjoy between adventures.
-                </p>
-                <p class="section-text">
-                    Whether you're looking for an exciting day out with friends or a fun-filled family adventure, Yas Waterworld is the perfect destination for those seeking an unforgettable experience.
-                </p>
+
+            <!-- Content Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- Left Description -->
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Experience</h3>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        Arba Tourism offers an exciting opportunity for thrill-seekers to experience Yas Waterworld in Abu Dhabi. This water park is a hub of adventure and fun, featuring over 40 rides, slides, and attractions.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0 0 12px 0;">
+                        Visitors can experience the region's unique culture with attractions such as the Pearl Diving Experience and the Al Raha River. The park also features restaurants serving delicious food.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
+                        Whether you're looking for an exciting day out with friends or a fun-filled family adventure, Yas Waterworld is the perfect destination.
+                    </p>
+                </div>
+
+                <!-- Right Highlights -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Park Highlights</h3>
+                    <div style="display: grid; gap: 10px;">
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">40+ Rides & Attractions</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">From adrenaline-pumping slides to relaxing pools</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Family Friendly</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Activities for all ages and thrill levels</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 -20.55 122.88 122.88" fill="white">
+                                    <path d="M18,33.84c3.46-2.36,5.2-5.45,4.9-12.52V3.14c-0.03-2.54-4.64-2.85-4.87,0l-0.18,14.75 c-0.01,2.76-4.16,2.85-4.15,0l0.18-15.25c-0.05-2.73-4.45-3-4.51,0c0,4.23-0.18,11.02-0.18,15.25c0.22,2.67-3.63,3.02-3.53,0 L5.85,2.73c-0.1-2.06-2.36-2.79-3.9-1.83C0.31,1.95,0.64,4.05,0.57,5.82L0,23.22c0.09,5.06,1.42,9.17,5.38,10.92 c0.6,0.26,1.44,0.47,2.41,0.62L6.42,77.18c-0.08,2.52,1.98,4.57,4.39,4.57h0.55c2.72,0,5.01-2.32,4.94-5.15l-1.2-41.86 C16.36,34.54,17.41,34.25,18,33.84L18,33.84L18,33.84z M113.36,44.66h1.48c0,10.83-0.04,23.34-0.39,34.12 c-0.15,4.13,7.59,3.97,7.45-0.43l-0.29-33.69h1.27V0C106.9,2.45,112.41,33.39,113.36,44.66L113.36,44.66z M105.56,41.11 c0,10.91-3.84,20.22-11.52,27.91c-7.7,7.7-17,11.55-27.91,11.55c-10.86,0-20.17-3.84-27.88-11.55c-7.7-7.69-11.57-17-11.57-27.91 c0-10.88,3.86-20.15,11.57-27.86c7.73-7.7,17.02-11.57,27.88-11.57c10.91,0,20.21,3.86,27.91,11.57 C101.71,20.95,105.56,30.23,105.56,41.11L105.56,41.11z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Dining Options</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Restaurants and cafes throughout the park</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="white">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Yas Island Location</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Part of Abu Dhabi's premier entertainment destination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-        <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
     <script src="includes/components.js"></script>
 </body>
