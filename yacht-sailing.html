@@ -44,25 +44,146 @@
             opacity: 0.9;
             pointer-events: none;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+            .yacht-hero-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            .yacht-hero-title {
+                font-size: 45px !important;
+            }
+            .yacht-hero-image {
+                height: 250px !important;
+            }
+            .yacht-section-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            .yacht-section-padding {
+                padding: 40px 40px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .yacht-hero-section {
+                min-height: 50vh !important;
+            }
+            .yacht-hero-padding {
+                padding: 0 20px !important;
+            }
+            .yacht-hero-title {
+                font-size: 32px !important;
+                letter-spacing: -1px !important;
+            }
+            .yacht-hero-desc {
+                font-size: 15px !important;
+            }
+            .yacht-hero-image {
+                height: 220px !important;
+                width: 100% !important;
+            }
+            .yacht-hero-image > div {
+                position: relative !important;
+                width: 100% !important;
+                height: 200px !important;
+                margin-bottom: 15px !important;
+                transform: none !important;
+            }
+            .yacht-section-padding {
+                padding: 30px 15px !important;
+            }
+            .yacht-section-title {
+                font-size: 28px !important;
+            }
+            .yacht-section-subtitle {
+                font-size: 13px !important;
+            }
+            .yacht-content-grid {
+                grid-template-columns: 1fr !important;
+                gap: 25px !important;
+            }
+            .yacht-highlight-item {
+                padding: 10px !important;
+            }
+            .icon-box {
+                width: 35px;
+                height: 35px;
+            }
+            .icon-box svg {
+                width: 18px;
+                height: 18px;
+            }
+            .yacht-service-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 10px !important;
+            }
+            .yacht-service-item {
+                padding: 15px !important;
+            }
+            .yacht-tour-options {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            .yacht-tour-card {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .yacht-inclusions-grid {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+            .yacht-divider {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .yacht-hero-title {
+                font-size: 26px !important;
+            }
+            .yacht-hero-desc {
+                font-size: 14px !important;
+            }
+            .yacht-hero-image {
+                height: 180px !important;
+            }
+            .yacht-section-padding {
+                padding: 25px 10px !important;
+            }
+            .yacht-section-title {
+                font-size: 24px !important;
+            }
+            .yacht-highlight-text h5 {
+                font-size: 13px !important;
+            }
+            .yacht-highlight-text p {
+                font-size: 12px !important;
+            }
+            .yacht-service-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section style="
+    <section class="yacht-hero-section" style="
         background: linear-gradient(135deg, rgba(139, 105, 20, 0.97) 0%, rgba(101, 67, 33, 0.95) 50%, rgba(120, 81, 45, 0.97) 100%),
                     url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a') center/cover fixed;
         min-height: 65vh;
         display: flex;
         align-items: center;">
 
-        <div style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+        <div class="yacht-hero-padding" style="max-width: 1500px; margin: 0 auto; width: 100%; padding: 0 80px;">
+            <div class="yacht-hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
 
                 <!-- Left Content -->
                 <div>
-                    <h1 style="
+                    <h1 class="yacht-hero-title" style="
                         font-size: 65px;
                         font-weight: 900;
                         margin-bottom: 25px;
@@ -75,7 +196,7 @@
                         Luxury Yacht<br/>Sailing Dubai
                     </h1>
 
-                    <p style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
+                    <p class="yacht-hero-desc" style="color: rgba(255,255,255,0.9); font-size: 17px; line-height: 1.6; margin-bottom: 25px; max-width: 500px;">
                         Experience Dubai's iconic landmarks from the water aboard a luxury yacht with breakfast or BBQ options
                     </p>
 
@@ -103,7 +224,7 @@
                 </div>
 
                 <!-- Right Images -->
-                <div style="position: relative; height: 400px;">
+                <div class="yacht-hero-image" style="position: relative; height: 400px;">
                     <div class="image-with-watermark" style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
                         <img src="images/yacht-sailing.webp" alt="Luxury Yacht Dubai" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
@@ -116,19 +237,19 @@
     </section>
 
     <!-- Yacht Tours Section -->
-    <section id="yacht-tours" style="background: linear-gradient(to bottom, white 0%, white 70%, #f5e6d3 100%); padding: 50px 80px 80px 80px;">
+    <section id="yacht-tours" class="yacht-section-padding" style="background: linear-gradient(to bottom, white 0%, white 70%, #f5e6d3 100%); padding: 50px 80px 80px 80px;">
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                <h2 class="yacht-section-title" style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
                     <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dubai Marina</span> Yacht Experience
                 </h2>
                 <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
-                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">LUXURY SAILING EXPERIENCE</p>
+                <p class="yacht-section-subtitle" style="font-size: 15px; color: #8b6914; font-weight: 700;">LUXURY SAILING EXPERIENCE</p>
             </div>
 
             <!-- Content Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
+            <div class="yacht-content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
 
                 <!-- Left: Image and Description -->
                 <div>
@@ -246,19 +367,19 @@
     </section>
 
     <!-- Sunset Yacht Section -->
-    <section id="sunset-cruise" style="background: linear-gradient(to bottom, #f5e6d3 0%, #f5e6d3 60%, #c9a060 100%); padding: 50px 80px 80px 80px;">
+    <section id="sunset-cruise" class="yacht-section-padding" style="background: linear-gradient(to bottom, #f5e6d3 0%, #f5e6d3 60%, #c9a060 100%); padding: 50px 80px 80px 80px;">
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                <h2 class="yacht-section-title" style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
                     <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Sunset Party</span> Yacht Cruise
                 </h2>
                 <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;"></div>
-                <p style="font-size: 15px; color: #8b6914; font-weight: 700;">MAGICAL SUNSET EXPERIENCE</p>
+                <p class="yacht-section-subtitle" style="font-size: 15px; color: #8b6914; font-weight: 700;">MAGICAL SUNSET EXPERIENCE</p>
             </div>
 
             <!-- Content Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
+            <div class="yacht-content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-bottom: 30px;">
 
                 <!-- Left: Highlights -->
                 <div>
@@ -333,7 +454,7 @@
                     </div>
 
                     <!-- Services -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="yacht-service-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                         <div style="background: white; padding: 20px; border-radius: 12px; text-align: center;">
                             <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -378,21 +499,21 @@
     </section>
 
     <!-- Luxury Cruise Section -->
-    <section id="luxury-cruise" style="background: linear-gradient(to bottom, #c9a060 0%, #b8923d 30%, #b8923d 70%, #c9a060 85%, white 100%); padding: 60px 80px 100px 80px;">
+    <section id="luxury-cruise" class="yacht-section-padding" style="background: linear-gradient(to bottom, #c9a060 0%, #b8923d 30%, #b8923d 70%, #c9a060 85%, white 100%); padding: 60px 80px 100px 80px;">
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 40px;">
-                <h2 style="font-size: 45px; font-weight: 900; margin: 0 0 15px 0; letter-spacing: -1px;
+                <h2 class="yacht-section-title" style="font-size: 45px; font-weight: 900; margin: 0 0 15px 0; letter-spacing: -1px;
                     color: #3d2a14;
                     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);">
                     Luxury Dhow Cruise
                 </h2>
                 <div style="width: 150px; height: 3px; background: linear-gradient(90deg, transparent, #5a3d1a, #3d2a14, #5a3d1a, transparent); margin: 0 auto 15px;"></div>
-                <p style="font-size: 16px; color: #3d2a14; font-weight: 700; letter-spacing: 2px;">GLASS-ENCLOSED DINING ON DUBAI WATER CANAL</p>
+                <p class="yacht-section-subtitle" style="font-size: 16px; color: #3d2a14; font-weight: 700; letter-spacing: 2px;">GLASS-ENCLOSED DINING ON DUBAI WATER CANAL</p>
             </div>
 
             <!-- Content Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
+            <div class="yacht-content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
 
                 <!-- Left: Image and Features -->
                 <div>
@@ -511,16 +632,16 @@
     </section>
 
     <!-- Tour Options -->
-    <section style="background: white; padding: 50px 80px;">
+    <section class="yacht-section-padding" style="background: white; padding: 50px 80px;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 36px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0;">
+                <h2 class="yacht-section-title" style="font-size: 36px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0;">
                     Choose Your <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Yacht Experience</span>
                 </h2>
                 <div style="width: 100px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto;"></div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+            <div class="yacht-tour-options" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
                 <!-- 1 Hour Option -->
                 <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 30px; border-radius: 20px; border: 2px solid rgba(198, 123, 62, 0.2); text-align: center;">
                     <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">

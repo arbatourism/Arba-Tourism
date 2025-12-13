@@ -825,48 +825,194 @@
             transform: scale(1.1);
         }
 
-        /* Responsive */
+        /* Responsive - Tablet */
+        @media (max-width: 1024px) {
+            #initial-header .nav-menu {
+                gap: 25px;
+            }
+
+            #initial-header .nav-link {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .home-hero-title {
+                font-size: 60px;
+            }
+
+            .home-hero-overlay {
+                padding: 0 30px;
+            }
+
+            .reviews-section h2 {
+                font-size: 40px;
+            }
+        }
+
+        /* Responsive - Mobile */
         @media (max-width: 768px) {
             .custom-cursor, .cursor-glow {
                 display: none;
             }
 
+            /* Hide initial header nav on mobile, show hamburger */
+            #initial-header .nav-menu {
+                display: none !important;
+            }
+
+            #initial-header .hamburger-menu {
+                display: flex;
+            }
+
+            #initial-header .hamburger-menu span {
+                background-color: #ffffff;
+            }
+
+            #initial-header {
+                padding: 10px 15px;
+            }
+
+            #initial-header .logo img {
+                height: 70px;
+            }
+
+            .home-hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 100px 0 50px;
+            }
+
             .home-hero-title {
-                font-size: 48px;
+                font-size: 36px;
+                line-height: 1.2;
             }
 
             .home-hero-subtitle {
-                font-size: 18px;
+                font-size: 16px;
+            }
+
+            .home-hero-overlay {
+                padding: 0 20px;
+            }
+
+            .hero-badge {
+                font-size: 12px;
+                padding: 8px 20px;
+                margin-bottom: 20px;
             }
 
             .hero-buttons {
                 flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-btn {
+                padding: 14px 30px;
+                font-size: 14px;
             }
 
             .big-scroll-button {
                 left: 20px;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
             }
 
             .big-scroll-button svg {
-                width: 30px;
-                height: 30px;
+                width: 24px;
+                height: 24px;
             }
 
             .social-media-widget {
-                bottom: 20px;
-                right: 20px;
+                bottom: 15px;
+                right: 15px;
             }
 
             .social-icon {
-                width: 55px;
-                height: 55px;
+                width: 50px;
+                height: 50px;
             }
 
             .social-icon svg {
-                width: 24px;
-                height: 24px;
+                width: 22px;
+                height: 22px;
+            }
+
+            .reviews-section {
+                padding: 60px 15px;
+            }
+
+            .reviews-section h2 {
+                font-size: 28px;
+            }
+
+            .reviews-section .section-subtitle {
+                font-size: 14px;
+                margin-bottom: 40px;
+            }
+
+            .review-card {
+                min-width: 280px;
+                max-width: 300px;
+                padding: 25px;
+            }
+
+            .review-card .review-text {
+                font-size: 14px;
+            }
+
+            /* CTA Section Mobile */
+            .cta-section {
+                padding: 50px 20px !important;
+            }
+
+            .cta-section h2 {
+                font-size: 28px !important;
+            }
+
+            .cta-section p {
+                font-size: 14px !important;
+            }
+        }
+
+        /* Responsive - Small Mobile */
+        @media (max-width: 480px) {
+            .home-hero-title {
+                font-size: 28px;
+            }
+
+            .home-hero-subtitle {
+                font-size: 14px;
+            }
+
+            .hero-badge {
+                font-size: 10px;
+                padding: 6px 15px;
+            }
+
+            .hero-btn {
+                padding: 12px 25px;
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .reviews-section h2 {
+                font-size: 24px;
+            }
+
+            .review-card {
+                min-width: 260px;
+                max-width: 280px;
+                padding: 20px;
             }
         }
 
