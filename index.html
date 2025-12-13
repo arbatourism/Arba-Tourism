@@ -96,7 +96,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 999;
+            z-index: 1001;
             background: transparent !important;
             padding: 10px 40px;
             transition: opacity 0.4s ease, transform 0.4s ease;
@@ -191,7 +191,7 @@
             background-color: rgba(255, 255, 255, 0.95);
             min-width: 220px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
+            z-index: 1002;
             padding: 15px 0;
             border-top: 3px solid #CFA460;
             backdrop-filter: blur(10px);
@@ -242,6 +242,16 @@
             position: relative;
         }
 
+        #initial-header .submenu::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 20px;
+            height: 100%;
+            background: transparent;
+        }
+
         #initial-header .submenu-content {
             display: none;
             position: absolute;
@@ -253,7 +263,7 @@
             padding: 15px 0;
             border-top: 3px solid #a67c52;
             margin-left: 0;
-            z-index: 1002;
+            z-index: 1003;
         }
 
         #initial-header .submenu-content a {
@@ -857,13 +867,18 @@
         }
 
         /* Home Page Header - Hidden by default, shows on scroll */
-        #home-header {
+        #header-placeholder {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             transform: translateY(-100%);
             opacity: 0;
             transition: transform 0.4s ease, opacity 0.4s ease;
         }
 
-        #home-header.visible {
+        #header-placeholder.visible {
             transform: translateY(0);
             opacity: 1;
         }
@@ -1641,7 +1656,7 @@
             <!-- Dubai City Tour Frame -->
             <a href="dubai-city-tour-frame-creek-blue-mosque.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Dubai Frame Tour" class="activity-card-image">
+                    <img src="images/photo-1518684079-3c830dcef090.jfif" alt="Dubai Frame Tour" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1832,7 +1847,7 @@
             <a href="abu-dhabi-city-tour.html" class="activity-card">
                 <div class="discount-badge">-25%</div>
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=400&h=300&fit=crop" alt="Abu Dhabi City Tour" class="activity-card-image">
+                    <img src="images/photo-1512632578888-169bbbc64f33.jfif" alt="Abu Dhabi City Tour" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -1946,7 +1961,7 @@
             <!-- Abu Dhabi Sheikh Zayed Mosque Tour -->
             <a href="abudhabi-sheikh-zayed-mosque-tour-from-dubai.html" class="activity-card">
                 <div class="activity-card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop" alt="Sheikh Zayed Mosque" class="activity-card-image">
+                    <img src="images/photo-1518684079-3c830dcef090.jfif" alt="Sheikh Zayed Mosque" class="activity-card-image">
                 </div>
                 <div class="activity-card-content">
                     <div class="rating">
@@ -2292,7 +2307,7 @@
     <script>
         // Show/hide header, scroll indicators, and hero overlay based on scroll position
         window.addEventListener('scroll', function() {
-            const header = document.getElementById('home-header');
+            const header = document.getElementById('header-placeholder');
             const initialHeader = document.getElementById('initial-header');
             const scrollIndicator = document.querySelector('.scroll-indicator');
             const bigScrollButton = document.querySelector('.big-scroll-button');

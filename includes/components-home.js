@@ -42,8 +42,8 @@ const headerHTML = `<header id="home-header">
                     <div class="submenu">
                         <a href="#abu-dhabi" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="#half-day-city-tour-abu-dhabi">Half Day City Tour Abu Dhabi</a>
-                            <a href="#full-day-city-tour-abu-dhabi">Full Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
                             <a href="#combo-tour-abu-dhabi">COMBO Abu Dhabi City Tour & Desert Safari</a>
                             <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
                         </div>
@@ -51,8 +51,8 @@ const headerHTML = `<header id="home-header">
                     <div class="submenu">
                         <a href="#dubai" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
                         <div class="submenu-content">
-                            <a href="#half-day-city-tour-dubai">Half Day City Tour Dubai</a>
-                            <a href="#full-day-city-tour-dubai">Full Day City Tour Dubai</a>
+                            <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
+                            <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
                             <a href="#combo-tour-dubai">COMBO Dubai City Tour & Desert Safari</a>
                             <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
                         </div>
