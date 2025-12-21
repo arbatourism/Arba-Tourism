@@ -93,6 +93,11 @@ const headerHTML = `<header>
                 <path d="m21 21-4.35-4.35"></path>
             </svg>
         </button>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>`;
 

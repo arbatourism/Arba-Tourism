@@ -1,10 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arba Tourism - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-menu.css">
     <style>
         /* Normal Cursor - Custom cursor disabled */
         body {
@@ -46,9 +48,9 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(180deg,
-                rgba(0, 0, 0, 0.3) 0%,
-                rgba(0, 0, 0, 0.4) 50%,
-                rgba(0, 0, 0, 0.5) 100%);
+                    rgba(0, 0, 0, 0.3) 0%,
+                    rgba(0, 0, 0, 0.4) 50%,
+                    rgba(0, 0, 0, 0.5) 100%);
             z-index: 1;
         }
 
@@ -84,6 +86,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -292,6 +295,7 @@
                 opacity: 0;
                 transform: translateY(-15px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -300,6 +304,7 @@
 
         /* Hide initial header on mobile - show hamburger menu instead */
         @media (max-width: 992px) {
+
             #initial-header .nav-menu,
             #initial-header .search-btn {
                 display: none;
@@ -314,10 +319,10 @@
             line-height: 1.1;
             letter-spacing: -2px;
             background: linear-gradient(135deg,
-                #ffffff 0%,
-                #f5e6d3 30%,
-                #f5d4a0 60%,
-                #c67b3e 100%);
+                    #ffffff 0%,
+                    #f5e6d3 30%,
+                    #f5d4a0 60%,
+                    #c67b3e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -332,6 +337,7 @@
                 transform: translateY(40px);
                 filter: blur(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -358,6 +364,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -379,6 +386,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -401,7 +409,7 @@
             align-items: center;
             gap: 12px;
             box-shadow: 0 8px 30px rgba(207, 164, 96, 0.5),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
@@ -415,9 +423,9 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg,
-                transparent,
-                rgba(255, 255, 255, 0.3),
-                transparent);
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
             animation: shimmer 3s infinite;
         }
 
@@ -425,6 +433,7 @@
             0% {
                 left: -100%;
             }
+
             100% {
                 left: 100%;
             }
@@ -433,7 +442,7 @@
         .home-hero .contact-us-btn:hover {
             transform: translateY(-3px) scale(1.03);
             box-shadow: 0 15px 45px rgba(207, 164, 96, 0.6),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
 
         .home-hero .contact-us-btn:active {
@@ -481,12 +490,19 @@
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateX(-50%) scale(1) translateY(0);
             }
+
             40% {
                 transform: translateX(-50%) scale(1) translateY(-8px);
             }
+
             60% {
                 transform: translateX(-50%) scale(1) translateY(-4px);
             }
@@ -519,6 +535,7 @@
                 opacity: 1;
                 transform: translateX(-50%) translateY(0);
             }
+
             100% {
                 opacity: 0;
                 transform: translateX(-50%) translateY(12px);
@@ -552,19 +569,22 @@
             visibility: visible;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease, visibility 0.5s ease;
             box-shadow: 0 6px 20px rgba(207, 164, 96, 0.5),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             animation: buttonPulse 2s infinite ease-in-out;
         }
 
         @keyframes buttonPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 8px 30px rgba(207, 164, 96, 0.5),
-                            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
             }
+
             50% {
                 box-shadow: 0 12px 40px rgba(207, 164, 96, 0.7),
-                            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                    inset 0 1px 0 rgba(255, 255, 255, 0.3);
             }
         }
 
@@ -572,8 +592,8 @@
             transform: translateY(-50%) scale(1.15);
             background: linear-gradient(135deg, rgba(220, 180, 110, 0.95) 0%, rgba(207, 164, 96, 0.95) 100%);
             box-shadow: 0 15px 50px rgba(207, 164, 96, 0.8),
-                        0 0 60px rgba(207, 164, 96, 0.5),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                0 0 60px rgba(207, 164, 96, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
             animation: none;
         }
 
@@ -587,12 +607,19 @@
         }
 
         @keyframes arrowBounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(8px);
             }
+
             60% {
                 transform: translateY(4px);
             }
@@ -611,11 +638,11 @@
             width: 100%;
             height: 100vh;
             background: linear-gradient(180deg,
-                transparent 0%,
-                transparent 50%,
-                rgba(26, 20, 16, 0.3) 70%,
-                rgba(26, 20, 16, 0.7) 85%,
-                #1a1410 100%);
+                    transparent 0%,
+                    transparent 50%,
+                    rgba(26, 20, 16, 0.3) 70%,
+                    rgba(26, 20, 16, 0.7) 85%,
+                    #1a1410 100%);
             opacity: 0;
             pointer-events: none;
             z-index: 2;
@@ -667,34 +694,34 @@
             width: 100%;
             height: 100px;
             background: linear-gradient(180deg,
-                transparent 0%,
-                rgba(26, 20, 16, 0.5) 40%,
-                #1a1410 100%);
+                    transparent 0%,
+                    rgba(26, 20, 16, 0.5) 40%,
+                    #1a1410 100%);
             pointer-events: none;
         }
 
         .activity-card {
             background: linear-gradient(135deg,
-                rgba(166, 124, 82, 0.25) 0%,
-                rgba(198, 123, 62, 0.2) 50%,
-                rgba(166, 124, 82, 0.25) 100%);
+                    rgba(166, 124, 82, 0.25) 0%,
+                    rgba(198, 123, 62, 0.2) 50%,
+                    rgba(166, 124, 82, 0.25) 100%);
             border: 2px solid rgba(198, 123, 62, 0.6);
             backdrop-filter: blur(15px);
             box-shadow: 0 8px 32px rgba(198, 123, 62, 0.3),
-                        inset 0 1px 0 rgba(245, 212, 160, 0.3),
-                        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+                inset 0 1px 0 rgba(245, 212, 160, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
         }
 
         .activity-card:hover {
             border-color: rgba(212, 160, 100, 0.9);
             background: linear-gradient(135deg,
-                rgba(198, 123, 62, 0.35) 0%,
-                rgba(212, 160, 100, 0.3) 50%,
-                rgba(198, 123, 62, 0.35) 100%);
+                    rgba(198, 123, 62, 0.35) 0%,
+                    rgba(212, 160, 100, 0.3) 50%,
+                    rgba(198, 123, 62, 0.35) 100%);
             box-shadow: 0 25px 60px rgba(198, 123, 62, 0.5),
-                        0 0 50px rgba(212, 160, 100, 0.4),
-                        inset 0 1px 0 rgba(245, 212, 160, 0.5),
-                        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+                0 0 50px rgba(212, 160, 100, 0.4),
+                inset 0 1px 0 rgba(245, 212, 160, 0.5),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2);
         }
 
         .activity-card-title {
@@ -708,7 +735,8 @@
         }
 
         /* White text for duration and location */
-        .duration, .location {
+        .duration,
+        .location {
             color: rgba(255, 255, 255, 0.95) !important;
             font-weight: 600;
         }
@@ -764,13 +792,16 @@
         }
 
         @keyframes whatsappPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5),
-                            0 0 0 0 rgba(37, 211, 102, 0.7);
+                    0 0 0 0 rgba(37, 211, 102, 0.7);
             }
+
             50% {
                 box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5),
-                            0 0 0 15px rgba(37, 211, 102, 0);
+                    0 0 0 15px rgba(37, 211, 102, 0);
             }
         }
 
@@ -827,16 +858,48 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .custom-cursor, .cursor-glow {
+
+            .custom-cursor,
+            .cursor-glow {
                 display: none;
             }
 
+            /* Issue 1: Hide social media widget on mobile to avoid duplicate WhatsApp */
+            .social-media-widget {
+                display: none !important;
+            }
+
+            /* Issue 2: Make hero text 20% bigger on mobile */
             .home-hero-title {
-                font-size: 48px;
+                font-size: 57.6px;
+                /* 48px * 1.2 = 57.6px */
             }
 
             .home-hero-subtitle {
-                font-size: 18px;
+                font-size: 21.6px;
+                /* 18px * 1.2 = 21.6px */
+            }
+
+            .hero-badge {
+                font-size: 16.8px;
+                /* 14px * 1.2 = 16.8px */
+                padding: 12px 33.6px;
+                /* 10px * 1.2, 28px * 1.2 */
+            }
+
+            /* Issue 2: Make buttons 20% smaller on mobile */
+            .home-hero .contact-us-btn {
+                padding: 16px 44px;
+                /* 20px * 0.8 = 16px, 55px * 0.8 = 44px */
+                font-size: 12.8px;
+                /* 16px * 0.8 = 12.8px */
+            }
+
+            .learn-more-btn {
+                padding: 14.4px 40px;
+                /* 18px * 0.8 = 14.4px, 50px * 0.8 = 40px */
+                font-size: 12.8px;
+                /* 16px * 0.8 = 12.8px */
             }
 
             .hero-buttons {
@@ -853,20 +916,128 @@
                 width: 30px;
                 height: 30px;
             }
+        }
 
-            .social-media-widget {
-                bottom: 20px;
-                right: 20px;
+        /* Issue 3 & 5: Adjust logo position on initial header for mobile */
+        @media (max-width: 768px) {
+            #initial-header .logo img {
+                margin-left: -20px;
+                /* Move logo more to the left */
+                margin-top: 5px;
+                /* Move logo a bit lower */
             }
 
-            .social-icon {
-                width: 55px;
-                height: 55px;
+            /* Issue 2: Make reviews carousel visible and scrollable on mobile */
+            .reviews-section {
+                padding: 60px 20px;
             }
 
-            .social-icon svg {
-                width: 24px;
-                height: 24px;
+            .reviews-carousel {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
+                animation: none !important;
+                /* Stop auto-scroll on mobile */
+                width: 100% !important;
+            }
+
+            .reviews-track {
+                display: flex;
+                gap: 20px;
+                padding: 0 10px;
+            }
+
+            .review-card {
+                scroll-snap-align: start;
+                min-width: 300px !important;
+                max-width: 300px !important;
+                flex-shrink: 0;
+            }
+
+            /* Issue 3: Show only one activity tile at a time on mobile */
+            .carousel-container {
+                position: relative;
+                padding: 0 20px;
+            }
+
+            .activity-grid {
+                display: flex !important;
+                overflow-x: auto;
+                gap: 20px;
+                padding: 10px 0;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
+
+            .activity-card {
+                min-width: calc(100vw - 60px) !important;
+                max-width: calc(100vw - 60px) !important;
+                scroll-snap-align: center;
+                flex-shrink: 0;
+            }
+
+            /* Add swipe indicator for activity cards */
+            .carousel-container::after {
+                content: '← SWIPE →';
+                position: absolute;
+                bottom: 10px;
+                /* Moved up from -30px */
+                left: 50%;
+                transform: translateX(-50%);
+                color: #ffffff;
+                background: rgba(207, 164, 96, 0.95);
+                padding: 8px 20px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                pointer-events: none;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                animation: swipeHintStrong 2s ease-in-out infinite;
+                z-index: 10;
+            }
+
+            @keyframes swipeHintStrong {
+
+                0%,
+                100% {
+                    opacity: 0.9;
+                    transform: translateX(-50%) scale(1);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: translateX(-50%) scale(1.05);
+                }
+            }
+
+            /* Add swipe indicator for reviews */
+            .reviews-section::after {
+                content: '← SWIPE TO SEE MORE REVIEWS →';
+                display: block;
+                text-align: center;
+                color: #ffffff;
+                background: rgba(207, 164, 96, 0.95);
+                padding: 10px 25px;
+                border-radius: 25px;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                margin: 30px auto 0;
+                max-width: 320px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                animation: swipeHintStrong 2s ease-in-out infinite;
+            }
+
+            /* Issue 4: Hide the scroll up button on mobile */
+            #backToTop {
+                display: none !important;
+            }
+
+            /* Hide carousel arrows on mobile */
+            .carousel-arrow {
+                display: none !important;
             }
         }
 
@@ -929,6 +1100,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
@@ -942,8 +1114,8 @@
         /* Individual review card */
         .review-card {
             background: linear-gradient(135deg,
-                rgba(166, 124, 82, 0.2) 0%,
-                rgba(198, 123, 62, 0.15) 100%);
+                    rgba(166, 124, 82, 0.2) 0%,
+                    rgba(198, 123, 62, 0.15) 100%);
             border: 2px solid rgba(198, 123, 62, 0.4);
             border-radius: 20px;
             padding: 30px;
@@ -1034,7 +1206,127 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">&times;</button>
+
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    Desert Adventures <span class="mobile-dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <div class="mobile-submenu">
+                        <button class="mobile-submenu-toggle">
+                            Abu Dhabi Desert <span class="mobile-dropdown-arrow">▼</span>
+                        </button>
+                        <div class="mobile-submenu-content">
+                            <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
+                            <a href="morning-safari-abudhabi.html">Morning Safari Abu Dhabi</a>
+                            <a href="evening-safari-abudhabi.html">Evening Safari Abu Dhabi</a>
+                            <a href="overnight-camp-abudhabi.html">Overnight Camp Abu Dhabi</a>
+                        </div>
+                    </div>
+                    <div class="mobile-submenu">
+                        <button class="mobile-submenu-toggle">
+                            Dubai Desert <span class="mobile-dropdown-arrow">▼</span>
+                        </button>
+                        <div class="mobile-submenu-content">
+                            <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
+                            <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
+                            <a href="evening-safari-dubai.html">Evening Safari Dubai</a>
+                            <a href="overnight-camp-dubai.html">Overnight Camp Dubai</a>
+                        </div>
+                    </div>
+                    <div class="mobile-submenu">
+                        <button class="mobile-submenu-toggle">
+                            Dune Drive <span class="mobile-dropdown-arrow">▼</span>
+                        </button>
+                        <div class="mobile-submenu-content">
+                            <a href="dune-buggy-quad-bike.html">Dune Buggy</a>
+                            <a href="dune-buggy-quad-bike.html#quad-bike">Quad Bike</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    City Attractions <span class="mobile-dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <div class="mobile-submenu">
+                        <button class="mobile-submenu-toggle">
+                            Abu Dhabi <span class="mobile-dropdown-arrow">▼</span>
+                        </button>
+                        <div class="mobile-submenu-content">
+                            <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
+                            <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
+                            <a href="combo-abu-dhabi-city-tour-desert-safari.html">COMBO Abu Dhabi City Tour & Desert
+                                Safari</a>
+                            <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
+                        </div>
+                    </div>
+                    <div class="mobile-submenu">
+                        <button class="mobile-submenu-toggle">
+                            Dubai <span class="mobile-dropdown-arrow">▼</span>
+                        </button>
+                        <div class="mobile-submenu-content">
+                            <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
+                            <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
+                            <a href="combo-dubai-city-tour-desert-safari.html">COMBO Dubai City Tour & Desert Safari</a>
+                            <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
+                        </div>
+                    </div>
+                    <a href="vip-events.html">VIP Events</a>
+                </div>
+            </li>
+
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    Cruise & Boat <span class="mobile-dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="yacht-sailing.html">Yacht Sailing</a>
+                    <a href="dhow-cruise.html">Dhow Cruise</a>
+                    <a href="yacht-sailing.html#luxury-cruise">Luxury Cruise</a>
+                </div>
+            </li>
+
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    Gallery <span class="mobile-dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="gallery.html">Photo</a>
+                    <a href="testimonials.html">Testimonials</a>
+                    <a href="#blogs">Blogs</a>
+                </div>
+            </li>
+
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">
+                    About Us <span class="mobile-dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="about-us.html#who-we-are">Who We Are ?</a>
+                    <a href="about-us.html#why-us">Why Us?</a>
+                    <a href="about-us.html#mission">Mission Statement</a>
+                    <a href="about-us.html#vision">Vision Statement</a>
+                </div>
+            </li>
+
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
     <div id="header-placeholder"></div>
 
     <!-- Custom Cursor -->
@@ -1044,17 +1336,20 @@
     <!-- Social Media Floating Widget -->
     <div class="social-media-widget">
         <!-- WhatsApp -->
-        <a href="https://wa.me/971525214149" target="_blank" class="social-icon whatsapp-icon" aria-label="Contact us on WhatsApp">
+        <a href="https://wa.me/971525214149" target="_blank" class="social-icon whatsapp-icon"
+            aria-label="Contact us on WhatsApp">
             <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
         </a>
     </div>
 
     <!-- Big Scroll Button -->
-    <div class="big-scroll-button" onclick="document.querySelector('.activity-showcase-section').scrollIntoView({behavior: 'smooth'})">
+    <div class="big-scroll-button"
+        onclick="document.querySelector('.activity-showcase-section').scrollIntoView({behavior: 'smooth'})">
         <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
     </div>
 
@@ -1067,10 +1362,12 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li class="dropdown">
-                    <a href="#desert-safari" class="nav-link">Desert Adventures <span class="dropdown-arrow">▼</span></a>
+                    <a href="#desert-safari" class="nav-link">Desert Adventures <span
+                            class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-content">
                         <div class="submenu">
-                            <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span class="arrow-right">›</span></a>
+                            <a href="#abu-dhabi-desert" class="submenu-trigger">Abu Dhabi Desert <span
+                                    class="arrow-right">›</span></a>
                             <div class="submenu-content">
                                 <a href="sunrise-safari-abudhabi.html">Sunrise Safari Abu Dhabi</a>
                                 <a href="morning-safari-abudhabi.html">Morning Safari Abu Dhabi</a>
@@ -1079,7 +1376,8 @@
                             </div>
                         </div>
                         <div class="submenu">
-                            <a href="#dubai-desert" class="submenu-trigger">Dubai Desert <span class="arrow-right">›</span></a>
+                            <a href="#dubai-desert" class="submenu-trigger">Dubai Desert <span
+                                    class="arrow-right">›</span></a>
                             <div class="submenu-content">
                                 <a href="sunrise-safari-dubai.html">Sunrise Safari Dubai</a>
                                 <a href="morning-safari-dubai.html">Morning Safari Dubai</a>
@@ -1088,7 +1386,8 @@
                             </div>
                         </div>
                         <div class="submenu">
-                            <a href="dune-buggy-quad-bike.html" class="submenu-trigger">Dune Drive <span class="arrow-right">›</span></a>
+                            <a href="dune-buggy-quad-bike.html" class="submenu-trigger">Dune Drive <span
+                                    class="arrow-right">›</span></a>
                             <div class="submenu-content">
                                 <a href="dune-buggy-quad-bike.html">Dune Buggy</a>
                                 <a href="dune-buggy-quad-bike.html#quad-bike">Quad Bike</a>
@@ -1100,20 +1399,24 @@
                     <a href="#tours" class="nav-link">City Attractions <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-content">
                         <div class="submenu">
-                            <a href="abu-dhabi-city-tour.html" class="submenu-trigger">Abu Dhabi <span class="arrow-right">›</span></a>
+                            <a href="abu-dhabi-city-tour.html" class="submenu-trigger">Abu Dhabi <span
+                                    class="arrow-right">›</span></a>
                             <div class="submenu-content">
                                 <a href="abu-dhabi-city-tour.html#half-day">Half Day City Tour Abu Dhabi</a>
                                 <a href="abu-dhabi-city-tour.html#full-day">Full Day City Tour Abu Dhabi</a>
-                                <a href="combo-abu-dhabi-city-tour-desert-safari.html">COMBO Abu Dhabi City Tour & Desert Safari</a>
+                                <a href="combo-abu-dhabi-city-tour-desert-safari.html">COMBO Abu Dhabi City Tour &
+                                    Desert Safari</a>
                                 <a href="abu-dhabi-city-tour.html#best-attractions">Top Abu Dhabi Tours</a>
                             </div>
                         </div>
                         <div class="submenu">
-                            <a href="dubai-city-tour.html" class="submenu-trigger">Dubai <span class="arrow-right">›</span></a>
+                            <a href="dubai-city-tour.html" class="submenu-trigger">Dubai <span
+                                    class="arrow-right">›</span></a>
                             <div class="submenu-content">
                                 <a href="dubai-city-tour.html#half-day">Half Day City Tour Dubai</a>
                                 <a href="dubai-city-tour.html#full-day">Full Day City Tour Dubai</a>
-                                <a href="combo-dubai-city-tour-desert-safari.html">COMBO Dubai City Tour & Desert Safari</a>
+                                <a href="combo-dubai-city-tour-desert-safari.html">COMBO Dubai City Tour & Desert
+                                    Safari</a>
                                 <a href="dubai-city-tour.html#best-attractions">Top Dubai Tours</a>
                             </div>
                         </div>
@@ -1153,6 +1456,11 @@
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
             </button>
+            <button class="hamburger-menu" id="hamburger-initial" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -1167,7 +1475,7 @@
                 <a href="contact.html" class="contact-us-btn">
                     CONTACT US
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
                 <a href="#activities" class="learn-more-btn">Explore Activities</a>
@@ -1175,7 +1483,8 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator" onclick="document.querySelector('.activity-showcase-section').scrollIntoView({behavior: 'smooth'})">
+        <div class="scroll-indicator"
+            onclick="document.querySelector('.activity-showcase-section').scrollIntoView({behavior: 'smooth'})">
             <div class="mouse-icon">
                 <div class="mouse-wheel"></div>
             </div>
@@ -1200,236 +1509,251 @@
             </button>
             <div class="carousel-wrapper">
                 <div class="activity-grid dubai-activities carousel-track">
-            <!-- Sunrise Safari Dubai -->
-            <a href="sunrise-safari-dubai.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/69.png" alt="Sunrise Safari Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Sunrise Desert Safari in Dubai</h3>
-                    <p class="activity-card-description">Experience the serene beauty of the desert at dawn with thrilling dune bashing...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 4-5 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Sunrise Safari Dubai -->
+                    <a href="sunrise-safari-dubai.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/69.png" alt="Sunrise Safari Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">385</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Sunrise Desert Safari in Dubai</h3>
+                            <p class="activity-card-description">Experience the serene beauty of the desert at dawn with
+                                thrilling dune bashing...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 4-5 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">385</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Morning Safari Dubai -->
-            <a href="morning-safari-dubai.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/58.png" alt="Morning Safari Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Morning Desert Safari in Dubai</h3>
-                    <p class="activity-card-description">Start your day with an exhilarating morning of dune bashing and desert adventures...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 4 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Morning Safari Dubai -->
+                    <a href="morning-safari-dubai.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/58.png" alt="Morning Safari Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">393</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Morning Desert Safari in Dubai</h3>
+                            <p class="activity-card-description">Start your day with an exhilarating morning of dune
+                                bashing and desert adventures...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 4 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">393</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Overnight Camp Dubai -->
-            <a href="overnight-camp-dubai.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/66.png" alt="Overnight Camp Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Dubai Overnight Desert Safari with BBQ Dinner</h3>
-                    <p class="activity-card-description">Enjoy a fun-filled desert safari in the Al Lahbab Desert with overnight camping...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 16-17 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Overnight Camp Dubai -->
+                    <a href="overnight-camp-dubai.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/66.png" alt="Overnight Camp Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">661</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Dubai Overnight Desert Safari with BBQ Dinner</h3>
+                            <p class="activity-card-description">Enjoy a fun-filled desert safari in the Al Lahbab
+                                Desert with overnight camping...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 16-17 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">661</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Dubai City Tour -->
-            <a href="dubai-city-tour.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/31.png" alt="Dubai City Tour" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Dubai City Tour - Modern & Heritage</h3>
-                    <p class="activity-card-description">Discover the iconic Burj Khalifa, Dubai Mall, Dubai Creek and charming Jumeirah...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 5-6 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Dubai City Tour -->
+                    <a href="dubai-city-tour.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/31.png" alt="Dubai City Tour" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">143</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Dubai City Tour - Modern & Heritage</h3>
+                            <p class="activity-card-description">Discover the iconic Burj Khalifa, Dubai Mall, Dubai
+                                Creek and charming Jumeirah...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 5-6 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">143</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- VIP Events -->
-            <a href="vip-events.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/3f/35/ed/interiors.jpg?w=900&h=-1&s=1" alt="VIP Events" style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">VIP Events - Customized Desert Experiences</h3>
-                    <p class="activity-card-description">Create your perfect event with customized lighting, private setups and exclusive services...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ Custom</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- VIP Events -->
+                    <a href="vip-events.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/3f/35/ed/interiors.jpg?w=900&h=-1&s=1"
+                                alt="VIP Events"
+                                style="width: 100%; height: 380px; object-fit: cover; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">Contact</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">VIP Events - Customized Desert Experiences</h3>
+                            <p class="activity-card-description">Create your perfect event with customized lighting,
+                                private setups and exclusive services...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ Custom</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">Contact</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Miracle Garden -->
-            <a href="miracle-garden.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/48.png" alt="Miracle Garden Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Miracle Garden Dubai - 45 Million Flowers</h3>
-                    <p class="activity-card-description">Explore the stunning garden with over 45 million blooming flowers in vibrant colors...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 3-4 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Miracle Garden -->
+                    <a href="miracle-garden.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/48.png" alt="Miracle Garden Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">125</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Miracle Garden Dubai - 45 Million Flowers</h3>
+                            <p class="activity-card-description">Explore the stunning garden with over 45 million
+                                blooming flowers in vibrant colors...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 3-4 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">125</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Wild Wadi -->
-            <a href="wild-wadi.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s" alt="Wild Wadi" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Wild Wadi Waterpark Dubai - 30+ Rides</h3>
-                    <p class="activity-card-description">Enjoy thrilling water slides, wave pools and lazy river at Dubai's premier waterpark...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ Full day</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Wild Wadi -->
+                    <a href="wild-wadi.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s"
+                                alt="Wild Wadi" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">295</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Wild Wadi Waterpark Dubai - 30+ Rides</h3>
+                            <p class="activity-card-description">Enjoy thrilling water slides, wave pools and lazy river
+                                at Dubai's premier waterpark...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ Full day</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">295</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Evening Safari Dubai -->
-            <a href="evening-safari-dubai.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/57.png" alt="Evening Safari Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Evening Desert Safari Dubai with BBQ</h3>
-                    <p class="activity-card-description">Experience magical sunset dune bashing, camel rides, and BBQ dinner under the stars...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 6-7 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Evening Safari Dubai -->
+                    <a href="evening-safari-dubai.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/57.png" alt="Evening Safari Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">150</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Evening Desert Safari Dubai with BBQ</h3>
+                            <p class="activity-card-description">Experience magical sunset dune bashing, camel rides,
+                                and BBQ dinner under the stars...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 6-7 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">150</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Dhow Cruise Dubai -->
-            <a href="dhow-cruise.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/Tour-Dubai-Royal-Dinner-Cruise-at-Dubai-Marina-with-Transfers.jpg" alt="Dhow Cruise Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Dhow Cruise Dubai Marina Dinner</h3>
-                    <p class="activity-card-description">Enjoy a romantic dinner cruise along Dubai Marina with stunning skyline views...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 2 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Dhow Cruise Dubai -->
+                    <a href="dhow-cruise.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/Tour-Dubai-Royal-Dinner-Cruise-at-Dubai-Marina-with-Transfers.jpg"
+                                alt="Dhow Cruise Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">175</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Dhow Cruise Dubai Marina Dinner</h3>
+                            <p class="activity-card-description">Enjoy a romantic dinner cruise along Dubai Marina with
+                                stunning skyline views...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 2 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">175</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Yacht Sailing Dubai -->
-            <a href="yacht-sailing.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/yacht-sailing.webp" alt="Yacht Sailing Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Luxury Yacht Sailing Dubai Marina</h3>
-                    <p class="activity-card-description">Cruise Dubai Marina on a luxury 65ft yacht with views of Burj Al Arab and Palm Jumeirah...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 1-3 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Yacht Sailing Dubai -->
+                    <a href="yacht-sailing.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/yacht-sailing.webp" alt="Yacht Sailing Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">549</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Luxury Yacht Sailing Dubai Marina</h3>
+                            <p class="activity-card-description">Cruise Dubai Marina on a luxury 65ft yacht with views
+                                of Burj Al Arab and Palm Jumeirah...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 1-3 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">549</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Dune Buggy & Quad Bike -->
-            <a href="dune-buggy-quad-bike.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/34.jpg" alt="Dune Buggy Dubai" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Dune Buggy & Quad Bike Adventure</h3>
-                    <p class="activity-card-description">Self-drive through the desert on powerful buggies and ATVs with expert guides...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 1-2 hours</span>
-                            <span class="location">📍 Dubai, UAE</span>
+                    <!-- Dune Buggy & Quad Bike -->
+                    <a href="dune-buggy-quad-bike.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/34.jpg" alt="Dune Buggy Dubai" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">450</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Dune Buggy & Quad Bike Adventure</h3>
+                            <p class="activity-card-description">Self-drive through the desert on powerful buggies and
+                                ATVs with expert guides...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 1-2 hours</span>
+                                    <span class="location">📍 Dubai, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">450</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
                 </div>
             </div>
@@ -1451,194 +1775,206 @@
             <div class="carousel-wrapper">
                 <div class="activity-grid abudhabi-activities carousel-track">
 
-            <!-- Sunrise Safari Abu Dhabi -->
-            <a href="sunrise-safari-abudhabi.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/51.png" alt="Sunrise Safari Abu Dhabi" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Sunrise Desert Safari in Abu Dhabi</h3>
-                    <p class="activity-card-description">Witness the magical Abu Dhabi desert sunrise with camel rides and sandboarding...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 4-5 hours</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Sunrise Safari Abu Dhabi -->
+                    <a href="sunrise-safari-abudhabi.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/51.png" alt="Sunrise Safari Abu Dhabi" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">294</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Sunrise Desert Safari in Abu Dhabi</h3>
+                            <p class="activity-card-description">Witness the magical Abu Dhabi desert sunrise with camel
+                                rides and sandboarding...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 4-5 hours</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">294</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Overnight Camp Abu Dhabi -->
-            <a href="overnight-camp-abudhabi.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/65.png" alt="Overnight Camp Abu Dhabi" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Abu Dhabi Overnight Desert Safari Experience</h3>
-                    <p class="activity-card-description">Sleep under the stars in Abu Dhabi's desert with traditional Bedouin camping...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 16-17 hours</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Overnight Camp Abu Dhabi -->
+                    <a href="overnight-camp-abudhabi.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/65.png" alt="Overnight Camp Abu Dhabi" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">694</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Abu Dhabi Overnight Desert Safari Experience</h3>
+                            <p class="activity-card-description">Sleep under the stars in Abu Dhabi's desert with
+                                traditional Bedouin camping...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 16-17 hours</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">694</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Liwa Adventure -->
-            <a href="liwa-adventure.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5siQAo8SjDGid6UNZRhC21LSXQF0jCC2dvw&s" alt="Liwa Desert Tour" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Liwa Desert Tour - Empty Quarter Adventure</h3>
-                    <p class="activity-card-description">Explore the breathtaking Liwa Desert with towering sand dunes and mesmerizing landscapes...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ Full day</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Liwa Adventure -->
+                    <a href="liwa-adventure.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5siQAo8SjDGid6UNZRhC21LSXQF0jCC2dvw&s"
+                                alt="Liwa Desert Tour" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">239</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Liwa Desert Tour - Empty Quarter Adventure</h3>
+                            <p class="activity-card-description">Explore the breathtaking Liwa Desert with towering sand
+                                dunes and mesmerizing landscapes...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ Full day</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">239</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Abu Dhabi City Tour -->
-            <a href="abu-dhabi-city-tour.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/photo-1512632578888-169bbbc64f33.jfif" alt="Abu Dhabi City Tour" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Abu Dhabi City Tour - Sheikh Zayed Mosque</h3>
-                    <p class="activity-card-description">Visit the majestic Sheikh Zayed Grand Mosque, Emirates Palace and Corniche...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 8-9 hours</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Abu Dhabi City Tour -->
+                    <a href="abu-dhabi-city-tour.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/photo-1512632578888-169bbbc64f33.jfif" alt="Abu Dhabi City Tour"
+                                class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">217</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Abu Dhabi City Tour - Sheikh Zayed Mosque</h3>
+                            <p class="activity-card-description">Visit the majestic Sheikh Zayed Grand Mosque, Emirates
+                                Palace and Corniche...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 8-9 hours</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">217</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Ferrari World -->
-            <a href="ferrari-world.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://i.imgur.com/YnNw7q4.png" alt="Ferrari World" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Ferrari World Abu Dhabi Theme Park</h3>
-                    <p class="activity-card-description">Experience the world's fastest roller coaster and thrilling Ferrari-branded attractions...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ Full day</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Ferrari World -->
+                    <a href="ferrari-world.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="https://i.imgur.com/YnNw7q4.png" alt="Ferrari World" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">325</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Ferrari World Abu Dhabi Theme Park</h3>
+                            <p class="activity-card-description">Experience the world's fastest roller coaster and
+                                thrilling Ferrari-branded attractions...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ Full day</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">325</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Yas Water World -->
-            <a href="yas-water-world.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/61/68/4a.jpg" alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Yas Water World Abu Dhabi</h3>
-                    <p class="activity-card-description">Experience the largest waterpark in Abu Dhabi with unique Emirati-themed attractions...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ Full day</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Yas Water World -->
+                    <a href="yas-water-world.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/61/68/4a.jpg"
+                                alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">310</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Yas Water World Abu Dhabi</h3>
+                            <p class="activity-card-description">Experience the largest waterpark in Abu Dhabi with
+                                unique Emirati-themed attractions...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ Full day</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">310</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Morning Safari Abu Dhabi -->
-            <a href="morning-safari-abudhabi.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/52.png" alt="Morning Safari Abu Dhabi" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Morning Desert Safari Abu Dhabi</h3>
-                    <p class="activity-card-description">Start your day with thrilling dune bashing and camel rides in Abu Dhabi's desert...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 4 hours</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Morning Safari Abu Dhabi -->
+                    <a href="morning-safari-abudhabi.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/52.png" alt="Morning Safari Abu Dhabi" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">280</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Morning Desert Safari Abu Dhabi</h3>
+                            <p class="activity-card-description">Start your day with thrilling dune bashing and camel
+                                rides in Abu Dhabi's desert...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 4 hours</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">280</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Evening Safari Abu Dhabi -->
-            <a href="evening-safari-abudhabi.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/53.png" alt="Evening Safari Abu Dhabi" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Evening Desert Safari Abu Dhabi with BBQ</h3>
-                    <p class="activity-card-description">Experience magical sunset views, dune bashing, and authentic BBQ dinner...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 6-7 hours</span>
-                            <span class="location">📍 Abu Dhabi, UAE</span>
+                    <!-- Evening Safari Abu Dhabi -->
+                    <a href="evening-safari-abudhabi.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/53.png" alt="Evening Safari Abu Dhabi" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">165</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Evening Desert Safari Abu Dhabi with BBQ</h3>
+                            <p class="activity-card-description">Experience magical sunset views, dune bashing, and
+                                authentic BBQ dinner...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 6-7 hours</span>
+                                    <span class="location">📍 Abu Dhabi, UAE</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">165</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-            <!-- Dune Buggy & Quad Bike -->
-            <a href="dune-buggy-quad-bike.html" class="activity-card">
-                <div class="activity-card-image-wrapper">
-                    <img src="images/34.jpg" alt="Dune Buggy & Quad Bike" class="activity-card-image">
-                </div>
-                <div class="activity-card-content">
-                    <h3 class="activity-card-title">Dune Buggy & Quad Bike Adventures</h3>
-                    <p class="activity-card-description">Experience heart-pounding thrills with self-drive buggy and quad bike desert tours...</p>
-                    <div class="activity-card-footer">
-                        <div class="activity-info-left">
-                            <span class="duration">⏱ 1-2 hours</span>
-                            <span class="location">📍 UAE Desert</span>
+                    <!-- Dune Buggy & Quad Bike -->
+                    <a href="dune-buggy-quad-bike.html" class="activity-card">
+                        <div class="activity-card-image-wrapper">
+                            <img src="images/34.jpg" alt="Dune Buggy & Quad Bike" class="activity-card-image">
                         </div>
-                        <div class="activity-price">
-                            <span class="price-label">From AED</span>
-                            <span class="price">250</span>
+                        <div class="activity-card-content">
+                            <h3 class="activity-card-title">Dune Buggy & Quad Bike Adventures</h3>
+                            <p class="activity-card-description">Experience heart-pounding thrills with self-drive buggy
+                                and quad bike desert tours...</p>
+                            <div class="activity-card-footer">
+                                <div class="activity-info-left">
+                                    <span class="duration">⏱ 1-2 hours</span>
+                                    <span class="location">📍 UAE Desert</span>
+                                </div>
+                                <div class="activity-price">
+                                    <span class="price-label">From AED</span>
+                                    <span class="price">250</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
                 </div>
             </div>
@@ -1654,7 +1990,8 @@
     <!-- Customer Reviews Section -->
     <section class="reviews-section">
         <h2 class="scroll-animate">What Our Travelers Say</h2>
-        <p class="section-subtitle scroll-animate scroll-animate-delay-1">Real experiences from real adventurers who explored the Arabian desert with us</p>
+        <p class="section-subtitle scroll-animate scroll-animate-delay-1">Real experiences from real adventurers who
+            explored the Arabian desert with us</p>
 
         <div class="reviews-carousel scroll-animate scroll-animate-delay-2">
             <!-- First set of reviews -->
@@ -1666,7 +2003,9 @@
                             <div class="review-name">James Anderson</div>
                         </div>
                     </div>
-                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
+                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our
+                        guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best
+                        desert experience we've ever had!"</p>
                 </div>
 
                 <!-- Review 2 -->
@@ -1676,7 +2015,9 @@
                             <div class="review-name">Sarah Mitchell</div>
                         </div>
                     </div>
-                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
+                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the
+                        stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly
+                        recommend Arba Tourism!"</p>
                 </div>
 
                 <!-- Review 3 -->
@@ -1686,7 +2027,9 @@
                             <div class="review-name">Marco Rossi</div>
                         </div>
                     </div>
-                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
+                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was
+                        comprehensive, and our guide was fantastic. Great value for money and very professional service.
+                        Will definitely book again!"</p>
                 </div>
 
                 <!-- Review 4 -->
@@ -1696,7 +2039,9 @@
                             <div class="review-name">Emily Chen</div>
                         </div>
                     </div>
-                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
+                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment
+                        was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so
+                        peaceful and beautiful."</p>
                 </div>
 
                 <!-- Review 5 -->
@@ -1706,7 +2051,9 @@
                             <div class="review-name">David Thompson</div>
                         </div>
                     </div>
-                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
+                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show.
+                        The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five
+                        stars all around!"</p>
                 </div>
 
                 <!-- Review 6 -->
@@ -1716,7 +2063,9 @@
                             <div class="review-name">Priya Sharma</div>
                         </div>
                     </div>
-                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
+                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our
+                        guide explained the history beautifully. Transportation was comfortable and air-conditioned.
+                        Excellent service throughout!"</p>
                 </div>
             </div>
 
@@ -1729,7 +2078,9 @@
                             <div class="review-name">James Anderson</div>
                         </div>
                     </div>
-                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best desert experience we've ever had!"</p>
+                    <p class="review-text">"Absolutely breathtaking experience! The sunrise safari was magical, and our
+                        guide Mohammed was incredibly knowledgeable. The dune bashing was thrilling yet safe. Best
+                        desert experience we've ever had!"</p>
                 </div>
 
                 <!-- Review 2 -->
@@ -1739,7 +2090,9 @@
                             <div class="review-name">Sarah Mitchell</div>
                         </div>
                     </div>
-                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly recommend Arba Tourism!"</p>
+                    <p class="review-text">"The overnight desert camp exceeded all expectations! Sleeping under the
+                        stars, traditional BBQ dinner, and authentic Bedouin hospitality made this unforgettable. Highly
+                        recommend Arba Tourism!"</p>
                 </div>
 
                 <!-- Review 3 -->
@@ -1749,7 +2102,9 @@
                             <div class="review-name">Marco Rossi</div>
                         </div>
                     </div>
-                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was comprehensive, and our guide was fantastic. Great value for money and very professional service. Will definitely book again!"</p>
+                    <p class="review-text">"Perfect organization from start to finish. The Dubai city tour was
+                        comprehensive, and our guide was fantastic. Great value for money and very professional service.
+                        Will definitely book again!"</p>
                 </div>
 
                 <!-- Review 4 -->
@@ -1759,7 +2114,9 @@
                             <div class="review-name">Emily Chen</div>
                         </div>
                     </div>
-                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so peaceful and beautiful."</p>
+                    <p class="review-text">"The quad biking through the desert was an adrenaline rush! Safety equipment
+                        was top-notch, and the staff made sure everyone was comfortable. The camel ride at sunset was so
+                        peaceful and beautiful."</p>
                 </div>
 
                 <!-- Review 5 -->
@@ -1769,7 +2126,9 @@
                             <div class="review-name">David Thompson</div>
                         </div>
                     </div>
-                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show. The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five stars all around!"</p>
+                    <p class="review-text">"Amazing family experience! Kids loved the sandboarding and the falcon show.
+                        The BBQ dinner was delicious with plenty of variety. Driver was punctual and very friendly. Five
+                        stars all around!"</p>
                 </div>
 
                 <!-- Review 6 -->
@@ -1779,7 +2138,9 @@
                             <div class="review-name">Priya Sharma</div>
                         </div>
                     </div>
-                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our guide explained the history beautifully. Transportation was comfortable and air-conditioned. Excellent service throughout!"</p>
+                    <p class="review-text">"The Abu Dhabi city tour with Sheikh Zayed Mosque visit was spectacular! Our
+                        guide explained the history beautifully. Transportation was comfortable and air-conditioned.
+                        Excellent service throughout!"</p>
                 </div>
             </div>
         </div>
@@ -1811,7 +2172,8 @@
                 max-width: 700px;
                 margin-left: auto;
                 margin-right: auto;">
-                From thrilling desert safaris to breathtaking city tours, let us create unforgettable memories for you. Contact us today and start planning your dream getaway!
+                From thrilling desert safaris to breathtaking city tours, let us create unforgettable memories for you.
+                Contact us today and start planning your dream getaway!
             </p>
 
             <a href="contact.html" class="scroll-animate scroll-animate-delay-2" style="
@@ -1833,7 +2195,7 @@
                 onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px rgba(198, 123, 62, 0.4)'; this.style.backgroundPosition='0 0'">
                 <span>Contact Us</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </a>
         </div>
@@ -1841,14 +2203,15 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 19V5M5 12l7-7 7 7"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
     </button>
 
     <script>
         // Show/hide header, scroll indicators, and hero overlay based on scroll position
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.getElementById('header-placeholder');
             const initialHeader = document.getElementById('initial-header');
             const scrollIndicator = document.querySelector('.scroll-indicator');
@@ -1902,11 +2265,11 @@
         });
 
         // Carousel Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const carouselArrows = document.querySelectorAll('.carousel-arrow');
 
             carouselArrows.forEach(arrow => {
-                arrow.addEventListener('click', function() {
+                arrow.addEventListener('click', function () {
                     const carouselType = this.getAttribute('data-carousel');
                     const isLeft = this.classList.contains('carousel-arrow-left');
                     const carousel = document.querySelector(`.${carouselType}-activities.carousel-track`);
@@ -1952,7 +2315,7 @@
         });
 
         // Scroll Animation using Intersection Observer
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const scrollElements = document.querySelectorAll('.scroll-animate');
 
             const observer = new IntersectionObserver((entries) => {
@@ -1968,6 +2331,130 @@
 
             scrollElements.forEach(el => observer.observe(el));
         });
+
+        // Mobile Menu Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburgerInitial = document.getElementById('hamburger-initial');
+            let hamburgerMenu = null; // Will be set after header loads
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const body = document.body;
+
+            // Function to open mobile menu
+            function openMobileMenu() {
+                mobileMenuOverlay.classList.add('active');
+                mobileMenuBackdrop.classList.add('active');
+                body.classList.add('mobile-menu-open');
+                if (hamburgerInitial) {
+                    hamburgerInitial.classList.add('active');
+                }
+                if (hamburgerMenu) {
+                    hamburgerMenu.classList.add('active');
+                }
+            }
+
+            // Function to close mobile menu
+            function closeMobileMenu() {
+                mobileMenuOverlay.classList.remove('active');
+                mobileMenuBackdrop.classList.remove('active');
+                body.classList.remove('mobile-menu-open');
+                if (hamburgerInitial) {
+                    hamburgerInitial.classList.remove('active');
+                }
+                if (hamburgerMenu) {
+                    hamburgerMenu.classList.remove('active');
+                }
+            }
+
+            // Hamburger button click (initial header)
+            if (hamburgerInitial) {
+                hamburgerInitial.addEventListener('click', function () {
+                    if (mobileMenuOverlay.classList.contains('active')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+
+            // Wait for white header to load, then attach event listener
+            setTimeout(function () {
+                hamburgerMenu = document.getElementById('hamburger-menu');
+                if (hamburgerMenu) {
+                    hamburgerMenu.addEventListener('click', function () {
+                        if (mobileMenuOverlay.classList.contains('active')) {
+                            closeMobileMenu();
+                        } else {
+                            openMobileMenu();
+                        }
+                    });
+                }
+            }, 500);
+
+            // Close button click
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', closeMobileMenu);
+            }
+
+            // Backdrop click
+            if (mobileMenuBackdrop) {
+                mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+            }
+
+            // Mobile dropdown toggles
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const parentDropdown = this.closest('.mobile-dropdown');
+                    const isActive = parentDropdown.classList.contains('active');
+
+                    // Close all other dropdowns at the same level
+                    const siblings = parentDropdown.parentElement.querySelectorAll(':scope > .mobile-dropdown');
+                    siblings.forEach(sibling => {
+                        if (sibling !== parentDropdown) {
+                            sibling.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    parentDropdown.classList.toggle('active');
+                });
+            });
+
+            // Mobile submenu toggles
+            const mobileSubmenuToggles = document.querySelectorAll('.mobile-submenu-toggle');
+            mobileSubmenuToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const parentSubmenu = this.closest('.mobile-submenu');
+                    const isActive = parentSubmenu.classList.contains('active');
+
+                    // Close all other submenus at the same level
+                    const siblings = parentSubmenu.parentElement.querySelectorAll(':scope > .mobile-submenu');
+                    siblings.forEach(sibling => {
+                        if (sibling !== parentSubmenu) {
+                            sibling.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current submenu
+                    parentSubmenu.classList.toggle('active');
+                });
+            });
+
+            // Close menu when clicking on a link
+            const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link, .mobile-dropdown-content a, .mobile-submenu-content a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    closeMobileMenu();
+                });
+            });
+
+            // Prevent body scroll when menu is open
+            mobileMenuOverlay.addEventListener('touchmove', function (e) {
+                e.stopPropagation();
+            }, { passive: false });
+        });
     </script>
 
     <!-- Footer -->
@@ -1976,4 +2463,5 @@
     <script src="includes/components-home.js"></script>
 
 </body>
+
 </html>
