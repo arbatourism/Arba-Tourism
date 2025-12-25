@@ -14,7 +14,12 @@
 }
 
 /* Apply Emirates font to all headings */
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .showcase-title,
 .city-section-title,
 .home-hero-title,
@@ -23,11 +28,15 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Smooth transitions for interactive elements */
-a, button, img, .safari-card, .event-card {
+a,
+button,
+img,
+.safari-card,
+.event-card {
     transition: transform 0.3s ease,
-                opacity 0.3s ease,
-                box-shadow 0.3s ease,
-                filter 0.3s ease;
+        opacity 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
 }
 
 html {
@@ -39,6 +48,37 @@ body {
     background-color: #ffffff;
     padding-top: 100px;
 }
+
+/* ============================================
+   HOMEPAGE ACTIVITY CARD WATERMARK SYSTEM
+   ============================================ */
+
+/* Watermark overlay for homepage activity cards */
+.activity-card-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.activity-card-image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25%;
+    /* Larger watermark as requested */
+    aspect-ratio: 1;
+    background: url('images/watermark-logo.png') no-repeat center/contain;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Hide watermark for tiles that already have it embedded */
+.activity-card-image-wrapper[data-no-watermark="true"]::after {
+    display: none;
+}
+
 
 header {
     background-color: #ffffff;
@@ -121,7 +161,7 @@ header.scrolled {
 }
 
 /* Main header navigation buttons hover effect */
-.nav-menu > li > .nav-link:hover {
+.nav-menu>li>.nav-link:hover {
     color: white !important;
     background-color: #c67b3e !important;
     border-color: #c67b3e !important;
@@ -368,14 +408,14 @@ header.scrolled {
 /* Dubai City Tour Hero */
 .dubai-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1600');
+        url('https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1600');
     background-position: center;
 }
 
 /* Abu Dhabi City Tour Hero */
 .abudhabi-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('images/27.png');
+        url('images/27.png');
     background-position: center;
     background-size: cover;
 }
@@ -383,77 +423,77 @@ header.scrolled {
 /* Ferrari World Hero */
 .ferrari-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600');
+        url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1600');
     background-position: center;
 }
 
 /* Miracle Garden Hero */
 .miracle-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1600');
+        url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1600');
     background-position: center;
 }
 
 /* Yas Water World Hero */
 .yas-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1561459802-c8b285546a03?w=1600');
+        url('https://images.unsplash.com/photo-1561459802-c8b285546a03?w=1600');
     background-position: center;
 }
 
 /* Liwa Desert Hero */
 .liwa-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1600');
+        url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=1600');
     background-position: center;
 }
 
 /* VIP Events Hero */
 .vip-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1600');
+        url('https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1600');
     background-position: center;
 }
 
 /* Wild Wadi Hero */
 .wildwadi-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=1600');
+        url('https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=1600');
     background-position: center;
 }
 
 /* Who We Are Hero */
 .whoweare-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600');
+        url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600');
     background-position: center;
 }
 
 /* Why Us Hero */
 .whyus-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
+        url('https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1600');
     background-position: center;
 }
 
 /* Vision Statement Hero */
 .vision-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600');
+        url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600');
     background-position: center;
 }
 
 /* Mission Statement Hero */
 .mission-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600');
+        url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1600');
     background-position: center;
 }
 
 /* Morning Safari Hero */
 .morning-safari-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
+        url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
     background-position: center;
     height: 300px;
     justify-content: flex-end;
@@ -469,7 +509,7 @@ header.scrolled {
 /* Overnight Camp Hero */
 .overnight-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600');
+        url('https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600');
     background-position: center;
     height: 300px;
     justify-content: flex-end;
@@ -485,7 +525,7 @@ header.scrolled {
 /* Sunrise Safari Hero */
 .sunrise-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
+        url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
     background-position: center;
     height: 300px;
     justify-content: flex-end;
@@ -501,7 +541,7 @@ header.scrolled {
 /* Sunrise Safari Abu Dhabi Hero */
 .sunrise-abudhabi-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
+        url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
     background-position: center;
 }
 
@@ -890,11 +930,11 @@ header.scrolled {
     background-color: #f5f5f5;
     color: #333;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                justify-content 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        justify-content 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     text-decoration: none;
     border: none;
@@ -910,8 +950,8 @@ header.scrolled {
     font-weight: 600;
     color: white;
     transition: opacity 0s linear 0s,
-                left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-                visibility 0s linear 0s;
+        left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        visibility 0s linear 0s;
     pointer-events: none;
     margin-left: 8px;
     visibility: hidden;
@@ -939,8 +979,8 @@ header.scrolled {
     left: 38px;
     visibility: visible;
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
-                left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-                visibility 0s linear 0s;
+        left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        visibility 0s linear 0s;
 }
 
 /* Instagram Hover */
@@ -959,8 +999,8 @@ header.scrolled {
     left: 38px;
     visibility: visible;
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
-                left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-                visibility 0s linear 0s;
+        left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        visibility 0s linear 0s;
 }
 
 /* YouTube Hover */
@@ -979,8 +1019,8 @@ header.scrolled {
     left: 38px;
     visibility: visible;
     transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
-                left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-                visibility 0s linear 0s;
+        left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+        visibility 0s linear 0s;
 }
 
 @media (max-width: 1200px) {
@@ -1029,7 +1069,7 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 20px rgba(198, 123, 62, 0.5),
-                0 2px 8px rgba(0, 0, 0, 0.15);
+        0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
@@ -1045,7 +1085,7 @@ header.scrolled {
 .back-to-top:hover {
     transform: translateY(-8px) scale(1.1);
     box-shadow: 0 12px 30px rgba(198, 123, 62, 0.7),
-                0 4px 12px rgba(0, 0, 0, 0.2);
+        0 4px 12px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #d68a4a 0%, #b88c62 100%);
     border-color: white;
 }
@@ -1092,7 +1132,7 @@ header.scrolled {
 /* Home Page Styles */
 .home-hero {
     background-image: linear-gradient(rgba(60, 40, 25, 0.8), rgba(60, 40, 25, 0.8)),
-                      url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
+        url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?w=1600');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -1128,10 +1168,12 @@ header.scrolled {
         transform: scale(1);
         box-shadow: 0 6px 16px rgba(166, 124, 82, 0.5);
     }
+
     50% {
         transform: scale(1.05);
         box-shadow: 0 8px 24px rgba(166, 124, 82, 0.7);
     }
+
     100% {
         transform: scale(1);
         box-shadow: 0 6px 16px rgba(166, 124, 82, 0.5);
@@ -1158,7 +1200,7 @@ header.scrolled {
     background-color: #c67b3e;
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 12px 28px rgba(198, 123, 62, 0.6),
-                0 0 40px rgba(198, 123, 62, 0.3);
+        0 0 40px rgba(198, 123, 62, 0.3);
     animation: none;
 }
 
@@ -1192,7 +1234,7 @@ header.scrolled {
 
 .safari-card:hover {
     box-shadow: 0 15px 35px rgba(166, 124, 82, 0.4),
-                0 0 50px rgba(166, 124, 82, 0.2);
+        0 0 50px rgba(166, 124, 82, 0.2);
     transform: translateY(-8px) scale(1.01);
 }
 
@@ -1246,7 +1288,7 @@ header.scrolled {
     background-color: #c67b3e;
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 12px 28px rgba(198, 123, 62, 0.6),
-                0 0 40px rgba(198, 123, 62, 0.3);
+        0 0 40px rgba(198, 123, 62, 0.3);
 }
 
 .safari-btn:active {
@@ -1346,13 +1388,16 @@ header.scrolled {
     gap: 25px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
     padding: 20px 10px;
 }
 
 .carousel-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 /* Carousel Arrows */
@@ -1372,14 +1417,14 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     box-shadow: 0 6px 20px rgba(198, 123, 62, 0.5),
-                0 2px 8px rgba(0, 0, 0, 0.15);
+        0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .carousel-arrow:hover {
     transform: translateY(-50%) scale(1.2);
     box-shadow: 0 8px 30px rgba(198, 123, 62, 0.7),
-                0 4px 12px rgba(0, 0, 0, 0.2);
+        0 4px 12px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #d68a4a 0%, #b88c62 100%);
     border-color: white;
 }
@@ -1531,7 +1576,8 @@ header.scrolled {
     gap: 5px;
 }
 
-.duration, .location {
+.duration,
+.location {
     font-size: 12px;
     color: #a67c52;
     display: flex;
@@ -1756,7 +1802,8 @@ header.scrolled {
     gap: 20px;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
     padding: 15px 18px;
     border: 2px solid #d4c4b0;
     border-radius: 6px;
@@ -1766,14 +1813,16 @@ header.scrolled {
     background-color: #fafaf8;
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
     outline: none;
     border-color: #a67c52;
     background-color: white;
     box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
 }
 
-.form-input::placeholder, .form-textarea::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
     color: #999;
 }
 
@@ -2166,41 +2215,42 @@ header.scrolled {
 
 /* Tablet and below */
 @media (max-width: 992px) {
+
     /* Header adjustments */
     header {
         padding: 10px 20px;
         height: 80px;
         max-height: 80px;
     }
-    
+
     .navbar {
         height: 60px;
     }
-    
+
     .logo img {
         height: 70px;
         margin: -5px 0;
     }
-    
+
     /* Hero section */
     .hero-section {
         height: 300px;
         padding: 0 40px;
     }
-    
+
     .hero-title {
         font-size: 48px;
     }
-    
+
     /* Content sections */
     .content-section {
         padding: 40px 20px;
     }
-    
+
     .section-title {
         font-size: 36px;
     }
-    
+
     .section-subtitle {
         font-size: 28px;
     }
@@ -2208,129 +2258,130 @@ header.scrolled {
 
 /* Mobile devices */
 @media (max-width: 768px) {
+
     /* Body padding adjustment */
     body {
         padding-top: 80px;
     }
-    
+
     /* Header mobile */
     header {
         padding: 10px 15px;
         height: 70px;
         max-height: 70px;
     }
-    
+
     .navbar {
         height: 50px;
     }
-    
+
     .logo img {
         height: 60px;
         margin: -5px 0;
     }
-    
+
     /* Hero sections */
     .hero-section {
         height: 250px;
         padding: 0 20px;
     }
-    
+
     .hero-title {
         font-size: 36px;
         margin-bottom: 15px;
     }
-    
+
     .breadcrumb {
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     /* Content sections */
     .content-section {
         padding: 30px 15px;
     }
-    
+
     .section-title {
         font-size: 28px;
         margin-bottom: 20px;
     }
-    
+
     .section-subtitle {
         font-size: 24px;
     }
-    
+
     .section-text {
         font-size: 15px;
         line-height: 1.6;
     }
-    
+
     /* Tour sections */
     .tour-content-section,
     .tour-details-section {
         padding: 40px 15px;
     }
-    
+
     .tour-container,
     .tour-info-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     .info-row {
         grid-template-columns: 1fr;
     }
-    
+
     .info-label {
         border-right: none;
         border-bottom: 1px solid #d4c4b0;
     }
-    
+
     /* Event cards */
     .event-types-container {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .event-card {
         height: 200px;
     }
-    
+
     /* Footer */
     .footer {
         padding: 40px 15px 15px 15px;
     }
-    
+
     .footer-container {
         grid-template-columns: 1fr;
         gap: 30px;
         margin-bottom: 30px;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
-    
+
     .footer-social {
         justify-content: center;
     }
-    
+
     /* Activity showcase section */
     .activity-showcase-section {
         padding: 60px 15px;
     }
-    
+
     .showcase-title {
         font-size: 32px;
         margin-bottom: 30px;
     }
-    
+
     .city-section-title {
         font-size: 24px;
         margin-bottom: 20px;
     }
-    
+
     /* Activity grid - make scrollable horizontally */
     .activity-grid {
         display: flex;
@@ -2340,52 +2391,52 @@ header.scrolled {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
     }
-    
+
     .activity-card {
         min-width: 280px;
         max-width: 280px;
         scroll-snap-align: start;
     }
-    
+
     /* Carousel adjustments */
     .carousel-container {
         margin: 0 -15px;
         padding: 0 15px;
     }
-    
+
     .carousel-arrow {
         width: 35px;
         height: 35px;
     }
-    
+
     .carousel-arrow svg {
         width: 18px;
         height: 18px;
     }
-    
+
     /* Safari cards */
     .safari-card {
         margin-bottom: 20px;
     }
-    
+
     /* Contact page */
     .contact-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     /* Gallery */
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     /* Testimonials */
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     /* Back to top button */
     #backToTop {
         width: 45px;
@@ -2393,7 +2444,7 @@ header.scrolled {
         bottom: 20px;
         right: 20px;
     }
-    
+
     /* VIP Events */
     .vip-packages {
         grid-template-columns: 1fr;
@@ -2403,47 +2454,48 @@ header.scrolled {
 
 /* Small mobile devices */
 @media (max-width: 480px) {
+
     /* Header */
     .logo img {
         height: 50px;
     }
-    
+
     /* Hero */
     .hero-title {
         font-size: 28px;
     }
-    
+
     .section-title {
         font-size: 24px;
     }
-    
+
     .section-subtitle {
         font-size: 20px;
     }
-    
+
     .section-text {
         font-size: 14px;
     }
-    
+
     /* Activity cards */
     .activity-card {
         min-width: 260px;
         max-width: 260px;
     }
-    
+
     .activity-card-title {
         font-size: 16px;
     }
-    
+
     .activity-card-description {
         font-size: 13px;
     }
-    
+
     /* Footer */
     .footer-title {
         font-size: 18px;
     }
-    
+
     .footer-description,
     .footer-contact p,
     .footer-links a {
@@ -2456,7 +2508,7 @@ header.scrolled {
     .hero-section {
         height: 200px;
     }
-    
+
     .hero-title {
         font-size: 32px;
     }
@@ -2464,6 +2516,7 @@ header.scrolled {
 
 /* Additional Mobile Fixes for Activity Cards and Reviews */
 @media (max-width: 768px) {
+
     /* Show only one activity tile at a time on mobile */
     .activity-grid {
         display: flex !important;
@@ -2510,6 +2563,7 @@ header.scrolled {
    ============================================ */
 
 @media (max-width: 768px) {
+
     /* Fix hero sections on all pages */
     section[style*='min-height: 65vh'],
     section[style*='height: 400px'],
@@ -2735,7 +2789,7 @@ header.scrolled {
 
     /* Fix box shadows */
     div[style*='box-shadow: 0 25px 60px'] {
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
     }
 
     /* Fix letter spacing */
@@ -2771,15 +2825,23 @@ header.scrolled {
 /* Small mobile devices (phones in portrait) */
 @media (max-width: 480px) {
     h1[style*='font-size'] {
-        font-size: 28px !important;
+        font-size: 32px !important;
     }
 
     h2[style*='font-size'] {
-        font-size: 24px !important;
+        font-size: 28px !important;
     }
 
     h3[style*='font-size'] {
         font-size: 20px !important;
+    }
+
+    h4[style*='font-size'] {
+        font-size: 17px !important;
+    }
+
+    h5[style*='font-size'] {
+        font-size: 15px !important;
     }
 
     section {
@@ -2797,6 +2859,7 @@ header.scrolled {
    ============================================ */
 
 @media (max-width: 768px) {
+
     /* Fix 1: Prevent logo from getting too big */
     .logo img {
         max-height: 60px !important;
@@ -2804,14 +2867,47 @@ header.scrolled {
     }
 
     /* Fix 3: Tour highlights - SVG left, text right (horizontal layout) */
-    div[style*='display: flex'][style*='align-items: center'][style*='gap: 15px'] {
+    /* Target tour highlight items specifically */
+    div[style*='display: flex'][style*='align-items: start'][style*='background: #fef3e2'] {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    /* Ensure icon box stays on left and maintains size */
+    .icon-box {
+        flex-shrink: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+    }
+
+    /* Ensure text content wraps properly next to icon */
+    div[style*='display: flex'][style*='align-items: start'][style*='background: #fef3e2']>div:not(.icon-box) {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    /* Also target white background tour highlights (yacht-sailing, etc.) */
+    div[style*='display: flex'][style*='align-items: start'][style*='background: white'] {
         flex-direction: row !important;
         align-items: flex-start !important;
     }
 
-    /* Ensure icon box stays on left */
-    .icon-box {
-        flex-shrink: 0 !important;
+    div[style*='display: flex'][style*='align-items: start'][style*='background: white']>div:not(.icon-box) {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+
+    /* Also target gradient background tour highlights (dhow cruise, etc.) */
+    div[style*='display: flex'][style*='align-items: start'][style*='background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%)'] {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+    }
+
+    div[style*='display: flex'][style*='align-items: start'][style*='background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%)']>div:not(.icon-box) {
+        flex: 1 !important;
+        min-width: 0 !important;
     }
 
     /* Fix 4: Remove highlight from reviews scroll button */
@@ -2823,7 +2919,51 @@ header.scrolled {
         font-size: 12px !important;
         font-weight: 500 !important;
     }
+
+    /* Fix 5: Increase heading sizes for better mobile readability */
+    /* Target inline-styled headings (common in tour pages) */
+    h1[style*='font-size'] {
+        font-size: 36px !important;
+    }
+
+    h2[style*='font-size'] {
+        font-size: 32px !important;
+    }
+
+    h3[style*='font-size'] {
+        font-size: 22px !important;
+    }
+
+    h4[style*='font-size'] {
+        font-size: 18px !important;
+    }
+
+    h5[style*='font-size'] {
+        font-size: 16px !important;
+    }
+
+    /* Also target regular headings without inline styles */
+    h1 {
+        font-size: 36px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+    }
+
+    h3 {
+        font-size: 22px !important;
+    }
+
+    h4 {
+        font-size: 18px !important;
+    }
+
+    h5 {
+        font-size: 16px !important;
+    }
 }
+
 
 /* Desktop - ensure logo stays normal */
 @media (min-width: 769px) {
