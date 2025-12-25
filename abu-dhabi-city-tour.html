@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +27,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
@@ -52,7 +54,7 @@
                         filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
                         line-height: 1;
                         letter-spacing: -2px;">
-                        Abu Dhabi<br/>City Tours
+                        Abu Dhabi<br />City Tours
                     </h1>
 
                     <a href="#half-day" style="
@@ -72,19 +74,24 @@
                         onmouseover="this.style.transform='translateY(-3px)'"
                         onmouseout="this.style.transform='translateY(0)'">
                         <span>Explore Tours</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
                 </div>
 
                 <!-- Right Images -->
                 <div style="position: relative; height: 400px;">
-                    <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
-                        <img src="images/photo_5821326393453776008_y.jpg" alt="Sheikh Zayed Mosque" style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
+                    <div
+                        style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
+                        <img src="images/photo_5821326393453776008_y.jpg" alt="Sheikh Zayed Mosque"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
                     </div>
-                    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
-                        <img src="images/photo_5821326393453776007_y.jpg" alt="Abu Dhabi Skyline" style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
+                        <img src="images/photo_5821326393453776007_y.jpg" alt="Abu Dhabi Skyline"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
                     </div>
                 </div>
             </div>
@@ -96,10 +103,15 @@
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Half-Day</span> Abu Dhabi City Tour
+                <h2
+                    style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span
+                        style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Half-Day</span>
+                    Abu Dhabi City Tour
                 </h2>
-                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <div
+                    style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;">
+                </div>
                 <p style="font-size: 16px; color: #8b6914; font-weight: 700;">4-5 HOURS</p>
             </div>
 
@@ -108,34 +120,69 @@
 
                 <!-- Left: Image and Description -->
                 <div>
-                    <img src="images/20.png" alt="Sheikh Zayed Mosque" style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <!-- Desktop Hero Image (Restored) -->
+                    <div class="desktop-tour-hero" onclick="currentImageIndex=0; showLightboxImage()">
+                        <img src="images/20.png" alt="Sheikh Zayed Mosque">
+                    </div>
 
-                    <!-- Tour Highlight Images Gallery -->
+                    <!-- Main Image moved into Gallery Grid for Carousel -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="https://images.trvl-media.com/localexpert/698521/dea7970e-d625-4c3e-a9c7-80dd7ca1fd20.jpg?impolicy=resizecrop&rw=1005&rh=565" alt="Emirates Palace" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper mobile-tour-hero-item"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/20.png" alt="Sheikh Zayed Mosque" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/the-corniche.jpg" alt="Corniche Beach" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="https://images.trvl-media.com/localexpert/698521/dea7970e-d625-4c3e-a9c7-80dd7ca1fd20.jpg?impolicy=resizecrop&rw=1005&rh=565"
+                                alt="Emirates Palace" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="https://www.etihad.com/content/dam/eag/etihadairways/etihadcom/Global/destinations/etihad-flights/uae/abu-dhabi/p2-e-a/heritage-village/11-heritage-village-entrance.jpg" alt="Heritage Village" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/the-corniche.jpg" alt="Corniche Beach" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="https://www.etihad.com/content/dam/eag/etihadairways/etihadcom/Global/destinations/etihad-flights/uae/abu-dhabi/p2-e-a/heritage-village/11-heritage-village-entrance.jpg"
+                                alt="Heritage Village" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                    <div
+                        style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This
+                            Tour</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Explore the magnificent capital of the UAE on this captivating half-day city tour. From the stunning Sheikh Zayed Grand Mosque to the luxurious Emirates Palace and the vibrant Corniche, discover Abu Dhabi's perfect blend of culture, heritage, and modern luxury.
+                            Explore the magnificent capital of the UAE on this captivating half-day city tour. From the
+                            stunning Sheikh Zayed Grand Mosque to the luxurious Emirates Palace and the vibrant
+                            Corniche, discover Abu Dhabi's perfect blend of culture, heritage, and modern luxury.
                         </p>
                     </div>
                 </div>
@@ -143,94 +190,131 @@
                 <!-- Right: Highlights and Inclusions -->
                 <div>
                     <!-- Highlights -->
-                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights
+                    </h3>
                     <div style="display: grid; gap: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 366.559 366.559" fill="white">
-                                    <path d="M254.031,192.313h-2.761c-4.316-25.05-5.012-50.752-19.972-65.424c-14.656-14.37-33.821-18.816-46.536-30.446v-5.444c1.165-0.558,1.977-1.738,1.977-3.113c0-1.375-0.812-2.557-1.977-3.114v-2.315c0.303-0.348,0.493-0.797,0.493-1.295c0-1.093-1.977-6.725-1.977-6.725s-1.978,5.632-1.978,6.725c0,0.498,0.191,0.948,0.495,1.296v2.314c-1.165,0.558-1.979,1.739-1.979,3.115c0,1.375,0.813,2.556,1.979,3.113v5.443c-12.717,11.63-31.882,16.077-46.536,30.446c-14.961,14.672-15.655,40.374-19.972,65.424h-2.761l-4.748,12.262h151L254.031,192.313z"/>
-                                    <path d="M28.779,214.139v152.42h109.5v-81.615c0-19.889,44.998-32.922,44.998-32.922s45.002,13.033,45.002,32.922v81.615h109.5v-152.42H28.779z"/>
-                                    <path d="M289.385,204.25h40.965v-50.418h3.867v-12.604h-7.734V92.242h7.734V79.638h-12.19V47.689c0-5.862-4.149-10.753-9.669-11.902v-7.967c1.96-0.935,3.32-2.93,3.32-5.242s-1.361-4.307-3.32-5.242v-3.873c0.51-0.583,0.83-1.338,0.83-2.175c0-1.834-3.321-11.29-3.321-11.29s-3.319,9.456-3.319,11.29c0,0.836,0.32,1.591,0.83,2.175v3.872c-1.959,0.935-3.32,2.93-3.32,5.242s1.361,4.308,3.32,5.242v7.966c-5.52,1.149-9.669,6.039-9.669,11.902v31.948h-12.19v12.604h7.734v48.986h-7.734v12.604h3.867V204.25z"/>
-                                    <path d="M36.208,204.25h40.965v-50.418h3.867v-12.604h-7.734V92.242h7.734V79.638H68.85V47.689c0-5.862-4.148-10.753-9.669-11.902v-7.967c1.959-0.935,3.32-2.93,3.32-5.242s-1.361-4.307-3.32-5.242v-3.873c0.51-0.583,0.83-1.338,0.83-2.175C60.011,9.456,56.689,0,56.689,0S53.37,9.456,53.37,11.29c0,0.836,0.32,1.591,0.83,2.175v3.872c-1.959,0.935-3.32,2.93-3.32,5.242s1.361,4.308,3.32,5.242v7.966c-5.521,1.149-9.669,6.039-9.669,11.902v31.948h-12.19v12.604h7.734v48.986h-7.734v12.604h3.867V204.25z"/>
+                                    <path
+                                        d="M254.031,192.313h-2.761c-4.316-25.05-5.012-50.752-19.972-65.424c-14.656-14.37-33.821-18.816-46.536-30.446v-5.444c1.165-0.558,1.977-1.738,1.977-3.113c0-1.375-0.812-2.557-1.977-3.114v-2.315c0.303-0.348,0.493-0.797,0.493-1.295c0-1.093-1.977-6.725-1.977-6.725s-1.978,5.632-1.978,6.725c0,0.498,0.191,0.948,0.495,1.296v2.314c-1.165,0.558-1.979,1.739-1.979,3.115c0,1.375,0.813,2.556,1.979,3.113v5.443c-12.717,11.63-31.882,16.077-46.536,30.446c-14.961,14.672-15.655,40.374-19.972,65.424h-2.761l-4.748,12.262h151L254.031,192.313z" />
+                                    <path
+                                        d="M28.779,214.139v152.42h109.5v-81.615c0-19.889,44.998-32.922,44.998-32.922s45.002,13.033,45.002,32.922v81.615h109.5v-152.42H28.779z" />
+                                    <path
+                                        d="M289.385,204.25h40.965v-50.418h3.867v-12.604h-7.734V92.242h7.734V79.638h-12.19V47.689c0-5.862-4.149-10.753-9.669-11.902v-7.967c1.96-0.935,3.32-2.93,3.32-5.242s-1.361-4.307-3.32-5.242v-3.873c0.51-0.583,0.83-1.338,0.83-2.175c0-1.834-3.321-11.29-3.321-11.29s-3.319,9.456-3.319,11.29c0,0.836,0.32,1.591,0.83,2.175v3.872c-1.959,0.935-3.32,2.93-3.32,5.242s1.361,4.308,3.32,5.242v7.966c-5.52,1.149-9.669,6.039-9.669,11.902v31.948h-12.19v12.604h7.734v48.986h-7.734v12.604h3.867V204.25z" />
+                                    <path
+                                        d="M36.208,204.25h40.965v-50.418h3.867v-12.604h-7.734V92.242h7.734V79.638H68.85V47.689c0-5.862-4.148-10.753-9.669-11.902v-7.967c1.959-0.935,3.32-2.93,3.32-5.242s-1.361-4.307-3.32-5.242v-3.873c0.51-0.583,0.83-1.338,0.83-2.175C60.011,9.456,56.689,0,56.689,0S53.37,9.456,53.37,11.29c0,0.836,0.32,1.591,0.83,2.175v3.872c-1.959,0.935-3.32,2.93-3.32,5.242s1.361,4.308,3.32,5.242v7.966c-5.521,1.149-9.669,6.039-9.669,11.902v31.948h-12.19v12.604h7.734v48.986h-7.734v12.604h3.867V204.25z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sheikh Zayed Grand Mosque</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">One of the world's largest mosques</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Sheikh
+                                    Zayed Grand Mosque</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">One of the
+                                    world's largest mosques</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 14 14" fill="white">
-                                    <path d="M 7,1 C 7,1 4,2 4,4 l 6,0 C 10,2 7,1 7,1 z M 1.5,2 C 1.5,2 0,3 0,4.5 L 0,5 3,5 3,4.5 C 3,3 1.5,2 1.5,2 z m 11,0 C 12.5,2 11,3 11,4.5 L 11,5 14,5 14,4.5 C 14,3 12.5,2 12.5,2 z M 4,5 4,7 3,7 3,6 0,6 l 0,7 5,0 c 0,-1 0,-3 2,-3 2,0 2,2 2,3 l 5,0 0,-7 -3,0 0,1 -1,0 0,-2 z M 5.5,6 C 6,6 6,6.7902542 6,7 L 6,8 5,8 5,7 C 5,6.7330508 5,6 5.5,6 z m 3,0 C 9,6 9,6.7902542 9,7 L 9,8 8,8 8,7 C 8,6.7330508 8,6 8.5,6 z m -7,1 C 2.012353,7 2,7.6752871 2,8 L 2,9 1,9 1,8 C 1,7.6752871 1.01461,7 1.5,7 z m 11,0 C 13.012353,7 13,7.6752871 13,8 l 0,1 -1,0 0,-1 c 0,-0.3247129 0.01461,-1 0.5,-1 z"/>
+                                    <path
+                                        d="M 7,1 C 7,1 4,2 4,4 l 6,0 C 10,2 7,1 7,1 z M 1.5,2 C 1.5,2 0,3 0,4.5 L 0,5 3,5 3,4.5 C 3,3 1.5,2 1.5,2 z m 11,0 C 12.5,2 11,3 11,4.5 L 11,5 14,5 14,4.5 C 14,3 12.5,2 12.5,2 z M 4,5 4,7 3,7 3,6 0,6 l 0,7 5,0 c 0,-1 0,-3 2,-3 2,0 2,2 2,3 l 5,0 0,-7 -3,0 0,1 -1,0 0,-2 z M 5.5,6 C 6,6 6,6.7902542 6,7 L 6,8 5,8 5,7 C 5,6.7330508 5,6 5.5,6 z m 3,0 C 9,6 9,6.7902542 9,7 L 9,8 8,8 8,7 C 8,6.7330508 8,6 8.5,6 z m -7,1 C 2.012353,7 2,7.6752871 2,8 L 2,9 1,9 1,8 C 1,7.6752871 1.01461,7 1.5,7 z m 11,0 C 13.012353,7 13,7.6752871 13,8 l 0,1 -1,0 0,-1 c 0,-0.3247129 0.01461,-1 0.5,-1 z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Emirates Palace</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxurious 7-star hotel photo stop</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Emirates Palace</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxurious
+                                    7-star hotel photo stop</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="white">
-                                        <path d="M.5,3.4c1.92,0,1.92.95,3.83.95S6.25,3.4,8.16,3.4s1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
-                                        <path d="M.5,9.15c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
-                                        <path d="M.5,14.9c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95"/>
-                                        <path d="M.5,20.65c1.92,0,1.92,1,3.83,1s1.92-1,3.83-1,1.92,1,3.83,1,1.92-1,3.83-1,1.92,1,3.84,1,1.92-1,3.84-1"/>
-                                    </svg>
+                                    <path
+                                        d="M.5,3.4c1.92,0,1.92.95,3.83.95S6.25,3.4,8.16,3.4s1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95" />
+                                    <path
+                                        d="M.5,9.15c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95" />
+                                    <path
+                                        d="M.5,14.9c1.92,0,1.92.95,3.83.95s1.92-.95,3.83-.95,1.92.95,3.83.95,1.92-.95,3.83-.95,1.92.95,3.84.95,1.92-.95,3.84-.95" />
+                                    <path
+                                        d="M.5,20.65c1.92,0,1.92,1,3.83,1s1.92-1,3.83-1,1.92,1,3.83,1,1.92-1,3.83-1,1.92,1,3.84,1,1.92-1,3.84-1" />
+                                </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Corniche Waterfront</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Scenic beachfront promenade</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Corniche Waterfront</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Scenic
+                                    beachfront promenade</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 512 512" fill="white">
-                                        <path d="M109.902 35.87l-71.14 59.284h142.28l-71.14-59.285zm288 32l-71.14 59.284h142.28l-71.14-59.285zM228.73 84.403l-108.9 90.75h217.8l-108.9-90.75zm-173.828 28.75v62h36.81l73.19-60.992v-1.008h-110zm23 14h16v18h-16v-18zm265 18v10.963l23 19.166v-16.13h16v18h-13.756l.104.087 19.098 15.914h-44.446v14h78v-39h18v39h14v-62h-110zm-194.345 48v20.08l24.095-20.08h-24.095zm28.158 0l105.1 87.582 27.087-22.574v-65.008H176.715zm74.683 14h35.735v34h-35.735v-34zm-76.714 7.74L30.37 335.153H319l-144.314-120.26zm198.046 13.51l-76.857 64.047 32.043 26.704H481.63l-108.9-90.75zm-23.214 108.75l.103.086 19.095 15.914h-72.248v77.467h60.435v-63.466h50v63.467h46v-93.466H349.516zm-278.614 16V476.13h126v-76.976h50v76.977h31.565V353.155H70.902zm30 30h50v50h-50v-50z"/>
-                                    </svg>
+                                    <path
+                                        d="M109.902 35.87l-71.14 59.284h142.28l-71.14-59.285zm288 32l-71.14 59.284h142.28l-71.14-59.285zM228.73 84.403l-108.9 90.75h217.8l-108.9-90.75zm-173.828 28.75v62h36.81l73.19-60.992v-1.008h-110zm23 14h16v18h-16v-18zm265 18v10.963l23 19.166v-16.13h16v18h-13.756l.104.087 19.098 15.914h-44.446v14h78v-39h18v39h14v-62h-110zm-194.345 48v20.08l24.095-20.08h-24.095zm28.158 0l105.1 87.582 27.087-22.574v-65.008H176.715zm74.683 14h35.735v34h-35.735v-34zm-76.714 7.74L30.37 335.153H319l-144.314-120.26zm198.046 13.51l-76.857 64.047 32.043 26.704H481.63l-108.9-90.75zm-23.214 108.75l.103.086 19.095 15.914h-72.248v77.467h60.435v-63.466h50v63.467h46v-93.466H349.516zm-278.614 16V476.13h126v-76.976h50v76.977h31.565V353.155H70.902zm30 30h50v50h-50v-50z" />
+                                </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Heritage Village</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional Bedouin culture</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Heritage Village</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional
+                                    Bedouin culture</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Inclusions -->
-                    <div style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                    <div
+                        style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
                         <div style="display: flex; gap: 30px; flex-wrap: wrap;">
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
-                                        <polyline points="20 6 9 17 4 12"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     What's Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Professional guide</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> AC vehicle</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Photo stops</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Professional guide</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> AC vehicle</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Photo stops</li>
                                 </ul>
                             </div>
                             <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <line x1="15" y1="9" x2="9" y2="15"/>
-                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="15" y1="9" x2="9" y2="15" />
+                                        <line x1="9" y1="9" x2="15" y2="15" />
                                     </svg>
                                     Not Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Entrance fees</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Meals</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Entrance fees</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Meals</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Personal expenses</li>
                                 </ul>
                             </div>
                         </div>
@@ -248,10 +332,15 @@
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Full-Day</span> Abu Dhabi City Tour
+                <h2
+                    style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span
+                        style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Full-Day</span>
+                    Abu Dhabi City Tour
                 </h2>
-                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;"></div>
+                <div
+                    style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;">
+                </div>
                 <p style="font-size: 16px; color: #8b6914; font-weight: 700;">8 HOURS</p>
             </div>
 
@@ -261,92 +350,124 @@
                 <!-- Left: Highlights and Inclusions -->
                 <div>
                     <!-- Highlights -->
-                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights
+                    </h3>
                     <div style="display: grid; gap: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="white">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">All Half-Day Attractions</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Plus extended experiences</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">All
+                                    Half-Day Attractions</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Plus extended
+                                    experiences</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 538.043 538.043" fill="white">
-                                        <path d="M269.022,111.626C120.677,111.626,0,232.315,0,380.648v34.327c0,6.313,5.117,11.442,11.442,11.442h515.158c6.325,0,11.442-5.129,11.442-11.442v-34.327C538.043,232.315,417.366,111.626,269.022,111.626z M194.795,369.193c0.335-22.12,1.483-43.223,3.491-62.963h59.293v62.963H194.795z M109.127,369.193c0.67-21.809,3.025-42.972,7.162-62.963h59.113c-2.069,20.673-3.276,41.884-3.599,62.963C171.803,369.193,109.127,369.193,109.127,369.193z M23.471,369.193c1.005-21.809,4.651-42.972,10.976-62.963h58.587c-3.958,20.159-6.349,41.226-6.983,62.963H23.471z M82.632,220.383h39.385c-9.733,19.178-17.719,40.353-23.698,62.963H43.044C53.003,260.305,66.466,239.166,82.632,220.383z M455.412,220.383c16.177,18.784,29.64,39.911,39.6,62.963h-55.275c-5.978-22.61-13.965-43.785-23.686-62.963H455.412z M416.194,283.345h-56.208c-2.965-22.167-6.983-43.39-11.98-62.963h42.41C400.926,239.166,409.702,260.305,416.194,283.345z M257.579,138.194v59.293h-36.922C231.442,166.698,244.451,145.977,257.579,138.194z M317.386,197.486h-36.922v-59.293C293.592,145.977,306.601,166.698,317.386,197.486z M257.579,220.383v62.963h-56.578c3.204-23.279,7.449-44.43,12.506-62.963H257.579z M280.464,220.383h44.096c5.046,18.532,9.29,39.684,12.495,62.963h-56.566L280.464,220.383L280.464,220.383z M341.466,197.486c-6.289-19.573-13.762-36.742-22.347-50.481c21.175,10.737,40.329,28.122,56.578,50.48L341.466,197.486L341.466,197.486z M218.948,147.005c-8.585,13.738-16.057,30.907-22.347,50.481h-34.244C178.606,175.127,197.773,157.742,218.948,147.005z M190.049,220.383c-4.986,19.573-9.015,40.807-11.981,62.963h-56.196c6.492-23.052,15.244-44.179,25.778-62.963H190.049z M280.464,306.23h59.292c2.009,19.716,3.157,40.843,3.491,62.963h-62.784V306.23z M366.24,369.193c-0.299-21.079-1.531-42.266-3.599-62.963h59.101c4.149,19.991,6.492,41.13,7.174,62.963H366.24z M451.992,369.193c-0.634-21.737-3.025-42.804-6.983-62.963h58.587c6.325,19.991,9.972,41.13,10.976,62.963C514.573,369.193,451.992,369.193,451.992,369.193z M432.838,197.486h-29.831c-9.792-15.448-20.804-29.222-32.844-40.963C393.214,166.961,414.245,180.842,432.838,197.486z M135.037,197.486h-29.831c18.58-16.643,39.636-30.525,62.676-40.963C155.841,168.264,144.829,182.038,135.037,197.486z M515.158,403.544H22.885v-11.442h492.274V403.544z"/>
-                                    </svg>
-                            </div>
-                            <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Louvre Abu Dhabi</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World-class art museum</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
-                            <div class="icon-box">
-                                <svg viewBox="0 0 227.334 227.334" fill="white">
-                                        <path d="m221.334,60.116h-43.858c-2.387-32.299-29.41-57.855-62.309-57.855h-3c-32.899,0-59.922,25.556-62.309,57.855h-43.858c-3.313,0-6,2.687-6,6v152.957c0,3.313 2.687,6 6,6h82.332 50.67 82.332c3.313,0 6-2.687 6-6v-152.957c0-3.314-2.687-6-6-6zm-88.332,145.478h-38.67v-25.665c0-10.661 8.674-19.335 19.335-19.335s19.335,8.674 19.335,19.335v25.665zm26.807,7.479c0.12-0.474 0.191-0.967 0.191-1.479 0-3.313-2.687-6-6-6h-8.998v-25.665c0-17.278-14.057-31.335-31.335-31.335s-31.335,14.057-31.335,31.335v25.665h-8.998c-3.313,0-6,2.687-6,6 0,0.511 0.071,1.005 0.191,1.479h-55.525v-95.479h203.334v95.479h-55.525zm-47.642-198.812h3c26.279,3.55271e-15 47.924,20.18 50.278,45.855h-103.556c2.354-25.675 23.999-45.855 50.278-45.855zm103.167,57.855v33.479h-203.334v-33.479h203.334z"/>
-                                        <path d="m79.718,94.594h8.614c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.614c-3.313,0-6,2.687-6,6s2.686,6 6,6z"/>
-                                        <path d="m109.36,94.594h8.613c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.613c-3.313,0-6,2.687-6,6s2.687,6 6,6z"/>
-                                        <path d="m139.002,94.594h8.614c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.614c-3.313,0-6,2.687-6,6s2.686,6 6,6z"/>
-                                    </svg>
-                            </div>
-                            <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Qasr Al Watan</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Presidential Palace tour</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
-                            <div class="icon-box">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
+                                    <path
+                                        d="M269.022,111.626C120.677,111.626,0,232.315,0,380.648v34.327c0,6.313,5.117,11.442,11.442,11.442h515.158c6.325,0,11.442-5.129,11.442-11.442v-34.327C538.043,232.315,417.366,111.626,269.022,111.626z M194.795,369.193c0.335-22.12,1.483-43.223,3.491-62.963h59.293v62.963H194.795z M109.127,369.193c0.67-21.809,3.025-42.972,7.162-62.963h59.113c-2.069,20.673-3.276,41.884-3.599,62.963C171.803,369.193,109.127,369.193,109.127,369.193z M23.471,369.193c1.005-21.809,4.651-42.972,10.976-62.963h58.587c-3.958,20.159-6.349,41.226-6.983,62.963H23.471z M82.632,220.383h39.385c-9.733,19.178-17.719,40.353-23.698,62.963H43.044C53.003,260.305,66.466,239.166,82.632,220.383z M455.412,220.383c16.177,18.784,29.64,39.911,39.6,62.963h-55.275c-5.978-22.61-13.965-43.785-23.686-62.963H455.412z M416.194,283.345h-56.208c-2.965-22.167-6.983-43.39-11.98-62.963h42.41C400.926,239.166,409.702,260.305,416.194,283.345z M257.579,138.194v59.293h-36.922C231.442,166.698,244.451,145.977,257.579,138.194z M317.386,197.486h-36.922v-59.293C293.592,145.977,306.601,166.698,317.386,197.486z M257.579,220.383v62.963h-56.578c3.204-23.279,7.449-44.43,12.506-62.963H257.579z M280.464,220.383h44.096c5.046,18.532,9.29,39.684,12.495,62.963h-56.566L280.464,220.383L280.464,220.383z M341.466,197.486c-6.289-19.573-13.762-36.742-22.347-50.481c21.175,10.737,40.329,28.122,56.578,50.48L341.466,197.486L341.466,197.486z M218.948,147.005c-8.585,13.738-16.057,30.907-22.347,50.481h-34.244C178.606,175.127,197.773,157.742,218.948,147.005z M190.049,220.383c-4.986,19.573-9.015,40.807-11.981,62.963h-56.196c6.492-23.052,15.244-44.179,25.778-62.963H190.049z M280.464,306.23h59.292c2.009,19.716,3.157,40.843,3.491,62.963h-62.784V306.23z M366.24,369.193c-0.299-21.079-1.531-42.266-3.599-62.963h59.101c4.149,19.991,6.492,41.13,7.174,62.963H366.24z M451.992,369.193c-0.634-21.737-3.025-42.804-6.983-62.963h58.587c6.325,19.991,9.972,41.13,10.976,62.963C514.573,369.193,451.992,369.193,451.992,369.193z M432.838,197.486h-29.831c-9.792-15.448-20.804-29.222-32.844-40.963C393.214,166.961,414.245,180.842,432.838,197.486z M135.037,197.486h-29.831c18.58-16.643,39.636-30.525,62.676-40.963C155.841,168.264,144.829,182.038,135.037,197.486z M515.158,403.544H22.885v-11.442h492.274V403.544z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Comprehensive Experience</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Complete Abu Dhabi exploration</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Louvre
+                                    Abu Dhabi</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World-class art
+                                    museum</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 227.334 227.334" fill="white">
+                                    <path
+                                        d="m221.334,60.116h-43.858c-2.387-32.299-29.41-57.855-62.309-57.855h-3c-32.899,0-59.922,25.556-62.309,57.855h-43.858c-3.313,0-6,2.687-6,6v152.957c0,3.313 2.687,6 6,6h82.332 50.67 82.332c3.313,0 6-2.687 6-6v-152.957c0-3.314-2.687-6-6-6zm-88.332,145.478h-38.67v-25.665c0-10.661 8.674-19.335 19.335-19.335s19.335,8.674 19.335,19.335v25.665zm26.807,7.479c0.12-0.474 0.191-0.967 0.191-1.479 0-3.313-2.687-6-6-6h-8.998v-25.665c0-17.278-14.057-31.335-31.335-31.335s-31.335,14.057-31.335,31.335v25.665h-8.998c-3.313,0-6,2.687-6,6 0,0.511 0.071,1.005 0.191,1.479h-55.525v-95.479h203.334v95.479h-55.525zm-47.642-198.812h3c26.279,3.55271e-15 47.924,20.18 50.278,45.855h-103.556c2.354-25.675 23.999-45.855 50.278-45.855zm103.167,57.855v33.479h-203.334v-33.479h203.334z" />
+                                    <path
+                                        d="m79.718,94.594h8.614c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.614c-3.313,0-6,2.687-6,6s2.686,6 6,6z" />
+                                    <path
+                                        d="m109.36,94.594h8.613c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.613c-3.313,0-6,2.687-6,6s2.687,6 6,6z" />
+                                    <path
+                                        d="m139.002,94.594h8.614c3.313,0 6-2.687 6-6s-2.687-6-6-6h-8.614c-3.313,0-6,2.687-6,6s2.686,6 6,6z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Qasr
+                                    Al Watan</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Presidential
+                                    Palace tour</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Comprehensive Experience</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Complete Abu
+                                    Dhabi exploration</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Inclusions -->
-                    <div style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                    <div
+                        style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
                         <div style="display: flex; gap: 30px; flex-wrap: wrap;">
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
-                                        <polyline points="20 6 9 17 4 12"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     What's Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Professional guide</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> AC vehicle</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Water</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Professional guide</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> AC vehicle</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Water</li>
                                 </ul>
                             </div>
                             <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <line x1="15" y1="9" x2="9" y2="15"/>
-                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="15" y1="9" x2="9" y2="15" />
+                                        <line x1="9" y1="9" x2="15" y2="15" />
                                     </svg>
                                     Not Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Lunch</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Entrance fees</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Lunch</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Entrance fees</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Personal expenses</li>
                                 </ul>
                             </div>
                         </div>
@@ -355,34 +476,56 @@
 
                 <!-- Right: Image and Description -->
                 <div>
-                    <img src="images/photo_5821326393453776015_y.jpg" alt="Abu Dhabi Full Day" style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="images/photo_5821326393453776015_y.jpg" alt="Abu Dhabi Full Day"
+                        style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
 
                     <!-- Tour Highlight Images Gallery -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/18.png" alt="Louvre Abu Dhabi" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/18.png" alt="Louvre Abu Dhabi" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/45.png" alt="Qasr Al Watan" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/45.png" alt="Qasr Al Watan" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/photo-1512632578888-169bbbc64f33.jfif" alt="Yas Island" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/photo-1512632578888-169bbbc64f33.jfif" alt="Yas Island"
+                                class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                    <div
+                        style="background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This
+                            Tour</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Experience the complete Abu Dhabi story on this immersive full-day tour. Discover the capital's rich heritage, stunning architecture, world-class museums, and modern marvels. From ancient traditions to contemporary culture, explore everything that makes Abu Dhabi unique.
+                            Experience the complete Abu Dhabi story on this immersive full-day tour. Discover the
+                            capital's rich heritage, stunning architecture, world-class museums, and modern marvels.
+                            From ancient traditions to contemporary culture, explore everything that makes Abu Dhabi
+                            unique.
                         </p>
                     </div>
                 </div>
@@ -396,24 +539,34 @@
     <!-- Best Attractions Section -->
     <section id="best-attractions" style="background: white; padding: 80px 20px;">
         <div style="max-width: 1400px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 48px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
-                <span style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Best Attractions</span> in Abu Dhabi
+            <h2
+                style="text-align: center; font-size: 48px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
+                <span
+                    style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Best
+                    Attractions</span> in Abu Dhabi
             </h2>
-            <p style="text-align: center; font-size: 18px; color: #6a5f54; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore the top must-visit attractions and theme parks in Abu Dhabi</p>
+            <p
+                style="text-align: center; font-size: 18px; color: #6a5f54; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                Explore the top must-visit attractions and theme parks in Abu Dhabi</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                 <!-- Ferrari World -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://blog.abudhabicityguide.com/wp-content/uploads/2024/09/Ferrari-World-Yas-Island-Abu-Dhabi-1.jpg" alt="Ferrari World" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://blog.abudhabicityguide.com/wp-content/uploads/2024/09/Ferrari-World-Yas-Island-Abu-Dhabi-1.jpg"
+                            alt="Ferrari World" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Ferrari World</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Ferrari
+                            World</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Theme Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">345</span>
                             </div>
                         </div>
@@ -421,16 +574,21 @@
                 </div>
 
                 <!-- SeaWorld -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/0b/db/76.jpg" alt="SeaWorld" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/0b/db/76.jpg"
+                            alt="SeaWorld" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">SeaWorld Abu Dhabi</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">SeaWorld Abu
+                            Dhabi</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Marine Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">375</span>
                             </div>
                         </div>
@@ -438,16 +596,21 @@
                 </div>
 
                 <!-- Yas Waterworld -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/61/68/4a.jpg" alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/61/68/4a.jpg"
+                            alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Yas Waterworld</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Yas
+                            Waterworld</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Water Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">295</span>
                             </div>
                         </div>
@@ -455,16 +618,21 @@
                 </div>
 
                 <!-- Snow Abu Dhabi -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3a/b3/c4.jpg" alt="Snow Abu Dhabi" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/3a/b3/c4.jpg"
+                            alt="Snow Abu Dhabi" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Snow Abu Dhabi</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Snow Abu
+                            Dhabi</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Indoor Snow Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">196</span>
                             </div>
                         </div>
@@ -472,16 +640,21 @@
                 </div>
 
                 <!-- Emirates Park Zoo -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&h=300&fit=crop&q=80" alt="Emirates Park Zoo" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&h=300&fit=crop&q=80"
+                            alt="Emirates Park Zoo" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Emirates Park Zoo</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Emirates
+                            Park Zoo</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Wildlife Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">45</span>
                             </div>
                         </div>
@@ -489,16 +662,21 @@
                 </div>
 
                 <!-- Louvre Abu Dhabi -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="images/photo_5821326393453776015_y.jpg" alt="Louvre Abu Dhabi" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/photo_5821326393453776015_y.jpg" alt="Louvre Abu Dhabi"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Louvre Abu Dhabi</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Louvre Abu
+                            Dhabi</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Art Museum</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">45</span>
                             </div>
                         </div>
@@ -506,16 +684,21 @@
                 </div>
 
                 <!-- Qasr Al Watan -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="images/photo_5821326393453776009_y.jpg" alt="Qasr Al Watan" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/photo_5821326393453776009_y.jpg" alt="Qasr Al Watan"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Qasr Al Watan</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Qasr Al
+                            Watan</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Presidential Palace</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">65</span>
                             </div>
                         </div>
@@ -523,16 +706,21 @@
                 </div>
 
                 <!-- Warner Bros World -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://imageio.forbes.com/blogs-images/csylt/files/2018/11/Screenshot_2018-11-04-21-55-54-1-1200x832.png?format=png&height=900&width=1600&fit=bounds" alt="Warner Bros World" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://imageio.forbes.com/blogs-images/csylt/files/2018/11/Screenshot_2018-11-04-21-55-54-1-1200x832.png?format=png&height=900&width=1600&fit=bounds"
+                            alt="Warner Bros World" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Warner Bros World</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Warner Bros
+                            World</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Theme Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">345</span>
                             </div>
                         </div>
@@ -540,16 +728,21 @@
                 </div>
 
                 <!-- National Aquarium -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/1d/33/18/bu-tinah-island-did-you.jpg?w=1200&h=-1&s=1" alt="National Aquarium" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/1d/33/18/bu-tinah-island-did-you.jpg?w=1200&h=-1&s=1"
+                            alt="National Aquarium" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">National Aquarium</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">National
+                            Aquarium</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Aquarium</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">107</span>
                             </div>
                         </div>
@@ -557,16 +750,21 @@
                 </div>
 
                 <!-- Kidzania -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmej7rgFs3BTw2X7UBU3p-MvUC3vWWrbrDA&s" alt="Kidzania" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmej7rgFs3BTw2X7UBU3p-MvUC3vWWrbrDA&s"
+                            alt="Kidzania" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Kidzania Abu Dhabi</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Kidzania Abu
+                            Dhabi</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Kids Entertainment</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">75</span>
                             </div>
                         </div>
@@ -574,16 +772,21 @@
                 </div>
 
                 <!-- Sky Dive -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://mister-tickets.com/wp-content/uploads/2023/12/s3.jpg" alt="Sky Dive" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://mister-tickets.com/wp-content/uploads/2023/12/s3.jpg" alt="Sky Dive"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Sky Dive Abu Dhabi</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Sky Dive Abu
+                            Dhabi</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Adventure Sport</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">1600</span>
                             </div>
                         </div>
@@ -591,16 +794,21 @@
                 </div>
 
                 <!-- Quad Biking -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/89/c9/f8.jpg" alt="Quad Biking" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/89/c9/f8.jpg"
+                            alt="Quad Biking" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Quad Biking</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Quad Biking
+                        </h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Desert Adventure</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">845</span>
                             </div>
                         </div>
@@ -608,16 +816,21 @@
                 </div>
 
                 <!-- Emirates Palace -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/181025111854-emirates-palace-back-exterior.jpg?q=w_2213,h_1245,x_0,y_0,c_fill" alt="Emirates Palace" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/181025111854-emirates-palace-back-exterior.jpg?q=w_2213,h_1245,x_0,y_0,c_fill"
+                            alt="Emirates Palace" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Emirates Palace</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Emirates
+                            Palace</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Luxury Hotel Tour</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">150</span>
                             </div>
                         </div>
@@ -632,7 +845,8 @@
     <div style="height: 60px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
 
     <!-- CTA -->
-    <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
+    <section
+        style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 38px; font-weight: 900; color: white; margin-bottom: 18px; line-height: 1.2;">
                 Ready to Explore Abu Dhabi?
@@ -654,12 +868,11 @@
                 font-weight: 900;
                 text-decoration: none;
                 box-shadow: 0 15px 50px rgba(0,0,0,0.4);
-                transition: all 0.3s ease;"
-                onmouseover="this.style.transform='translateY(-4px)'"
+                transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'"
                 onmouseout="this.style.transform='translateY(0)'">
                 <span>Book Now</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </a>
         </div>
@@ -668,58 +881,141 @@
     <div id="footer-placeholder"></div>
 
     <!-- Image Lightbox Modal -->
-    <div id="imageLightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; justify-content: center; align-items: center;">
-        <button onclick="closeLightbox()" style="position: absolute; top: 30px; right: 40px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; font-weight: bold; color: #2d1f15; z-index: 10001; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">×</button>
-        <img id="lightboxImage" src="" alt="" style="max-width: 90%; max-height: 90%; border-radius: 15px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);">
+    <div id="imageLightbox"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; justify-content: center; align-items: center;">
+        <button onclick="closeLightbox()"
+            style="position: absolute; top: 30px; right: 40px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; font-weight: bold; color: #2d1f15; z-index: 10001; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;"
+            onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">×</button>
+
+        <!-- Previous Arrow -->
+        <button onclick="navigateLightbox(-1)"
+            style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: transparent; border: none; width: 60px; height: 60px; cursor: pointer; font-size: 60px; font-weight: 300; font-family: monospace; color: rgba(255,255,255,0.7); z-index: 10001; transition: all 0.2s; padding: 0; line-height: 1;"
+            onmouseover="this.style.color='rgba(255,255,255,1)'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateY(-50%) scale(1)'">‹</button>
+
+        <!-- Next Arrow -->
+        <button onclick="navigateLightbox(1)"
+            style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: transparent; border: none; width: 60px; height: 60px; cursor: pointer; font-size: 60px; font-weight: 300; font-family: monospace; color: rgba(255,255,255,0.7); z-index: 10001; transition: all 0.2s; padding: 0; line-height: 1;"
+            onmouseover="this.style.color='rgba(255,255,255,1)'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateY(-50%) scale(1)'">›</button>
+
+        <img id="lightboxImage" src="" alt=""
+            style="max-width: 90%; max-height: 85%; border-radius: 15px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);">
+
+        <!-- Image counter -->
+        <div id="imageCounter"
+            style="position: absolute !important; bottom: 25px !important; left: 0 !important; width: 100% !important; text-align: center !important; font-size: 16px !important; font-weight: 500 !important; color: white !important; z-index: 10001 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8); pointer-events: none;">
+        </div>
     </div>
 
     <script>
-        // Image Lightbox Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        // Image Lightbox Functionality with Navigation
+        let currentImageIndex = 0;
+        let galleryImagesArray = [];
+
+        document.addEventListener('DOMContentLoaded', function () {
             const galleryImages = document.querySelectorAll('.tour-gallery-img');
             const galleryWrappers = document.querySelectorAll('.gallery-img-wrapper');
             const lightbox = document.getElementById('imageLightbox');
             const lightboxImage = document.getElementById('lightboxImage');
+            const imageCounter = document.getElementById('imageCounter');
+
+            // Convert NodeList to Array for easier navigation
+            galleryImagesArray = Array.from(galleryImages);
 
             // Add hover effect to show overlay
             galleryWrappers.forEach(wrapper => {
                 const overlay = wrapper.querySelector('.gallery-overlay');
                 const img = wrapper.querySelector('.tour-gallery-img');
 
-                wrapper.addEventListener('mouseenter', function() {
+                wrapper.addEventListener('mouseenter', function () {
                     overlay.style.opacity = '1';
                     img.style.transform = 'scale(1.05)';
                 });
 
-                wrapper.addEventListener('mouseleave', function() {
+                wrapper.addEventListener('mouseleave', function () {
                     overlay.style.opacity = '0';
                     img.style.transform = 'scale(1)';
                 });
             });
 
-            galleryImages.forEach(img => {
-                img.addEventListener('click', function() {
-                    lightboxImage.src = this.src;
-                    lightboxImage.alt = this.alt;
-                    lightbox.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
+            galleryImages.forEach((img, index) => {
+                img.addEventListener('click', function () {
+                    currentImageIndex = index;
+                    showLightboxImage();
                 });
             });
 
             // Close on click outside image
-            lightbox.addEventListener('click', function(e) {
+            lightbox.addEventListener('click', function (e) {
                 if (e.target === lightbox) {
                     closeLightbox();
                 }
             });
 
-            // Close on Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeLightbox();
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigateLightbox(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        navigateLightbox(1);
+                    }
                 }
             });
+
+            // Touch swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            lightboxImage.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            lightboxImage.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    // Swipe left - next image
+                    navigateLightbox(1);
+                }
+                if (touchEndX > touchStartX + 50) {
+                    // Swipe right - previous image
+                    navigateLightbox(-1);
+                }
+            }
         });
+
+        function showLightboxImage() {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const imageCounter = document.getElementById('imageCounter');
+
+            lightboxImage.src = galleryImagesArray[currentImageIndex].src;
+            lightboxImage.alt = galleryImagesArray[currentImageIndex].alt;
+            imageCounter.textContent = `${currentImageIndex + 1} / ${galleryImagesArray.length}`;
+
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+
+            // Loop around
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImagesArray.length - 1;
+            } else if (currentImageIndex >= galleryImagesArray.length) {
+                currentImageIndex = 0;
+            }
+
+            showLightboxImage();
+        }
 
         function closeLightbox() {
             const lightbox = document.getElementById('imageLightbox');
@@ -731,4 +1027,5 @@
     <script src="includes/components.js"></script>
     <script src="mobile-menu.js"></script>
 </body>
+
 </html>
