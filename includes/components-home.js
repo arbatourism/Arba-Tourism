@@ -93,6 +93,11 @@ const headerHTML = `<header id="home-header">
                 <path d="m21 21-4.35-4.35"></path>
             </svg>
         </button>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 </header>`;
 
@@ -194,7 +199,7 @@ const footerHTML = `<footer class="footer">
 `;
 
 // Load Header and Footer on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Insert Header
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
@@ -209,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle footer contact form submission
         const footerForm = document.getElementById('footerContactForm');
         if (footerForm) {
-            footerForm.addEventListener('submit', async function(e) {
+            footerForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
 
                 const submitBtn = footerForm.querySelector('button[type="submit"]');
@@ -274,14 +279,14 @@ function showFooterSuccessPopup() {
         document.body.appendChild(popup);
 
         // Close on clicking outside
-        popup.addEventListener('click', function(e) {
+        popup.addEventListener('click', function (e) {
             if (e.target === popup.querySelector('div')) {
                 closeFooterSuccessPopup();
             }
         });
 
         // Close on ESC key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeFooterSuccessPopup();
             }
