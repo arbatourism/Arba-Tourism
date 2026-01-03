@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai City Tours - Half Day & Full Day Tours | Arba Tourism</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-menu.css">
     <style>
         /* Icon styles */
         .icon-box {
@@ -25,6 +27,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
@@ -51,7 +54,7 @@
                         filter: drop-shadow(0 4px 20px rgba(198, 123, 62, 0.7));
                         line-height: 1;
                         letter-spacing: -2px;">
-                        Dubai City<br/>Tours
+                        Dubai City<br />Tours
                     </h1>
 
                     <a href="#half-day" style="
@@ -71,19 +74,24 @@
                         onmouseover="this.style.transform='translateY(-3px)'"
                         onmouseout="this.style.transform='translateY(0)'">
                         <span>Explore Tours</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
                 </div>
 
                 <!-- Right Images -->
                 <div style="position: relative; height: 400px;">
-                    <div style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
-                        <img src="images/photo-1512453979798-5ea266f8880c.jfif" alt="Dubai Burj Khalifa" style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
+                    <div
+                        style="position: absolute; top: 30px; right: 0; width: 75%; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(2deg);">
+                        <img src="images/photo-1512453979798-5ea266f8880c.jfif" alt="Dubai Burj Khalifa"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
                     </div>
-                    <div style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
-                        <img src="images/photo-1580674684081-7617fbf3d745.jfif" alt="Dubai Skyline" style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; width: 50%; height: 200px; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.6); border: 6px solid rgba(245, 212, 160, 0.4); transform: rotate(-3deg);">
+                        <img src="images/photo-1580674684081-7617fbf3d745.jfif" alt="Dubai Skyline"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top right;">
                     </div>
                 </div>
             </div>
@@ -95,10 +103,15 @@
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Half-Day</span> Dubai City Tour
+                <h2
+                    style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span
+                        style="background: linear-gradient(135deg, #c67b3e 0%, #d4a574 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Half-Day</span>
+                    Dubai City Tour
                 </h2>
-                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;"></div>
+                <div
+                    style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #c67b3e, transparent); margin: 0 auto 10px;">
+                </div>
                 <p style="font-size: 16px; color: #8b6914; font-weight: 700;">4-5 HOURS</p>
             </div>
 
@@ -107,34 +120,69 @@
 
                 <!-- Left: Image and Description -->
                 <div>
-                    <img src="images/photo-1512453979798-5ea266f8880c.jfif" alt="Dubai Burj Khalifa" style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <!-- Desktop Hero Image (Restored) -->
+                    <div class="desktop-tour-hero" onclick="currentImageIndex=0; showLightboxImage()">
+                        <img src="images/photo-1512453979798-5ea266f8880c.jfif" alt="Dubai Burj Khalifa">
+                    </div>
 
-                    <!-- Tour Highlight Images Gallery -->
+                    <!-- Main Image moved into Gallery Grid for Carousel -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/The_view_of_Dubai_Creek.jpg" alt="Dubai Mall" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper mobile-tour-hero-item"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/photo-1512453979798-5ea266f8880c.jfif" alt="Dubai Burj Khalifa"
+                                class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/photo-1518684079-3c830dcef090.jfif" alt="Dubai Creek" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/The_view_of_Dubai_Creek.jpg" alt="Dubai Mall" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/taken-5-years-ago-it.jpg" alt="Jumeirah Beach" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/photo-1518684079-3c830dcef090.jfif" alt="Dubai Creek"
+                                class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
+                            </div>
+                        </div>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/taken-5-years-ago-it.jpg" alt="Jumeirah Beach" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #c67b3e; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                    <div
+                        style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(198, 123, 62, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This
+                            Tour</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Experience the magic of Dubai on this captivating half-day city tour. From the towering Burj Khalifa to the vibrant Dubai Mall and historic Dubai Creek, discover the perfect blend of tradition and innovation in the city of superlatives.
+                            Experience the magic of Dubai on this captivating half-day city tour. From the towering Burj
+                            Khalifa to the vibrant Dubai Mall and historic Dubai Creek, discover the perfect blend of
+                            tradition and innovation in the city of superlatives.
                         </p>
                     </div>
                 </div>
@@ -142,89 +190,119 @@
                 <!-- Right: Highlights and Inclusions -->
                 <div>
                     <!-- Highlights -->
-                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights
+                    </h3>
                     <div style="display: grid; gap: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 375.89999 1541.4" fill="white">
-                                        <path d="m0 1516.6v-24.75h14.4c9.4 0 14.4-0.1042 14.4-0.3 0-0.1929 3-0.3 8.4-0.3h8.4v-7.9462-7.9461l10.575-0.079 10.575-0.079 0.08006-7.725 0.08006-7.725h11.095 11.095v-96.909c0-92.022 0.02649-96.919 0.525-97.099 0.28875-0.1042 0.87191-0.4293 1.2959-0.7225 0.93397-0.6459 6.422-2.0526 12.129-3.1089 2.31-0.4276 4.841-0.922 5.6246-1.0987l1.4246-0.3213 0.0754-99.762 0.0755-99.762 3.75-1.7271c2.0625-0.9499 6.0788-2.5133 8.925-3.4742l5.175-1.7471v-115.46-115.46l0.675-0.57048c3.7826-3.1968 18.413-11.376 20.349-11.376 0.16701 0 0.27556-54.838 0.27556-139.22v-139.22l1.0375-2.2455c3.1668-6.854 7.7704-12.417 14.276-17.252 4.0261-2.992 3.5769 1.5138 3.5853-35.963 0.007-30.721 0.0357-32.434 0.60653-36.133 1.05-6.8027 1.9646-10.02 3.4671-12.196l0.74497-1.0789 0.0661-33.721 0.0661-33.721 0.95868-1.9587c1.3677-2.7944 3.6859-5.7251 6.1124-7.7275l2.0959-1.7296-0.0127-51.237-0.0127-51.237 0.76479-3.7123c1.2731-6.1795 2.5641-10.014 4.4609-13.251l1.0827-1.8474v-41.017c0-40.18 0.0123-41.058 0.6015-43.037 1.0457-3.5113 2.3063-6.2084 4.1807-8.9452l1.8178-2.6541v-24.798-24.798h1.65 1.65v-41.25-41.25h1.8 1.8v48.9 48.9h1.5 1.5v29.4c0 25.933 0.0531 29.4 0.45 29.4 0.39603 0 0.45 2.7167 0.45 22.65v22.65h2.4 2.4v47.85 47.85h2.1 2.1v42.124 42.124l1.8826 1.3434c1.0354 0.73884 2.7904 2.3057 3.9 3.482l2.0174 2.1386v53.844c0 36.137 0.0999 53.844 0.30373 53.844 1.1961 0 3.7563 5.9158 4.6741 10.8l0.7046 3.75 0.009 56.775c0.005 31.226 0.12275 56.775 0.26201 56.775 0.32742 0 7.5531 5.6992 10.766 8.4916l2.4834 2.1584 0.00021 54.6 0.00021 54.6 0.81329 4.5 0.8133 4.5 0.16026 69.427 0.16026 69.427 3.15 1.1261c1.7325 0.61935 5.3438 2.2375 8.025 3.5959l4.875 2.4698 0.001 112.38 0.001 112.38 6.3739 1.6257c3.5056 0.8942 6.8126 1.7443 7.3489 1.8891l0.975 0.2634v93.436 93.436l0.975-0.01c0.53625 0 4.1138 0.4208 7.95 0.9441l6.975 0.9515v71.656 71.656h10.35 10.35v7.8 7.8h10.2 10.2v8.1 8.1h22.05 22.05v24.75 24.75h-187.95-187.95v-24.75z"/>
-                                    </svg>
-                            </div>
-                            <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Burj Khalifa</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World's tallest building photo stop</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
-                            <div class="icon-box">
-                                <svg viewBox="0 0 384 448" fill="white">
-                                        <path d="M 224 0 C 170.816 0 128 42.816 128 96 L 128 160 L 160 160 L 160 96 C 160 60.544 188.544 32 224 32 C 259.456 32 288 60.544 288 96 L 288 160 L 320 160 L 320 96 C 320 42.816 277.184 0 224 0 z M 128 32 C 74.816 32 32 74.816 32 128 L 32 160 L 64 160 L 64 128 C 64 96.54773 86.468168 70.551939 116.29102 65.078125 C 119.69118 53.135788 125.02019 42.022487 131.91406 32.085938 C 130.6153 32.034322 129.31187 32 128 32 z M 194.18555 58.34375 C 185.4174 65.285347 179.14854 75.227142 176.91016 86.654297 C 186.32584 97.793105 192 112.20614 192 128 L 192 160 L 224 160 L 224 128 C 224 100.52114 212.56981 75.81157 194.18555 58.34375 z M 0 192 L 0 211.39258 L 0 320 L 0 428.40625 C 0 431.07195 0.52648185 433.60471 1.578125 436.00391 C 2.7800033 438.40311 4.3574955 440.46837 6.3105469 442.20117 C 8.4138336 444.06717 10.740931 445.46729 13.294922 446.40039 C 15.999147 447.46659 18.854679 448 21.859375 448 L 329.91602 448 C 336.07564 448 341.25827 446.06647 345.46484 442.20117 C 349.82165 438.46907 352 433.87105 352 428.40625 L 352 320 L 352 211.39258 L 352 192 L 329.91602 192 L 21.859375 192 L 0 192 z"/>
-                                    </svg>
-                            </div>
-                            <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Dubai Mall</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World's largest shopping destination</p>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
-                            <div class="icon-box">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                    <polyline points="9 22 9 12 15 12 15 22"/>
+                                    <path
+                                        d="m0 1516.6v-24.75h14.4c9.4 0 14.4-0.1042 14.4-0.3 0-0.1929 3-0.3 8.4-0.3h8.4v-7.9462-7.9461l10.575-0.079 10.575-0.079 0.08006-7.725 0.08006-7.725h11.095 11.095v-96.909c0-92.022 0.02649-96.919 0.525-97.099 0.28875-0.1042 0.87191-0.4293 1.2959-0.7225 0.93397-0.6459 6.422-2.0526 12.129-3.1089 2.31-0.4276 4.841-0.922 5.6246-1.0987l1.4246-0.3213 0.0754-99.762 0.0755-99.762 3.75-1.7271c2.0625-0.9499 6.0788-2.5133 8.925-3.4742l5.175-1.7471v-115.46-115.46l0.675-0.57048c3.7826-3.1968 18.413-11.376 20.349-11.376 0.16701 0 0.27556-54.838 0.27556-139.22v-139.22l1.0375-2.2455c3.1668-6.854 7.7704-12.417 14.276-17.252 4.0261-2.992 3.5769 1.5138 3.5853-35.963 0.007-30.721 0.0357-32.434 0.60653-36.133 1.05-6.8027 1.9646-10.02 3.4671-12.196l0.74497-1.0789 0.0661-33.721 0.0661-33.721 0.95868-1.9587c1.3677-2.7944 3.6859-5.7251 6.1124-7.7275l2.0959-1.7296-0.0127-51.237-0.0127-51.237 0.76479-3.7123c1.2731-6.1795 2.5641-10.014 4.4609-13.251l1.0827-1.8474v-41.017c0-40.18 0.0123-41.058 0.6015-43.037 1.0457-3.5113 2.3063-6.2084 4.1807-8.9452l1.8178-2.6541v-24.798-24.798h1.65 1.65v-41.25-41.25h1.8 1.8v48.9 48.9h1.5 1.5v29.4c0 25.933 0.0531 29.4 0.45 29.4 0.39603 0 0.45 2.7167 0.45 22.65v22.65h2.4 2.4v47.85 47.85h2.1 2.1v42.124 42.124l1.8826 1.3434c1.0354 0.73884 2.7904 2.3057 3.9 3.482l2.0174 2.1386v53.844c0 36.137 0.0999 53.844 0.30373 53.844 1.1961 0 3.7563 5.9158 4.6741 10.8l0.7046 3.75 0.009 56.775c0.005 31.226 0.12275 56.775 0.26201 56.775 0.32742 0 7.5531 5.6992 10.766 8.4916l2.4834 2.1584 0.00021 54.6 0.00021 54.6 0.81329 4.5 0.8133 4.5 0.16026 69.427 0.16026 69.427 3.15 1.1261c1.7325 0.61935 5.3438 2.2375 8.025 3.5959l4.875 2.4698 0.001 112.38 0.001 112.38 6.3739 1.6257c3.5056 0.8942 6.8126 1.7443 7.3489 1.8891l0.975 0.2634v93.436 93.436l0.975-0.01c0.53625 0 4.1138 0.4208 7.95 0.9441l6.975 0.9515v71.656 71.656h10.35 10.35v7.8 7.8h10.2 10.2v8.1 8.1h22.05 22.05v24.75 24.75h-187.95-187.95v-24.75z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Historic Dubai Creek</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional heart of Dubai</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Burj
+                                    Khalifa</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World's tallest
+                                    building photo stop</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
-                                <svg viewBox="0 0 70.096 70.096" fill="white">
-                                        <path d="M5.256,32.938l-5.144,0.64C1.02,41.993,6.801,49.316,15.25,53.841v-5.133C9.573,44.779,5.834,39.201,5.256,32.938z M35.046,7.933c15.868,0,28.845,9.65,29.813,21.852l5.236,0.645C69.545,15.694,54.07,3.874,35.046,3.874 C16.033,3.874,0.558,15.687,0,30.423l5.236-0.645C6.206,17.583,19.183,7.933,35.046,7.933z M54.85,48.708v5.133 c8.446-4.524,14.229-11.848,15.14-20.256l-5.15-0.637C64.261,39.208,60.517,44.779,54.85,48.708z M35.267,33.671v-0.018 c12.773-2.005,21.746,6.308,21.828,6.399c0.383,0.363,0.992,0.35,1.355-0.034c0.366-0.39,0.349-0.992-0.034-1.358 c-0.397-0.366-9.596-8.932-23.143-6.945v-0.063c12.979-5.207,24.251,2.96,24.36,3.039c0.432,0.314,1.026,0.229,1.335-0.191 c0.314-0.425,0.219-1.02-0.199-1.338c-0.451-0.343-10.369-7.56-22.818-4.393c4.373-1.917,13.195-4.956,20.684-2.292 c0.5,0.178,1.04-0.082,1.218-0.582c0.179-0.501-0.082-1.042-0.581-1.22c-9.438-3.354-20.342,1.398-23.868,3.171 c0.046-0.034,0.08-0.07,0.123-0.101c0.073-0.074,7.719-7.577,17.729-7.296c0.527,0.014,0.972-0.402,0.985-0.926 c0.014-0.525-0.403-0.97-0.934-0.977c-7.711-0.217-13.952,3.668-17.041,6.059c1.24-2.047,4.547-6.742,9.502-8.379 c0.506-0.157,0.773-0.703,0.609-1.205c-0.172-0.501-0.705-0.775-1.205-0.604c-3.956,1.3-6.902,4.223-8.776,6.62 c0.91-2.24,2.391-5.049,3.756-5.765c0.466-0.245,0.653-0.819,0.4-1.287c-0.243-0.472-0.817-0.65-1.283-0.402 c-1.679,0.876-3.076,3.273-4.006,5.257v-4.076l-0.585-1.254h-0.127l-0.599,1.254v4.073c-0.919-1.983-2.32-4.38-3.999-5.256 c-0.465-0.241-1.044-0.07-1.289,0.402c-0.243,0.474-0.057,1.049,0.405,1.29c1.371,0.712,2.849,3.525,3.758,5.761 c-1.872-2.394-4.815-5.316-8.764-6.617c-0.505-0.171-1.049,0.106-1.213,0.607c-0.164,0.498,0.113,1.041,0.606,1.198 c4.958,1.641,8.256,6.336,9.512,8.383c-3.092-2.394-9.335-6.276-17.052-6.056c-0.525,0-0.939,0.445-0.926,0.974 c0.015,0.52,0.457,0.939,0.979,0.926c10.001-0.281,17.651,7.222,17.732,7.296c0.034,0.036,0.077,0.07,0.115,0.101 c-3.518-1.773-14.413-6.524-23.849-3.164c-0.501,0.175-0.761,0.719-0.582,1.217c0.174,0.5,0.724,0.76,1.215,0.582 c7.493-2.667,16.313,0.375,20.687,2.288c-12.451-3.164-22.379,4.057-22.824,4.393c-0.424,0.318-0.512,0.913-0.2,1.338 c0.308,0.421,0.916,0.506,1.331,0.191c0.117-0.079,11.382-8.249,24.359-3.039v0.063c-13.54-1.986-22.742,6.572-23.139,6.945 c-0.378,0.369-0.399,0.965-0.038,1.365c0.364,0.373,0.967,0.387,1.348,0.034c0.094-0.092,9.065-8.412,21.828-6.402v0.021 c-11.964,0.862-18.541,9.038-18.822,9.394c-0.322,0.407-0.251,1.013,0.161,1.335c0.411,0.328,1.013,0.26,1.34-0.157 c0.06-0.076,5.842-7.229,16.098-8.539c-7.4,2.152-12.703,10.396-12.941,10.776c-0.284,0.445-0.147,1.041,0.294,1.314 c0.445,0.287,1.034,0.15,1.314-0.294c0.06-0.09,5.513-8.556,12.556-10.137v0.537c0,0-0.712,0.229-0.953,1.026 c-0.238,0.805-0.953,0.647-1.99,1.681c-1.03,1.037-0.873,1.902-1.03,2.228c-0.159,0.315-2.945,0-3.498,0.315 c-0.561,0.321,0.55,0.954,1.03,1.43c0.479,0.479,0.315,1.362,0.799,2.146c0.472,0.797,2.385,0.314,2.385,0.314 s-0.556,14.551,0,16.782c0.484,1.934,3.145,2.307,3.831,2.378v0.014c0,0,0.027-0.006,0.08-0.006c0.057,0,0.084,0.006,0.084,0.006 v-0.014c0.688-0.071,3.354-0.444,3.835-2.378c0.554-2.231,0-16.782,0-16.782s1.902,0.482,2.382-0.314 c0.479-0.794,0.321-1.678,0.801-2.146c0.482-0.469,1.595-1.108,1.036-1.43c-0.554-0.315-3.34,0-3.504-0.315 c-0.161-0.325,0-1.19-1.028-2.228c-1.04-1.04-1.756-0.883-1.993-1.681c-0.234-0.797-0.953-1.026-0.953-1.026V37.37 c7.055,1.577,12.499,10.044,12.554,10.137c0.281,0.444,0.876,0.581,1.314,0.294c0.445-0.273,0.582-0.869,0.294-1.314 C49.2,46.11,43.885,37.862,36.491,35.71c10.256,1.311,16.032,8.463,16.094,8.539c0.329,0.417,0.932,0.485,1.342,0.157 c0.41-0.322,0.486-0.928,0.157-1.335C53.81,42.705,47.233,34.536,35.267,33.671z"/>
-                                    </svg>
+                                <svg viewBox="0 0 384 448" fill="white">
+                                    <path
+                                        d="M 224 0 C 170.816 0 128 42.816 128 96 L 128 160 L 160 160 L 160 96 C 160 60.544 188.544 32 224 32 C 259.456 32 288 60.544 288 96 L 288 160 L 320 160 L 320 96 C 320 42.816 277.184 0 224 0 z M 128 32 C 74.816 32 32 74.816 32 128 L 32 160 L 64 160 L 64 128 C 64 96.54773 86.468168 70.551939 116.29102 65.078125 C 119.69118 53.135788 125.02019 42.022487 131.91406 32.085938 C 130.6153 32.034322 129.31187 32 128 32 z M 194.18555 58.34375 C 185.4174 65.285347 179.14854 75.227142 176.91016 86.654297 C 186.32584 97.793105 192 112.20614 192 128 L 192 160 L 224 160 L 224 128 C 224 100.52114 212.56981 75.81157 194.18555 58.34375 z M 0 192 L 0 211.39258 L 0 320 L 0 428.40625 C 0 431.07195 0.52648185 433.60471 1.578125 436.00391 C 2.7800033 438.40311 4.3574955 440.46837 6.3105469 442.20117 C 8.4138336 444.06717 10.740931 445.46729 13.294922 446.40039 C 15.999147 447.46659 18.854679 448 21.859375 448 L 329.91602 448 C 336.07564 448 341.25827 446.06647 345.46484 442.20117 C 349.82165 438.46907 352 433.87105 352 428.40625 L 352 320 L 352 211.39258 L 352 192 L 329.91602 192 L 21.859375 192 L 0 192 z" />
+                                </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Jumeirah & Palm</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxury areas & Atlantis views</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Dubai
+                                    Mall</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">World's largest
+                                    shopping destination</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Historic Dubai Creek</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Traditional
+                                    heart of Dubai</p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: #fef3e2; padding: 12px; border-radius: 10px;">
+                            <div class="icon-box">
+                                <svg viewBox="0 0 70.096 70.096" fill="white">
+                                    <path
+                                        d="M5.256,32.938l-5.144,0.64C1.02,41.993,6.801,49.316,15.25,53.841v-5.133C9.573,44.779,5.834,39.201,5.256,32.938z M35.046,7.933c15.868,0,28.845,9.65,29.813,21.852l5.236,0.645C69.545,15.694,54.07,3.874,35.046,3.874 C16.033,3.874,0.558,15.687,0,30.423l5.236-0.645C6.206,17.583,19.183,7.933,35.046,7.933z M54.85,48.708v5.133 c8.446-4.524,14.229-11.848,15.14-20.256l-5.15-0.637C64.261,39.208,60.517,44.779,54.85,48.708z M35.267,33.671v-0.018 c12.773-2.005,21.746,6.308,21.828,6.399c0.383,0.363,0.992,0.35,1.355-0.034c0.366-0.39,0.349-0.992-0.034-1.358 c-0.397-0.366-9.596-8.932-23.143-6.945v-0.063c12.979-5.207,24.251,2.96,24.36,3.039c0.432,0.314,1.026,0.229,1.335-0.191 c0.314-0.425,0.219-1.02-0.199-1.338c-0.451-0.343-10.369-7.56-22.818-4.393c4.373-1.917,13.195-4.956,20.684-2.292 c0.5,0.178,1.04-0.082,1.218-0.582c0.179-0.501-0.082-1.042-0.581-1.22c-9.438-3.354-20.342,1.398-23.868,3.171 c0.046-0.034,0.08-0.07,0.123-0.101c0.073-0.074,7.719-7.577,17.729-7.296c0.527,0.014,0.972-0.402,0.985-0.926 c0.014-0.525-0.403-0.97-0.934-0.977c-7.711-0.217-13.952,3.668-17.041,6.059c1.24-2.047,4.547-6.742,9.502-8.379 c0.506-0.157,0.773-0.703,0.609-1.205c-0.172-0.501-0.705-0.775-1.205-0.604c-3.956,1.3-6.902,4.223-8.776,6.62 c0.91-2.24,2.391-5.049,3.756-5.765c0.466-0.245,0.653-0.819,0.4-1.287c-0.243-0.472-0.817-0.65-1.283-0.402 c-1.679,0.876-3.076,3.273-4.006,5.257v-4.076l-0.585-1.254h-0.127l-0.599,1.254v4.073c-0.919-1.983-2.32-4.38-3.999-5.256 c-0.465-0.241-1.044-0.07-1.289,0.402c-0.243,0.474-0.057,1.049,0.405,1.29c1.371,0.712,2.849,3.525,3.758,5.761 c-1.872-2.394-4.815-5.316-8.764-6.617c-0.505-0.171-1.049,0.106-1.213,0.607c-0.164,0.498,0.113,1.041,0.606,1.198 c4.958,1.641,8.256,6.336,9.512,8.383c-3.092-2.394-9.335-6.276-17.052-6.056c-0.525,0-0.939,0.445-0.926,0.974 c0.015,0.52,0.457,0.939,0.979,0.926c10.001-0.281,17.651,7.222,17.732,7.296c0.034,0.036,0.077,0.07,0.115,0.101 c-3.518-1.773-14.413-6.524-23.849-3.164c-0.501,0.175-0.761,0.719-0.582,1.217c0.174,0.5,0.724,0.76,1.215,0.582 c7.493-2.667,16.313,0.375,20.687,2.288c-12.451-3.164-22.379,4.057-22.824,4.393c-0.424,0.318-0.512,0.913-0.2,1.338 c0.308,0.421,0.916,0.506,1.331,0.191c0.117-0.079,11.382-8.249,24.359-3.039v0.063c-13.54-1.986-22.742,6.572-23.139,6.945 c-0.378,0.369-0.399,0.965-0.038,1.365c0.364,0.373,0.967,0.387,1.348,0.034c0.094-0.092,9.065-8.412,21.828-6.402v0.021 c-11.964,0.862-18.541,9.038-18.822,9.394c-0.322,0.407-0.251,1.013,0.161,1.335c0.411,0.328,1.013,0.26,1.34-0.157 c0.06-0.076,5.842-7.229,16.098-8.539c-7.4,2.152-12.703,10.396-12.941,10.776c-0.284,0.445-0.147,1.041,0.294,1.314 c0.445,0.287,1.034,0.15,1.314-0.294c0.06-0.09,5.513-8.556,12.556-10.137v0.537c0,0-0.712,0.229-0.953,1.026 c-0.238,0.805-0.953,0.647-1.99,1.681c-1.03,1.037-0.873,1.902-1.03,2.228c-0.159,0.315-2.945,0-3.498,0.315 c-0.561,0.321,0.55,0.954,1.03,1.43c0.479,0.479,0.315,1.362,0.799,2.146c0.472,0.797,2.385,0.314,2.385,0.314 s-0.556,14.551,0,16.782c0.484,1.934,3.145,2.307,3.831,2.378v0.014c0,0,0.027-0.006,0.08-0.006c0.057,0,0.084,0.006,0.084,0.006 v-0.014c0.688-0.071,3.354-0.444,3.835-2.378c0.554-2.231,0-16.782,0-16.782s1.902,0.482,2.382-0.314 c0.479-0.794,0.321-1.678,0.801-2.146c0.482-0.469,1.595-1.108,1.036-1.43c-0.554-0.315-3.34,0-3.504-0.315 c-0.161-0.325,0-1.19-1.028-2.228c-1.04-1.04-1.756-0.883-1.993-1.681c-0.234-0.797-0.953-1.026-0.953-1.026V37.37 c7.055,1.577,12.499,10.044,12.554,10.137c0.281,0.444,0.876,0.581,1.314,0.294c0.445-0.273,0.582-0.869,0.294-1.314 C49.2,46.11,43.885,37.862,36.491,35.71c10.256,1.311,16.032,8.463,16.094,8.539c0.329,0.417,0.932,0.485,1.342,0.157 c0.41-0.322,0.486-0.928,0.157-1.335C53.81,42.705,47.233,34.536,35.267,33.671z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Jumeirah & Palm</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Luxury areas &
+                                    Atlantis views</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Inclusions -->
-                    <div style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                    <div
+                        style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
                         <div style="display: flex; gap: 30px; flex-wrap: wrap;">
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
-                                        <polyline points="20 6 9 17 4 12"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     What's Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Professional guide</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> AC vehicle</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Photo stops</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Professional guide</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> AC vehicle</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Photo stops</li>
                                 </ul>
                             </div>
                             <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <line x1="15" y1="9" x2="9" y2="15"/>
-                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="15" y1="9" x2="9" y2="15" />
+                                        <line x1="9" y1="9" x2="15" y2="15" />
                                     </svg>
                                     Not Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Entrance fees</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Meals</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Entrance fees</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Meals</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Personal expenses</li>
                                 </ul>
                             </div>
                         </div>
@@ -242,10 +320,15 @@
         <div style="max-width: 1500px; margin: 0 auto;">
             <!-- Header -->
             <div style="text-align: center; margin-bottom: 35px;">
-                <h2 style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
-                    <span style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Full-Day</span> Dubai City Tour
+                <h2
+                    style="font-size: 40px; font-weight: 900; color: #2d1f15; margin: 0 0 12px 0; letter-spacing: -1px;">
+                    <span
+                        style="background: linear-gradient(135deg, #a67c52 0%, #8b6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Full-Day</span>
+                    Dubai City Tour
                 </h2>
-                <div style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;"></div>
+                <div
+                    style="width: 120px; height: 3px; background: linear-gradient(90deg, transparent, #a67c52, transparent); margin: 0 auto 10px;">
+                </div>
                 <p style="font-size: 16px; color: #8b6914; font-weight: 700;">8 HOURS</p>
             </div>
 
@@ -255,89 +338,118 @@
                 <!-- Left: Highlights and Inclusions -->
                 <div>
                     <!-- Highlights -->
-                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights</h3>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 15px;">Tour Highlights
+                    </h3>
                     <div style="display: grid; gap: 10px; margin-bottom: 20px;">
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="white">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">All Half-Day Attractions</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Plus extended experiences</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">All
+                                    Half-Day Attractions</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Plus extended
+                                    experiences</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 200 200" fill="white">
-                                    <path d="M181.75,42.5c-3-13-15-22.5-29-22.5h-105a30.6,30.6,0,0,0-29.5,22.5l-10.5,40c-2,7,1,14,7,18l2,1.5c3,1.5,5.5,3,8.5,3.5V160a20.06,20.06,0,0,0,20,20h23.5a20.06,20.06,0,0,0,20-20V140h27.5v20a20.06,20.06,0,0,0,20,20h19a20.06,20.06,0,0,0,20-20V105.5a22.09,22.09,0,0,0,8-3l2-1.5a16.87,16.87,0,0,0,7-18.5ZM156.25,160h-20V140a20.06,20.06,0,0,0-20-20H88.75a20.06,20.06,0,0,0-20,20v20H45.25V100c6.5-2.5,13.5-1.5,19.5,2a21.07,21.07,0,0,0,24,0,21.07,21.07,0,0,1,24,0,21.07,21.07,0,0,0,24,0,20.87,20.87,0,0,1,19.5-2Zm14.5-74.5a40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0,40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0,40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0l9.5-38c1-4.5,5-7.5,10-7.5h105.5a9.64,9.64,0,0,1,9.5,7.5l9.5,38S171.25,86,170.75,85.5Z"/>
+                                    <path
+                                        d="M181.75,42.5c-3-13-15-22.5-29-22.5h-105a30.6,30.6,0,0,0-29.5,22.5l-10.5,40c-2,7,1,14,7,18l2,1.5c3,1.5,5.5,3,8.5,3.5V160a20.06,20.06,0,0,0,20,20h23.5a20.06,20.06,0,0,0,20-20V140h27.5v20a20.06,20.06,0,0,0,20,20h19a20.06,20.06,0,0,0,20-20V105.5a22.09,22.09,0,0,0,8-3l2-1.5a16.87,16.87,0,0,0,7-18.5ZM156.25,160h-20V140a20.06,20.06,0,0,0-20-20H88.75a20.06,20.06,0,0,0-20,20v20H45.25V100c6.5-2.5,13.5-1.5,19.5,2a21.07,21.07,0,0,0,24,0,21.07,21.07,0,0,1,24,0,21.07,21.07,0,0,0,24,0,20.87,20.87,0,0,1,19.5-2Zm14.5-74.5a40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0,40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0,40.69,40.69,0,0,0-46,0,.94.94,0,0,1-1.5,0l9.5-38c1-4.5,5-7.5,10-7.5h105.5a9.64,9.64,0,0,1,9.5,7.5l9.5,38S171.25,86,170.75,85.5Z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Traditional Souks</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Gold, spice & textile markets</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Traditional Souks</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Gold, spice &
+                                    textile markets</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 16 16" fill="white">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3H0V14H16V3H13L11 1H5L3 3ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3 3H0V14H16V3H13L11 1H5L3 3ZM8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">More Photo Opportunities</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Extended stops & landmarks</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">More
+                                    Photo Opportunities</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Extended stops
+                                    & landmarks</p>
                             </div>
                         </div>
 
-                        <div style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
+                        <div
+                            style="display: flex; gap: 12px; align-items: start; background: white; padding: 12px; border-radius: 10px;">
                             <div class="icon-box">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12 6 12 12 16 14"/>
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
                                 </svg>
                             </div>
                             <div>
-                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">Comprehensive Experience</h5>
-                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Complete Dubai exploration</p>
+                                <h5 style="color: #2d1f15; font-size: 14px; font-weight: 700; margin: 0 0 3px 0;">
+                                    Comprehensive Experience</h5>
+                                <p style="color: #6a5f54; font-size: 13px; margin: 0; line-height: 1.5;">Complete Dubai
+                                    exploration</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Inclusions -->
-                    <div style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
+                    <div
+                        style="background: linear-gradient(135deg, #fef7ed 0%, #fef3e2 100%); padding: 20px; border-radius: 12px; border: 2px solid rgba(166, 124, 82, 0.3);">
                         <div style="display: flex; gap: 30px; flex-wrap: wrap;">
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="3">
-                                        <polyline points="20 6 9 17 4 12"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12" />
                                     </svg>
                                     What's Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Professional guide</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> AC vehicle</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #a67c52;">✓</span> Water</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Hotel pickup/drop-off</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Professional guide</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> AC vehicle</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #a67c52;">✓</span> Water</li>
                                 </ul>
                             </div>
                             <div style="width: 1px; background: rgba(166, 124, 82, 0.3); align-self: stretch;"></div>
                             <div style="flex: 1; min-width: 150px;">
-                                <h5 style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52" stroke-width="2.5">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <line x1="15" y1="9" x2="9" y2="15"/>
-                                        <line x1="9" y1="9" x2="15" y2="15"/>
+                                <h5
+                                    style="color: #2d1f15; font-size: 13px; margin-bottom: 12px; font-weight: 800; display: flex; align-items: center; gap: 8px;">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a67c52"
+                                        stroke-width="2.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="15" y1="9" x2="9" y2="15" />
+                                        <line x1="9" y1="9" x2="15" y2="15" />
                                     </svg>
                                     Not Included
                                 </h5>
-                                <ul style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Lunch</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Entrance fees</li>
-                                    <li style="display: flex; align-items: center; gap: 8px;"><span style="color: #999;">–</span> Personal expenses</li>
+                                <ul
+                                    style="color: #5a4a3a; font-size: 12px; line-height: 2; list-style: none; padding: 0; margin: 0; font-weight: 500;">
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Lunch</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Entrance fees</li>
+                                    <li style="display: flex; align-items: center; gap: 8px;"><span
+                                            style="color: #999;">–</span> Personal expenses</li>
                                 </ul>
                             </div>
                         </div>
@@ -346,34 +458,55 @@
 
                 <!-- Right: Image and Description -->
                 <div>
-                    <img src="images/photo-1580674684081-7617fbf3d745.jfif" alt="Dubai Full Day" style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <img src="images/photo-1580674684081-7617fbf3d745.jfif" alt="Dubai Full Day"
+                        style="width: 100%; height: 380px; object-fit: cover; object-position: top right; border-radius: 15px; margin-bottom: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
 
                     <!-- Tour Highlight Images Gallery -->
                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px;">
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/ain_dubai_art.jpg" alt="Dubai Frame" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/ain_dubai_art.jpg" alt="Dubai Frame" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/images.jfif" alt="Burj Al Arab" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/images.jfif" alt="Burj Al Arab" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
-                        <div class="gallery-img-wrapper" style="position: relative; overflow: hidden; border-radius: 10px;">
-                            <img src="images/images (1).jfif" alt="Dubai Marina" class="tour-gallery-img" style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
-                            <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
-                                <span style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click to view</span>
+                        <div class="gallery-img-wrapper"
+                            style="position: relative; overflow: hidden; border-radius: 10px;">
+                            <img src="images/images (1).jfif" alt="Dubai Marina" class="tour-gallery-img"
+                                style="width: 100%; height: 140px; object-fit: cover; object-position: top right; cursor: pointer; transition: transform 0.3s; display: block;">
+                            <div class="gallery-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; pointer-events: none;">
+                                <span
+                                    style="color: white; font-size: 13px; font-weight: 700; background: #a67c52; padding: 8px 16px; border-radius: 20px;">Click
+                                    to view</span>
                             </div>
                         </div>
                     </div>
 
-                    <div style="background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
-                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This Tour</h3>
+                    <div
+                        style="background: linear-gradient(135deg, #ffffff 0%, #fef3e2 100%); padding: 25px; border-radius: 15px; border: 2px solid rgba(166, 124, 82, 0.2);">
+                        <h3 style="font-size: 18px; font-weight: 800; color: #2d1f15; margin-bottom: 12px;">About This
+                            Tour</h3>
                         <p style="font-size: 14px; line-height: 1.7; color: #4a403a; margin: 0;">
-                            Discover the complete story of Dubai on this immersive full-day tour. Experience comprehensive exploration of both old and new Dubai, visiting iconic landmarks, traditional markets, modern architectural marvels, and exclusive residential areas that showcase Dubai's unique character.
+                            Discover the complete story of Dubai on this immersive full-day tour. Experience
+                            comprehensive exploration of both old and new Dubai, visiting iconic landmarks, traditional
+                            markets, modern architectural marvels, and exclusive residential areas that showcase Dubai's
+                            unique character.
                         </p>
                     </div>
                 </div>
@@ -387,24 +520,34 @@
     <!-- Best Attractions Section -->
     <section id="best-attractions" style="background: white; padding: 80px 20px;">
         <div style="max-width: 1400px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 48px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
-                <span style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Best Attractions</span> in Dubai
+            <h2
+                style="text-align: center; font-size: 48px; color: #2d1f15; margin-bottom: 20px; font-weight: 900; letter-spacing: -1px;">
+                <span
+                    style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Best
+                    Attractions</span> in Dubai
             </h2>
-            <p style="text-align: center; font-size: 18px; color: #6a5f54; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">Explore the top must-visit attractions and theme parks in Dubai</p>
+            <p
+                style="text-align: center; font-size: 18px; color: #6a5f54; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                Explore the top must-visit attractions and theme parks in Dubai</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
 
                 <!-- Dubai Aquarium and Underwater Zoo -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/58/21/77.jpg" alt="Dubai Aquarium" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/58/21/77.jpg"
+                            alt="Dubai Aquarium" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai Aquarium & Underwater Zoo</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai
+                            Aquarium & Underwater Zoo</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Aquarium</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">199</span>
                             </div>
                         </div>
@@ -412,16 +555,21 @@
                 </div>
 
                 <!-- IMG Worlds of Adventure -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=1200&h=1200&s=1" alt="IMG Worlds" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=1200&h=1200&s=1"
+                            alt="IMG Worlds" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">IMG Worlds of Adventure</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">IMG Worlds
+                            of Adventure</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Theme Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">255</span>
                             </div>
                         </div>
@@ -429,16 +577,21 @@
                 </div>
 
                 <!-- Dhow Cruise -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/70/b1/77.jpg" alt="Dhow Cruise" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/70/b1/77.jpg"
+                            alt="Dhow Cruise" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dhow Cruise</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dhow Cruise
+                        </h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Cruise Experience</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">155</span>
                             </div>
                         </div>
@@ -446,16 +599,21 @@
                 </div>
 
                 <!-- Atlantis Aquaventure -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/84/17/14.jpg" alt="Atlantis Aquaventure" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/84/17/14.jpg"
+                            alt="Atlantis Aquaventure" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Atlantis Aquaventure Waterpark</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Atlantis
+                            Aquaventure Waterpark</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Water Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">330</span>
                             </div>
                         </div>
@@ -463,16 +621,21 @@
                 </div>
 
                 <!-- Miracle Garden -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/b4/61/44.jpg" alt="Miracle Garden" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/b4/61/44.jpg"
+                            alt="Miracle Garden" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Miracle Garden</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Miracle
+                            Garden</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Flower Garden</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">100</span>
                             </div>
                         </div>
@@ -480,16 +643,21 @@
                 </div>
 
                 <!-- AYA Universe -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://www.aya-universe.com/_next/image?url=https%3A%2F%2Faya-dxb-website.s3.me-central-1.amazonaws.com%2FAYA_DXB_Website_Images_SR_v001_Desktop_Experience_9_7941ffdea6.jpg&w=3840&q=75" alt="AYA Universe" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://www.aya-universe.com/_next/image?url=https%3A%2F%2Faya-dxb-website.s3.me-central-1.amazonaws.com%2FAYA_DXB_Website_Images_SR_v001_Desktop_Experience_9_7941ffdea6.jpg&w=3840&q=75"
+                            alt="AYA Universe" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">AYA Universe</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">AYA Universe
+                        </h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Immersive Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">110</span>
                             </div>
                         </div>
@@ -497,16 +665,21 @@
                 </div>
 
                 <!-- Yas Waterworld -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s" alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s"
+                            alt="Yas Waterworld" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Yas Waterworld</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Yas
+                            Waterworld</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Water Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">295</span>
                             </div>
                         </div>
@@ -514,16 +687,21 @@
                 </div>
 
                 <!-- Wild Wadi -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s" alt="Wild Wadi" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5QNBHy60j7Ys7U3TonZNVYs4Etgrut2u2DQ&s"
+                            alt="Wild Wadi" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Wild Wadi Waterpark</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Wild Wadi
+                            Waterpark</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Water Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">185</span>
                             </div>
                         </div>
@@ -531,16 +709,21 @@
                 </div>
 
                 <!-- Legoland Waterpark -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/26/d2/b6.jpg" alt="Legoland Waterpark" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/26/d2/b6.jpg"
+                            alt="Legoland Waterpark" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Legoland Waterpark</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Legoland
+                            Waterpark</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Water Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">295</span>
                             </div>
                         </div>
@@ -548,16 +731,21 @@
                 </div>
 
                 <!-- Museum of the Future -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://37a0829c.delivery.rocketcdn.me/wp-content/uploads/2025/06/museum-of-the-future-tickets-price-1024x682.webp" alt="Museum of the Future" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://37a0829c.delivery.rocketcdn.me/wp-content/uploads/2025/06/museum-of-the-future-tickets-price-1024x682.webp"
+                            alt="Museum of the Future" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Museum of the Future</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Museum of
+                            the Future</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Museum</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">169</span>
                             </div>
                         </div>
@@ -565,16 +753,21 @@
                 </div>
 
                 <!-- Skydive Dubai -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjC6aUZfB-BXgPIs49DnkywDMX_ggVYiYpw&s" alt="Skydive Dubai" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjC6aUZfB-BXgPIs49DnkywDMX_ggVYiYpw&s"
+                            alt="Skydive Dubai" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Skydive Dubai</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Skydive
+                            Dubai</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Adventure Sport</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">2199</span>
                             </div>
                         </div>
@@ -582,16 +775,21 @@
                 </div>
 
                 <!-- Dubai Frame -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://images.adsttc.com/media/images/5a4b/bce6/b22e/38b5/fa00/0067/newsletter/Screen_Shot_2018-01-02_at_12.05.08_PM.jpg?1514912994" alt="Dubai Frame" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://images.adsttc.com/media/images/5a4b/bce6/b22e/38b5/fa00/0067/newsletter/Screen_Shot_2018-01-02_at_12.05.08_PM.jpg?1514912994"
+                            alt="Dubai Frame" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai Frame</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai Frame
+                        </h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Landmark</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">52</span>
                             </div>
                         </div>
@@ -599,16 +797,21 @@
                 </div>
 
                 <!-- Dolphinarium -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://cdn-imgix.headout.com/media/images/08778ab8bdb17667f9d2ec1f35cff6ed-1878-dubai-dubai-dolphinarium-tickets--dolphin---seal-show-03.jpg" alt="Dolphinarium" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://cdn-imgix.headout.com/media/images/08778ab8bdb17667f9d2ec1f35cff6ed-1878-dubai-dubai-dolphinarium-tickets--dolphin---seal-show-03.jpg"
+                            alt="Dolphinarium" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai Dolphinarium</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Dubai
+                            Dolphinarium</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Marine Show</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">50</span>
                             </div>
                         </div>
@@ -616,16 +819,21 @@
                 </div>
 
                 <!-- Motiongate -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/9a/90/40/entrance-gate-to-motiongate.jpg?w=1200&h=-1&s=1" alt="Motiongate" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/9a/90/40/entrance-gate-to-motiongate.jpg?w=1200&h=-1&s=1"
+                            alt="Motiongate" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Motiongate Dubai</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Motiongate
+                            Dubai</h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Theme Park</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">295</span>
                             </div>
                         </div>
@@ -633,16 +841,21 @@
                 </div>
 
                 <!-- Ski Dubai -->
-                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+                <div style="background: linear-gradient(135deg, #fef3e2 0%, #f5e6d3 100%); border: 2px solid rgba(198, 123, 62, 0.3); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(198, 123, 62, 0.6)'; this.style.boxShadow='0 15px 35px rgba(198, 123, 62, 0.3)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(198, 123, 62, 0.3)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
                     <div class="best-attractions-watermark" style="height: 200px; overflow: hidden;">
-                        <img src="https://i.ytimg.com/vi/xIX9ju_ZbAY/maxresdefault.jpg" alt="Ski Dubai" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://i.ytimg.com/vi/xIX9ju_ZbAY/maxresdefault.jpg" alt="Ski Dubai"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Ski Dubai</h3>
+                        <h3 style="font-size: 22px; font-weight: 700; color: #2d1f15; margin-bottom: 15px;">Ski Dubai
+                        </h3>
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <span style="color: #6a5f54; font-size: 14px; font-weight: 600;">Indoor Ski Resort</span>
                             <div style="text-align: right;">
-                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From AED</span>
+                                <span style="color: #8b6914; font-size: 14px; display: block; font-weight: 600;">From
+                                    AED</span>
                                 <span style="color: #c67b3e; font-size: 28px; font-weight: 800;">250</span>
                             </div>
                         </div>
@@ -657,7 +870,8 @@
     <div style="height: 60px; background: linear-gradient(to bottom, white 0%, #fef3e2 50%, #f5e6d3 100%);"></div>
 
     <!-- CTA -->
-    <section style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
+    <section
+        style="background: linear-gradient(135deg, #c67b3e 0%, #a67c52 100%); padding: 50px 80px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 38px; font-weight: 900; color: white; margin-bottom: 18px; line-height: 1.2;">
                 Ready to Explore Dubai?
@@ -679,12 +893,11 @@
                 font-weight: 900;
                 text-decoration: none;
                 box-shadow: 0 15px 50px rgba(0,0,0,0.4);
-                transition: all 0.3s ease;"
-                onmouseover="this.style.transform='translateY(-4px)'"
+                transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)'"
                 onmouseout="this.style.transform='translateY(0)'">
                 <span>Book Now</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
             </a>
         </div>
@@ -693,58 +906,141 @@
     <div id="footer-placeholder"></div>
 
     <!-- Image Lightbox Modal -->
-    <div id="imageLightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; justify-content: center; align-items: center;">
-        <button onclick="closeLightbox()" style="position: absolute; top: 30px; right: 40px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; font-weight: bold; color: #2d1f15; z-index: 10001; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">×</button>
-        <img id="lightboxImage" src="" alt="" style="max-width: 90%; max-height: 90%; border-radius: 15px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);">
+    <div id="imageLightbox"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; justify-content: center; align-items: center;">
+        <button onclick="closeLightbox()"
+            style="position: absolute; top: 30px; right: 40px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; font-weight: bold; color: #2d1f15; z-index: 10001; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s;"
+            onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">×</button>
+
+        <!-- Previous Arrow -->
+        <button onclick="navigateLightbox(-1)"
+            style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: transparent; border: none; width: 60px; height: 60px; cursor: pointer; font-size: 60px; font-weight: 300; font-family: monospace; color: rgba(255,255,255,0.7); z-index: 10001; transition: all 0.2s; padding: 0; line-height: 1;"
+            onmouseover="this.style.color='rgba(255,255,255,1)'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateY(-50%) scale(1)'">‹</button>
+
+        <!-- Next Arrow -->
+        <button onclick="navigateLightbox(1)"
+            style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: transparent; border: none; width: 60px; height: 60px; cursor: pointer; font-size: 60px; font-weight: 300; font-family: monospace; color: rgba(255,255,255,0.7); z-index: 10001; transition: all 0.2s; padding: 0; line-height: 1;"
+            onmouseover="this.style.color='rgba(255,255,255,1)'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.color='rgba(255,255,255,0.7)'; this.style.transform='translateY(-50%) scale(1)'">›</button>
+
+        <img id="lightboxImage" src="" alt=""
+            style="max-width: 90%; max-height: 85%; border-radius: 15px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);">
+
+        <!-- Image counter -->
+        <div id="imageCounter"
+            style="position: absolute !important; bottom: 25px !important; left: 0 !important; width: 100% !important; text-align: center !important; font-size: 16px !important; font-weight: 500 !important; color: white !important; z-index: 10001 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.8); pointer-events: none;">
+        </div>
     </div>
 
     <script>
-        // Image Lightbox Functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        // Image Lightbox Functionality with Navigation
+        let currentImageIndex = 0;
+        let galleryImagesArray = [];
+
+        document.addEventListener('DOMContentLoaded', function () {
             const galleryImages = document.querySelectorAll('.tour-gallery-img');
             const galleryWrappers = document.querySelectorAll('.gallery-img-wrapper');
             const lightbox = document.getElementById('imageLightbox');
             const lightboxImage = document.getElementById('lightboxImage');
+            const imageCounter = document.getElementById('imageCounter');
+
+            // Convert NodeList to Array for easier navigation
+            galleryImagesArray = Array.from(galleryImages);
 
             // Add hover effect to show overlay
             galleryWrappers.forEach(wrapper => {
                 const overlay = wrapper.querySelector('.gallery-overlay');
                 const img = wrapper.querySelector('.tour-gallery-img');
 
-                wrapper.addEventListener('mouseenter', function() {
+                wrapper.addEventListener('mouseenter', function () {
                     overlay.style.opacity = '1';
                     img.style.transform = 'scale(1.05)';
                 });
 
-                wrapper.addEventListener('mouseleave', function() {
+                wrapper.addEventListener('mouseleave', function () {
                     overlay.style.opacity = '0';
                     img.style.transform = 'scale(1)';
                 });
             });
 
-            galleryImages.forEach(img => {
-                img.addEventListener('click', function() {
-                    lightboxImage.src = this.src;
-                    lightboxImage.alt = this.alt;
-                    lightbox.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
+            galleryImages.forEach((img, index) => {
+                img.addEventListener('click', function () {
+                    currentImageIndex = index;
+                    showLightboxImage();
                 });
             });
 
             // Close on click outside image
-            lightbox.addEventListener('click', function(e) {
+            lightbox.addEventListener('click', function (e) {
                 if (e.target === lightbox) {
                     closeLightbox();
                 }
             });
 
-            // Close on Escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeLightbox();
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigateLightbox(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        navigateLightbox(1);
+                    }
                 }
             });
+
+            // Touch swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            lightboxImage.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            lightboxImage.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    // Swipe left - next image
+                    navigateLightbox(1);
+                }
+                if (touchEndX > touchStartX + 50) {
+                    // Swipe right - previous image
+                    navigateLightbox(-1);
+                }
+            }
         });
+
+        function showLightboxImage() {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const imageCounter = document.getElementById('imageCounter');
+
+            lightboxImage.src = galleryImagesArray[currentImageIndex].src;
+            lightboxImage.alt = galleryImagesArray[currentImageIndex].alt;
+            imageCounter.textContent = `${currentImageIndex + 1} / ${galleryImagesArray.length}`;
+
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+
+            // Loop around
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImagesArray.length - 1;
+            } else if (currentImageIndex >= galleryImagesArray.length) {
+                currentImageIndex = 0;
+            }
+
+            showLightboxImage();
+        }
 
         function closeLightbox() {
             const lightbox = document.getElementById('imageLightbox');
@@ -754,5 +1050,7 @@
     </script>
 
     <script src="includes/components.js"></script>
+    <script src="mobile-menu.js"></script>
 </body>
+
 </html>
