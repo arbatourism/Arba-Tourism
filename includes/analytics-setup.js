@@ -1,33 +1,4 @@
-/**
- * Google Analytics 4 (GA4) Setup
- * Replace 'G-7QYVKQXQZF' with your actual Measurement ID
- */
-
-const GA_MEASUREMENT_ID = 'G-7QYVKQXQZF'; // TODO: Replace with actual ID
-
-// Function to load Google Analytics Script
-function loadGoogleAnalytics() {
-    // specific check to avoid double loading
-    if (document.getElementById('ga-script')) return;
-
-    const script = document.createElement('script');
-    script.id = 'ga-script';
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID, {
-        'page_path': window.location.pathname,
-        'send_page_view': true
-    });
-}
-
-// Track custom events helper
+// Event tracking helper
 function trackEvent(eventName, eventParams = {}) {
     if (window.gtag) {
         window.gtag('event', eventName, eventParams);
@@ -36,7 +7,7 @@ function trackEvent(eventName, eventParams = {}) {
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
-    loadGoogleAnalytics();
+    // Event tracking initialization
 
     // Track clicks on important elements
     document.addEventListener('click', (e) => {
@@ -44,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target) {
             const isButton = target.tagName === 'BUTTON' || target.classList.contains('btn') || target.classList.contains('contact-us-btn');
             const isNav = target.closest('.nav-menu') || target.closest('.footer-links');
-            
+
             let eventCategory = 'interaction';
             if (isButton) eventCategory = 'button_click';
             if (isNav) eventCategory = 'navigation_click';
 
             const label = target.textContent.trim() || target.getAttribute('aria-label') || 'unlabeled';
-            
+
             // Only track if it looks significant
             if (isButton || isNav || target.href) {
                 trackEvent('click', {
