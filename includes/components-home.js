@@ -206,6 +206,11 @@ document.addEventListener('DOMContentLoaded', function () {
         headerPlaceholder.innerHTML = headerHTML;
     }
 
+    // Inject Analytics
+    const analyticsScript = document.createElement('script');
+    analyticsScript.src = 'includes/analytics-setup.js';
+    document.head.appendChild(analyticsScript);
+
     // Insert Footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {

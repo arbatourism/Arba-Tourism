@@ -199,13 +199,18 @@ const footerHTML = `<footer class="footer">
 `;
 
 // Load Header and Footer on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Insert Header
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         headerPlaceholder.innerHTML = headerHTML;
         setActiveNav();
     }
+
+    // Inject Analytics
+    const analyticsScript = document.createElement('script');
+    analyticsScript.src = 'includes/analytics-setup.js';
+    document.head.appendChild(analyticsScript);
 
     // Insert Footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
@@ -215,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle footer contact form submission
         const footerForm = document.getElementById('footerContactForm');
         if (footerForm) {
-            footerForm.addEventListener('submit', async function(e) {
+            footerForm.addEventListener('submit', async function (e) {
                 e.preventDefault();
 
                 const submitBtn = footerForm.querySelector('button[type="submit"]');
@@ -280,14 +285,14 @@ function showFooterSuccessPopup() {
         document.body.appendChild(popup);
 
         // Close on clicking outside
-        popup.addEventListener('click', function(e) {
+        popup.addEventListener('click', function (e) {
             if (e.target === popup.querySelector('div')) {
                 closeFooterSuccessPopup();
             }
         });
 
         // Close on ESC key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeFooterSuccessPopup();
             }
